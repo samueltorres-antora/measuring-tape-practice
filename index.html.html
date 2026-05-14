@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0064)file:///C:/Users/SamTorres/Downloads/tape-measure-trainer_1.html -->
+<!-- saved from url=(0064)file:///C:/Users/SamTorres/Downloads/tape-measure-trainer_9.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -9,7 +9,7 @@
 <title>Tape Measure Trainer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-<link href="./Tape Measure Trainer_files/css2" rel="stylesheet">
+<link href="./index.html_files/css2" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -503,6 +503,76 @@ body {
 @media (min-width: 700px) {
   .app { padding: 2.5rem 2rem 4rem; }
 }
+/* Learn 2 */
+.l2tab {
+  font-family: var(--mono);
+  font-size: .65rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  padding: 7px 13px;
+  min-height: 36px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  color: var(--text3);
+  background: var(--surface);
+  transition: var(--ease);
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+}
+.l2tab:active, .l2tab.active { background: var(--surface2); border-color: var(--border2); color: var(--text); }
+.l2tab.active { border-color: var(--accent); color: var(--accent); }
+
+.l2-concept {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 1rem;
+  align-items: flex-start;
+}
+.l2-step-num {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: .75rem;
+  font-weight: 500;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.l2-step-body { flex: 1; min-width: 0; }
+.l2-step-title { font-size: .9rem; font-weight: 500; color: var(--text); margin-bottom: 4px; }
+.l2-step-text { font-size: .83rem; color: var(--text2); line-height: 1.65; }
+.l2-step-text strong { font-weight: 500; color: var(--text); }
+
+.l2-height-legend { margin-top: .6rem; display: flex; flex-direction: column; gap: 7px; }
+.l2-hl-row { display: flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: .72rem; color: var(--text2); }
+.l2-hl-bar { background: var(--text); border-radius: 1px; flex-shrink: 0; }
+
+.l2-conversion-grid { margin-top: .65rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px,1fr)); gap: 5px; }
+.l2-cv-row { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius); padding: .4rem .6rem; display: flex; align-items: center; gap: 8px; }
+.l2-cv-frac { font-family: var(--mono); font-size: .85rem; font-weight: 500; color: var(--accent); min-width: 30px; }
+.l2-cv-eq { font-family: var(--mono); font-size: .72rem; color: var(--text2); }
+
+.l2-diagram-wrap { margin: .75rem 0; overflow-x: auto; scrollbar-width: none; }
+.l2-diagram-wrap::-webkit-scrollbar { display: none; }
+
+.l2-worked { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius); padding: .85rem 1rem; margin-bottom: 1rem; }
+.l2-worked-title { font-family: var(--mono); font-size: .7rem; letter-spacing: .07em; text-transform: uppercase; color: var(--text3); margin-bottom: .6rem; }
+
+.l2-worked-steps { display: flex; flex-direction: column; gap: 6px; }
+.l2-ws-row { display: flex; align-items: flex-start; gap: 9px; font-size: .83rem; color: var(--text2); line-height: 1.5; }
+.l2-ws-row strong { font-weight: 500; color: var(--text); }
+.l2-ws-num { font-family: var(--mono); font-size: .75rem; font-weight: 500; color: var(--text3); min-width: 18px; margin-top: 1px; flex-shrink: 0; }
+.l2-ws-answer { padding-top: 6px; border-top: 1px solid var(--border); color: var(--text); font-weight: 500; }
+.l2-ws-answer .l2-ws-num { color: var(--green); }
+
+.l2-cta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding-top: .85rem; border-top: 1px solid var(--border); margin-top: .5rem; font-size: .8rem; color: var(--text3); }
+.l2-cta-btn { font-family: var(--mono); font-size: .7rem; letter-spacing: .05em; text-transform: uppercase; padding: 8px 16px; border-radius: var(--radius); border: 1px solid var(--border2); background: var(--surface2); color: var(--text2); cursor: pointer; transition: var(--ease); -webkit-tap-highlight-color: transparent; }
+.l2-cta-btn:active { border-color: var(--accent); color: var(--text); }
+.l2-cta-btn.accent { background: var(--accent); color: #fff; border-color: var(--accent); }
+.l2-cta-btn.accent:active { background: var(--accent2); }
 </style>
 </head>
 <body>
@@ -515,13 +585,25 @@ body {
       <p class="header-sub">Learn to read every fraction from 1⁄16″ to 1″</p>
     </div>
     <div class="mode-tabs">
-      <button class="mtab active" onclick="setMode(&#39;learn&#39;)">Learn</button>
-      <button class="mtab" onclick="setMode(&#39;quiz&#39;)">Quiz</button>
+      <button class="mtab active" onclick="setMode(&#39;learn&#39;)">Learn 1</button>
+      <button class="mtab" onclick="setMode(&#39;learn2&#39;)">Learn 2</button>
+      <button class="mtab" onclick="setMode(&#39;quiz&#39;)">Quiz 1</button>
+      <button class="mtab" onclick="setMode(&#39;math&#39;)">Quiz 2</button>
     </div>
   </header>
 
   <!-- LEARN MODE -->
   <div id="learnSection">
+
+    <!-- Learn 1 sub-tabs -->
+    <div style="display:flex;gap:5px;margin-bottom:.75rem;flex-wrap:wrap" id="l1TabRow">
+      <button class="l2tab active" onclick="showL1(0)">Interactive ruler</button>
+      <button class="l2tab" onclick="showL1(1)">How a ruler works</button>
+      <button class="l2tab" onclick="showL1(2)">Reading fractions</button>
+    </div>
+
+    <!-- L1 Card 0: Interactive ruler (existing) -->
+    <div id="l1c0">
     <div class="panel">
       <div class="panel-header">
         <div class="panel-title-group">
@@ -577,7 +659,419 @@ body {
       </div>
     </div>
     <div class="dots" id="dots"><div class="dot on"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
-  </div>
+    </div><!-- /l1c0 -->
+
+    <!-- L1 Card 1: How a ruler works -->
+    <div id="l1c1" style="display:none">
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <div class="panel-title">How a ruler works</div>
+            <div class="panel-sub">Understanding inches, halves, quarters, eighths &amp; sixteenths</div>
+          </div>
+          <span class="tag tag-anchor">Foundation</span>
+        </div>
+        <div class="panel-body">
+          <div class="l2-concept">
+            <div class="l2-step-num">1</div>
+            <div class="l2-step-body">
+              <div class="l2-step-title">Every inch is divided into 16 equal parts</div>
+              <div class="l2-step-text">The distance between two whole numbers (e.g. 0″ and 1″) is split into 16 tiny slices. Each slice is <strong>1/16″</strong>. All other fractions are just groups of those slices.</div>
+            </div>
+          </div>
+          <div class="l2-diagram-wrap">
+            <svg viewBox="0 0 640 155" width="100%" style="max-width:640px;display:block;margin:0 auto" xmlns="http://www.w3.org/2000/svg">
+              <!-- tape body -->
+              <rect x="20" y="28" width="600" height="58" rx="4" fill="#f0d878" stroke="#b09030" stroke-width="1.5"></rect>
+              <rect x="21" y="29" width="598" height="11" fill="#e8cc55" opacity=".35"></rect>
+              <rect x="20" y="28" width="5" height="58" rx="2" fill="#b09030"></rect>
+
+              <!-- ── Ticks (tape top y=28) ── -->
+              <!-- anchor: pos 0 & 16 — full height 58 -->
+              <line x1="20" y1="28" x2="20" y2="86" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line>
+              <line x1="620" y1="28" x2="620" y2="86" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line>
+              <!-- half: pos 8 — h=48 -->
+              <line x1="320" y1="28" x2="320" y2="76" stroke="#1a160a" stroke-width="2.2" stroke-linecap="square"></line>
+              <!-- quarters: pos 4,12 — h=34 -->
+              <line x1="170" y1="28" x2="170" y2="62" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line>
+              <line x1="470" y1="28" x2="470" y2="62" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line>
+              <!-- eighths: pos 2,6,10,14 — h=22 -->
+              <line x1="95" y1="28" x2="95" y2="50" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+              <line x1="245" y1="28" x2="245" y2="50" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+              <line x1="395" y1="28" x2="395" y2="50" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+              <line x1="545" y1="28" x2="545" y2="50" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+              <!-- sixteenths: pos 1,3,5,7,9,11,13,15 — h=14 -->
+              <line x1="57.5" y1="28" x2="57.5" y2="42" stroke="#1a160a" stroke-width="1" stroke-linecap="square"></line>
+              <line x1="132.5" y1="28" x2="132.5" y2="42" stroke="#1a160a" stroke-width="1" stroke-linecap="square"></line>
+              <line x1="207.5" y1="28" x2="207.5" y2="42" stroke="#1a160a" stroke-width="1" stroke-linecap="square"></line>
+              <line x1="282.5" y1="28" x2="282.5" y2="42" stroke="#1a160a" stroke-width="1" stroke-linecap="square"></line>
+              <line x1="357.5" y1="28" x2="357.5" y2="42" stroke="#1a160a" stroke-width="1" stroke-linecap="square"></line>
+              <line x1="432.5" y1="28" x2="432.5" y2="42" stroke="#1a160a" stroke-width="1" stroke-linecap="square"></line>
+              <line x1="507.5" y1="28" x2="507.5" y2="42" stroke="#1a160a" stroke-width="1" stroke-linecap="square"></line>
+              <line x1="582.5" y1="28" x2="582.5" y2="42" stroke="#1a160a" stroke-width="1" stroke-linecap="square"></line>
+
+              <!-- ── Labels below tape (y1=86 baseline) ── -->
+              <!-- Row 1: anchors + half + quarters (bigger chips, y~100) -->
+              <!-- pos 0 = 0" -->
+              <rect x="10" y="89" width="22" height="17" rx="3" fill="rgba(210,185,60,.65)"></rect>
+              <text x="21" y="101" text-anchor="middle" font-size="10" font-weight="500" fill="#1a1000" font-family="&#39;DM Mono&#39;,monospace">0"</text>
+              <!-- pos 4 = 1/4 -->
+              <rect x="158" y="89" width="26" height="17" rx="3" fill="rgba(210,185,60,.55)"></rect>
+              <text x="171" y="101" text-anchor="middle" font-size="10" font-weight="500" fill="#1a1000" font-family="&#39;DM Mono&#39;,monospace">1/4</text>
+              <!-- pos 8 = 1/2 -->
+              <rect x="308" y="89" width="26" height="17" rx="3" fill="rgba(210,185,60,.65)"></rect>
+              <text x="321" y="101" text-anchor="middle" font-size="10" font-weight="500" fill="#1a1000" font-family="&#39;DM Mono&#39;,monospace">1/2</text>
+              <!-- pos 12 = 3/4 -->
+              <rect x="458" y="89" width="26" height="17" rx="3" fill="rgba(210,185,60,.55)"></rect>
+              <text x="471" y="101" text-anchor="middle" font-size="10" font-weight="500" fill="#1a1000" font-family="&#39;DM Mono&#39;,monospace">3/4</text>
+              <!-- pos 16 = 1" -->
+              <rect x="609" y="89" width="22" height="17" rx="3" fill="rgba(210,185,60,.65)"></rect>
+              <text x="620" y="101" text-anchor="middle" font-size="10" font-weight="500" fill="#1a1000" font-family="&#39;DM Mono&#39;,monospace">1"</text>
+
+              <!-- Row 2: eighths (y~112) -->
+              <!-- pos 2 = 1/8 -->
+              <rect x="83" y="109" width="26" height="16" rx="3" fill="rgba(180,165,55,.4)"></rect>
+              <text x="96" y="121" text-anchor="middle" font-size="9.5" font-weight="500" fill="#2a2000" font-family="&#39;DM Mono&#39;,monospace">1/8</text>
+              <!-- pos 6 = 3/8 -->
+              <rect x="233" y="109" width="26" height="16" rx="3" fill="rgba(180,165,55,.4)"></rect>
+              <text x="246" y="121" text-anchor="middle" font-size="9.5" font-weight="500" fill="#2a2000" font-family="&#39;DM Mono&#39;,monospace">3/8</text>
+              <!-- pos 10 = 5/8 -->
+              <rect x="383" y="109" width="26" height="16" rx="3" fill="rgba(180,165,55,.4)"></rect>
+              <text x="396" y="121" text-anchor="middle" font-size="9.5" font-weight="500" fill="#2a2000" font-family="&#39;DM Mono&#39;,monospace">5/8</text>
+              <!-- pos 14 = 7/8 -->
+              <rect x="533" y="109" width="26" height="16" rx="3" fill="rgba(180,165,55,.4)"></rect>
+              <text x="546" y="121" text-anchor="middle" font-size="9.5" font-weight="500" fill="#2a2000" font-family="&#39;DM Mono&#39;,monospace">7/8</text>
+
+              <!-- Row 3: sixteenths (y~133) — two sub-rows to avoid overlap -->
+              <!-- odd sixteenths left of half: 1/16, 3/16, 5/16, 7/16 -->
+              <rect x="46" y="128" width="26" height="15" rx="3" fill="rgba(160,145,45,.3)"></rect>
+              <text x="59" y="139" text-anchor="middle" font-size="8.5" fill="#3a3000" font-family="&#39;DM Mono&#39;,monospace">1/16</text>
+              <rect x="121" y="128" width="26" height="15" rx="3" fill="rgba(160,145,45,.3)"></rect>
+              <text x="134" y="139" text-anchor="middle" font-size="8.5" fill="#3a3000" font-family="&#39;DM Mono&#39;,monospace">3/16</text>
+              <rect x="196" y="128" width="26" height="15" rx="3" fill="rgba(160,145,45,.3)"></rect>
+              <text x="209" y="139" text-anchor="middle" font-size="8.5" fill="#3a3000" font-family="&#39;DM Mono&#39;,monospace">5/16</text>
+              <rect x="271" y="128" width="26" height="15" rx="3" fill="rgba(160,145,45,.3)"></rect>
+              <text x="284" y="139" text-anchor="middle" font-size="8.5" fill="#3a3000" font-family="&#39;DM Mono&#39;,monospace">7/16</text>
+              <!-- odd sixteenths right of half: 9/16, 11/16, 13/16, 15/16 -->
+              <rect x="346" y="128" width="26" height="15" rx="3" fill="rgba(160,145,45,.3)"></rect>
+              <text x="359" y="139" text-anchor="middle" font-size="8.5" fill="#3a3000" font-family="&#39;DM Mono&#39;,monospace">9/16</text>
+              <rect x="421" y="128" width="28" height="15" rx="3" fill="rgba(160,145,45,.3)"></rect>
+              <text x="435" y="139" text-anchor="middle" font-size="8.5" fill="#3a3000" font-family="&#39;DM Mono&#39;,monospace">11/16</text>
+              <rect x="496" y="128" width="28" height="15" rx="3" fill="rgba(160,145,45,.3)"></rect>
+              <text x="510" y="139" text-anchor="middle" font-size="8.5" fill="#3a3000" font-family="&#39;DM Mono&#39;,monospace">13/16</text>
+              <rect x="571" y="128" width="28" height="15" rx="3" fill="rgba(160,145,45,.3)"></rect>
+              <text x="585" y="139" text-anchor="middle" font-size="8.5" fill="#3a3000" font-family="&#39;DM Mono&#39;,monospace">15/16</text>
+
+              <!-- dashed connector lines from tick base to label -->
+              <!-- sixteenths -->
+              <line x1="57.5" y1="86" x2="57.5" y2="128" stroke="#a09030" stroke-width=".6" stroke-dasharray="2,2" opacity=".5"></line>
+              <line x1="132.5" y1="86" x2="132.5" y2="128" stroke="#a09030" stroke-width=".6" stroke-dasharray="2,2" opacity=".5"></line>
+              <line x1="207.5" y1="86" x2="207.5" y2="128" stroke="#a09030" stroke-width=".6" stroke-dasharray="2,2" opacity=".5"></line>
+              <line x1="282.5" y1="86" x2="282.5" y2="128" stroke="#a09030" stroke-width=".6" stroke-dasharray="2,2" opacity=".5"></line>
+              <line x1="357.5" y1="86" x2="357.5" y2="128" stroke="#a09030" stroke-width=".6" stroke-dasharray="2,2" opacity=".5"></line>
+              <line x1="432.5" y1="86" x2="432.5" y2="128" stroke="#a09030" stroke-width=".6" stroke-dasharray="2,2" opacity=".5"></line>
+              <line x1="507.5" y1="86" x2="507.5" y2="128" stroke="#a09030" stroke-width=".6" stroke-dasharray="2,2" opacity=".5"></line>
+              <line x1="582.5" y1="86" x2="582.5" y2="128" stroke="#a09030" stroke-width=".6" stroke-dasharray="2,2" opacity=".5"></line>
+              <!-- eighths -->
+              <line x1="95" y1="86" x2="95" y2="109" stroke="#a09030" stroke-width=".6" stroke-dasharray="2,2" opacity=".4"></line>
+              <line x1="245" y1="86" x2="245" y2="109" stroke="#a09030" stroke-width=".6" stroke-dasharray="2,2" opacity=".4"></line>
+              <line x1="395" y1="86" x2="395" y2="109" stroke="#a09030" stroke-width=".6" stroke-dasharray="2,2" opacity=".4"></line>
+              <line x1="545" y1="86" x2="545" y2="109" stroke="#a09030" stroke-width=".6" stroke-dasharray="2,2" opacity=".4"></line>
+            </svg>
+          </div>
+          <div class="l2-concept">
+            <div class="l2-step-num">2</div>
+            <div class="l2-step-body">
+              <div class="l2-step-title">Tick height = fraction importance</div>
+              <div class="l2-step-text">The ruler uses <em>height as a shortcut</em> — you don't need to count every tiny line. Taller ticks mark bigger fractions. Learn the 5 heights and you can read any position instantly.</div>
+              <div class="l2-height-legend">
+                <div class="l2-hl-row"><div class="l2-hl-bar" style="height:28px;width:3px"></div><span>Whole inch — tallest, printed number</span></div>
+                <div class="l2-hl-row"><div class="l2-hl-bar" style="height:23px;width:2.5px"></div><span>Half inch — 2nd tallest, easy to spot</span></div>
+                <div class="l2-hl-row"><div class="l2-hl-bar" style="height:17px;width:2px"></div><span>Quarter inch — medium height</span></div>
+                <div class="l2-hl-row"><div class="l2-hl-bar" style="height:11px;width:1.5px"></div><span>Eighth inch — short</span></div>
+                <div class="l2-hl-row"><div class="l2-hl-bar" style="height:7px;width:1px"></div><span>Sixteenth inch — shortest</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="l2-concept">
+            <div class="l2-step-num">3</div>
+            <div class="l2-step-body">
+              <div class="l2-step-title">Use landmarks, not counting</div>
+              <div class="l2-step-text">The fastest readers navigate like a map. Find the nearest big landmark (whole inch → half → quarter), then count tiny ticks from there. Example: to find <strong>7/16″</strong>, find the ½″ mark and step left one tiny tick — that's it.</div>
+            </div>
+          </div>
+          <div class="l2-cta">
+            <span>Ready to practice?</span>
+            <button onclick="showL1(0)" class="l2-cta-btn">Try the interactive ruler →</button>
+            <button onclick="setMode(&#39;quiz&#39;)" class="l2-cta-btn accent">Take Quiz 1 →</button>
+          </div>
+        </div>
+      </div>
+    </div><!-- /l1c1 -->
+
+    <!-- L1 Card 2: Reading fractions -->
+    <div id="l1c2" style="display:none">
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <div class="panel-title">Reading fractions on a ruler</div>
+            <div class="panel-sub">Step-by-step method for any measurement</div>
+          </div>
+          <span class="tag tag-quarter">Technique</span>
+        </div>
+        <div class="panel-body">
+          <div class="l2-concept">
+            <div class="l2-step-num">1</div>
+            <div class="l2-step-body">
+              <div class="l2-step-title">Start at the nearest whole inch to the left</div>
+              <div class="l2-step-text">Look at the measurement point. Find the closest whole-inch number that is at or to the left of it. That's your base. Example: if a point is between 2″ and 3″, your base is <strong>2″</strong>.</div>
+            </div>
+          </div>
+          <div class="l2-concept">
+            <div class="l2-step-num">2</div>
+            <div class="l2-step-body">
+              <div class="l2-step-title">Find the nearest landmark between that inch and the point</div>
+              <div class="l2-step-text">Look for the tall ½″ tick first. Is the point before or after it? Then narrow to ¼ or ¾. Use the height of the nearest tick to place yourself quickly.</div>
+            </div>
+          </div>
+          <div class="l2-concept">
+            <div class="l2-step-num">3</div>
+            <div class="l2-step-body">
+              <div class="l2-step-title">Count tiny (sixteenth) ticks from the landmark</div>
+              <div class="l2-step-text">Once you're oriented to the nearest quarter or half, count the short ticks left or right to reach the exact point. Each tiny tick = 1/16″.</div>
+            </div>
+          </div>
+          <div class="l2-worked">
+            <div class="l2-worked-title">Worked example — read this point</div>
+            <div class="l2-diagram-wrap">
+              <svg viewBox="0 0 640 130" width="100%" style="max-width:620px;display:block;margin:0 auto" xmlns="http://www.w3.org/2000/svg">
+                <rect x="20" y="48" width="600" height="52" rx="4" fill="#f0d878" stroke="#b09030" stroke-width="1.5"></rect>
+                <rect x="21" y="49" width="598" height="10" fill="#e8cc55" opacity=".35"></rect>
+                <rect x="20" y="48" width="5" height="52" rx="2" fill="#b09030"></rect>
+                <line x1="20" y1="48" x2="20" y2="100" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line>
+                <line x1="620" y1="48" x2="620" y2="100" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line>
+                <line x1="320" y1="48" x2="320" y2="88" stroke="#1a160a" stroke-width="2.2" stroke-linecap="square"></line>
+                <line x1="170" y1="48" x2="170" y2="76" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line>
+                <line x1="470" y1="48" x2="470" y2="76" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line>
+                <line x1="95" y1="48" x2="95" y2="64" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+                <line x1="245" y1="48" x2="245" y2="64" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+                <line x1="395" y1="48" x2="395" y2="64" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+                <line x1="545" y1="48" x2="545" y2="64" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+                <line x1="57" y1="48" x2="57" y2="57" stroke="#1a160a" stroke-width="1" stroke-linecap="square"></line>
+                <line x1="133" y1="48" x2="133" y2="57" stroke="#1a160a" stroke-width="1" stroke-linecap="square"></line>
+                <line x1="207" y1="48" x2="207" y2="57" stroke="#1a160a" stroke-width="1" stroke-linecap="square"></line>
+                <line x1="282" y1="48" x2="282" y2="57" stroke="#1a160a" stroke-width="1" stroke-linecap="square"></line>
+                <line x1="357" y1="48" x2="357" y2="57" stroke="#1a160a" stroke-width="1" stroke-linecap="square"></line>
+                <line x1="432" y1="48" x2="432" y2="57" stroke="#1a160a" stroke-width="1" stroke-linecap="square"></line>
+                <line x1="507" y1="48" x2="507" y2="57" stroke="#1a160a" stroke-width="1" stroke-linecap="square"></line>
+                <line x1="583" y1="48" x2="583" y2="57" stroke="#1a160a" stroke-width="1" stroke-linecap="square"></line>
+                <path d="M432.5,34 L441,48 L424,48 Z" fill="#c87941"></path>
+                <rect x="20" y="48" width="412.5" height="52" fill="#c87941" opacity=".14"></rect>
+                <rect x="12" y="105" width="20" height="16" rx="3" fill="rgba(210,185,60,.5)"></rect><text x="22" y="117" text-anchor="middle" font-size="11" font-weight="500" fill="#2a2000" font-family="&#39;DM Mono&#39;,monospace">0</text>
+                <rect x="612" y="105" width="20" height="16" rx="3" fill="rgba(210,185,60,.5)"></rect><text x="622" y="117" text-anchor="middle" font-size="11" font-weight="500" fill="#2a2000" font-family="&#39;DM Mono&#39;,monospace">1"</text>
+                <text x="320" y="117" text-anchor="middle" font-size="10" fill="#5c5a48" font-family="&#39;DM Mono&#39;,monospace">½</text>
+                <text x="470" y="117" text-anchor="middle" font-size="10" fill="#5c5a48" font-family="&#39;DM Mono&#39;,monospace">¾</text>
+              </svg>
+            </div>
+            <div class="l2-worked-steps">
+              <div class="l2-ws-row"><span class="l2-ws-num">①</span>Arrow is between 0″ and 1″ — base is <strong>0″</strong></div>
+              <div class="l2-ws-row"><span class="l2-ws-num">②</span>Arrow is past the ½ mark, before the ¾ mark — between <strong>½ and ¾</strong></div>
+              <div class="l2-ws-row"><span class="l2-ws-num">③</span>Count from ¾ going left: arrow is <strong>1 tiny tick before ¾</strong></div>
+              <div class="l2-ws-row l2-ws-answer"><span class="l2-ws-num">✓</span>Answer: <strong>11/16″</strong> (¾ minus 1/16)</div>
+            </div>
+          </div>
+          <div class="l2-cta">
+            <span>Ready to practice?</span>
+            <button onclick="showL1(0)" class="l2-cta-btn">Try the interactive ruler →</button>
+            <button onclick="setMode(&#39;quiz&#39;)" class="l2-cta-btn accent">Take Quiz 1 →</button>
+          </div>
+        </div>
+      </div>
+    </div><!-- /l1c2 -->
+
+  </div><!-- /learnSection -->
+
+  <!-- LEARN 2 — MATH CONCEPTS -->
+  <div id="learn2Section" style="display:none">
+
+    <!-- L2 inner tabs -->
+    <div style="display:flex;gap:5px;margin-bottom:.75rem;flex-wrap:wrap" id="l2TabRow">
+      <button class="l2tab active" onclick="showL2(0)">Adding lengths</button>
+      <button class="l2tab" onclick="showL2(1)">Subtracting lengths</button>
+    </div>
+
+    <!-- Card 0: Adding lengths (was Card 2) -->
+    <div class="l2card" id="l2c0">
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <div class="panel-title">Adding measurements</div>
+            <div class="panel-sub">How to add two lengths on a tape measure</div>
+          </div>
+          <span class="tag tag-eighth">Prep for Quiz 2</span>
+        </div>
+        <div class="panel-body">
+
+          <div class="l2-concept">
+            <div class="l2-step-num">1</div>
+            <div class="l2-step-body">
+              <div class="l2-step-title">Convert everything to sixteenths first</div>
+              <div class="l2-step-text">Fractions are easiest to add when they share a common unit. Since the smallest division is 1⁄16″, convert each measurement: 1″ = 16⁄16, ½″ = 8⁄16, ¼″ = 4⁄16, ⅛″ = 2⁄16, 1⁄16 = 1⁄16.</div>
+              <div class="l2-conversion-grid">
+                <div class="l2-cv-row"><span class="l2-cv-frac">1″</span><span class="l2-cv-eq">= 16 sixteenths</span></div>
+                <div class="l2-cv-row"><span class="l2-cv-frac">½″</span><span class="l2-cv-eq">= 8 sixteenths</span></div>
+                <div class="l2-cv-row"><span class="l2-cv-frac">¼″</span><span class="l2-cv-eq">= 4 sixteenths</span></div>
+                <div class="l2-cv-row"><span class="l2-cv-frac">⅛″</span><span class="l2-cv-eq">= 2 sixteenths</span></div>
+                <div class="l2-cv-row"><span class="l2-cv-frac">1⁄16″</span><span class="l2-cv-eq">= 1 sixteenth</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="l2-concept">
+            <div class="l2-step-num">2</div>
+            <div class="l2-step-body">
+              <div class="l2-step-title">Add the sixteenths, then simplify</div>
+              <div class="l2-step-text">Add the two sixteenth counts together, then convert back. If the total is 16 or more, divide by 16 to get whole inches. Simplify any leftover fraction if possible.</div>
+            </div>
+          </div>
+
+          <div class="l2-worked">
+            <div class="l2-worked-title">Worked example — ¾″ + ⅝″</div>
+            <div class="l2-diagram-wrap">
+              <svg viewBox="0 0 640 130" width="100%" style="max-width:620px;display:block;margin:0 auto" xmlns="http://www.w3.org/2000/svg">
+                <rect x="20" y="48" width="600" height="52" rx="4" fill="#f0d878" stroke="#b09030" stroke-width="1.5"></rect>
+                <rect x="21" y="49" width="598" height="10" fill="#e8cc55" opacity=".35"></rect>
+                <rect x="20" y="48" width="5" height="52" rx="2" fill="#b09030"></rect>
+                <!-- ticks: 0,8,16 = 0,½,1" at x=20,320,620; also ¼=170,¾=470 -->
+                <line x1="20" y1="48" x2="20" y2="100" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line>
+                <line x1="620" y1="48" x2="620" y2="100" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line>
+                <line x1="320" y1="48" x2="320" y2="88" stroke="#1a160a" stroke-width="2.2" stroke-linecap="square"></line>
+                <line x1="170" y1="48" x2="170" y2="76" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line>
+                <line x1="470" y1="48" x2="470" y2="76" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line>
+                <line x1="95" y1="48" x2="95" y2="64" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+                <line x1="245" y1="48" x2="245" y2="64" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+                <line x1="395" y1="48" x2="395" y2="64" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+                <line x1="545" y1="48" x2="545" y2="64" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+                <!-- span A: 0 to ¾ = 0 to 12/16 → x=20 to 20+(12/16)*600=470 -->
+                <rect x="20" y="48" width="450" height="52" fill="#c87941" opacity=".18"></rect>
+                <!-- span B: ¾ to ¾+⅝ = 12/16 to 22/16 → x=470 to 20+(22/16)*600=845 but clipped -->
+                <rect x="470" y="48" width="225" height="52" fill="#5a9e5a" opacity=".18"></rect>
+                <!-- label A -->
+                <rect x="190" y="28" width="50" height="17" rx="8" fill="#c87941"></rect>
+                <text x="215" y="40" text-anchor="middle" font-size="11" font-weight="500" fill="#fff" font-family="&#39;DM Mono&#39;,monospace">¾″</text>
+                <line x1="215" y1="41" x2="215" y2="48" stroke="#c87941" stroke-width="1" stroke-dasharray="2,2"></line>
+                <!-- label B -->
+                <rect x="558" y="28" width="50" height="17" rx="8" fill="#5a9e5a"></rect>
+                <text x="583" y="40" text-anchor="middle" font-size="11" font-weight="500" fill="#fff" font-family="&#39;DM Mono&#39;,monospace">⅝″</text>
+                <line x1="583" y1="41" x2="583" y2="48" stroke="#5a9e5a" stroke-width="1" stroke-dasharray="2,2"></line>
+                <!-- labels -->
+                <rect x="12" y="105" width="20" height="16" rx="3" fill="rgba(210,185,60,.5)"></rect><text x="22" y="117" text-anchor="middle" font-size="11" font-weight="500" fill="#2a2000" font-family="&#39;DM Mono&#39;,monospace">0</text>
+                <rect x="612" y="105" width="20" height="16" rx="3" fill="rgba(210,185,60,.5)"></rect><text x="622" y="117" text-anchor="middle" font-size="11" font-weight="500" fill="#2a2000" font-family="&#39;DM Mono&#39;,monospace">1"</text>
+                <text x="320" y="117" text-anchor="middle" font-size="10" fill="#5c5a48" font-family="&#39;DM Mono&#39;,monospace">½</text>
+              </svg>
+            </div>
+            <div class="l2-worked-steps">
+              <div class="l2-ws-row"><span class="l2-ws-num">①</span>¾″ = 12 sixteenths</div>
+              <div class="l2-ws-row"><span class="l2-ws-num">②</span>⅝″ = 10 sixteenths</div>
+              <div class="l2-ws-row"><span class="l2-ws-num">③</span>12 + 10 = <strong>22 sixteenths</strong></div>
+              <div class="l2-ws-row"><span class="l2-ws-num">④</span>22 ÷ 16 = 1 remainder 6 → <strong>1 and 6⁄16</strong></div>
+              <div class="l2-ws-row l2-ws-answer"><span class="l2-ws-num">✓</span>Simplified: <strong>1⅜″</strong> (6⁄16 = ⅜)</div>
+            </div>
+          </div>
+
+          <div class="l2-cta">
+            <span>Ready to practice?</span>
+            <button onclick="setMode(&#39;math&#39;)" class="l2-cta-btn accent">Take Quiz 2 →</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 1: Subtracting lengths (was Card 3) -->
+    <div class="l2card" id="l2c1" style="display:none">
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <div class="panel-title">Subtracting measurements</div>
+            <div class="panel-sub">How to find what remains after cutting or trimming</div>
+          </div>
+          <span class="tag tag-sixteenth">Prep for Quiz 2</span>
+        </div>
+        <div class="panel-body">
+
+          <div class="l2-concept">
+            <div class="l2-step-num">1</div>
+            <div class="l2-step-body">
+              <div class="l2-step-title">The same sixteenths trick works for subtraction</div>
+              <div class="l2-step-text">Convert both measurements to sixteenths, subtract, then convert back. This avoids any fraction confusion — it's just plain number subtraction.</div>
+            </div>
+          </div>
+
+          <div class="l2-concept">
+            <div class="l2-step-num">2</div>
+            <div class="l2-step-body">
+              <div class="l2-step-title">Real-world use: cutting a piece to length</div>
+              <div class="l2-step-text">You have a board that measures 2¼″. You need to cut 11⁄16″ off one end. What's left? Convert both to sixteenths, subtract, convert back.</div>
+            </div>
+          </div>
+
+          <div class="l2-worked">
+            <div class="l2-worked-title">Worked example — 1½″ − 5⁄16″</div>
+            <div class="l2-diagram-wrap">
+              <svg viewBox="0 0 640 140" width="100%" style="max-width:620px;display:block;margin:0 auto" xmlns="http://www.w3.org/2000/svg">
+                <rect x="20" y="58" width="600" height="52" rx="4" fill="#f0d878" stroke="#b09030" stroke-width="1.5"></rect>
+                <rect x="21" y="59" width="598" height="10" fill="#e8cc55" opacity=".35"></rect>
+                <rect x="20" y="58" width="5" height="52" rx="2" fill="#b09030"></rect>
+                <line x1="20" y1="58" x2="20" y2="110" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line>
+                <line x1="620" y1="58" x2="620" y2="110" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line>
+                <line x1="320" y1="58" x2="320" y2="98" stroke="#1a160a" stroke-width="2.2" stroke-linecap="square"></line>
+                <line x1="170" y1="58" x2="170" y2="86" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line>
+                <line x1="470" y1="58" x2="470" y2="86" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line>
+                <line x1="95" y1="58" x2="95" y2="74" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+                <line x1="245" y1="58" x2="245" y2="74" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+                <line x1="395" y1="58" x2="395" y2="74" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+                <line x1="545" y1="58" x2="545" y2="74" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+                <!-- full span: 0 to 1½ = 24/16 → x=20 to 20+(24/16)*600=920 but ruler only goes to 620 = 1" -->
+                <!-- show on single inch ruler: 1½ goes off edge, show proportionally scaled to 2 inch ruler width -->
+                <!-- Actually scale: show ½" ruler window. Full span = 1½ = 0 to 320+(300/2)=470. Remove = 5/16 = 20 to 20+(5/16)*600=207.5 -->
+                <!-- Full total green span -->
+                <rect x="20" y="58" width="450" height="52" fill="#5a9e5a" opacity=".16"></rect>
+                <!-- Red remove span -->
+                <rect x="20" y="58" width="187.5" height="52" fill="#c05050" opacity=".22"></rect>
+                <!-- remaining bracket -->
+                <line x1="207.5" y1="42" x2="470" y2="42" stroke="#c87941" stroke-width="1.5"></line>
+                <line x1="207.5" y1="39" x2="207.5" y2="45" stroke="#c87941" stroke-width="1.5"></line>
+                <line x1="470" y1="39" x2="470" y2="45" stroke="#c87941" stroke-width="1.5"></line>
+                <rect x="294" y="32" width="68" height="17" rx="8" fill="#c87941"></rect>
+                <text x="328" y="44" text-anchor="middle" font-size="11" font-weight="500" fill="#fff" font-family="&#39;DM Mono&#39;,monospace">remains</text>
+                <!-- labels -->
+                <rect x="12" y="115" width="20" height="16" rx="3" fill="rgba(210,185,60,.5)"></rect><text x="22" y="127" text-anchor="middle" font-size="11" font-weight="500" fill="#2a2000" font-family="&#39;DM Mono&#39;,monospace">0</text>
+                <rect x="612" y="115" width="20" height="16" rx="3" fill="rgba(210,185,60,.5)"></rect><text x="622" y="127" text-anchor="middle" font-size="11" font-weight="500" fill="#2a2000" font-family="&#39;DM Mono&#39;,monospace">1"</text>
+                <text x="320" y="127" text-anchor="middle" font-size="10" fill="#5c5a48" font-family="&#39;DM Mono&#39;,monospace">½</text>
+                <text x="470" y="127" text-anchor="middle" font-size="10" fill="#5c5a48" font-family="&#39;DM Mono&#39;,monospace">¾</text>
+                <text x="207.5" y="127" text-anchor="middle" font-size="9" fill="#c05050" font-family="&#39;DM Mono&#39;,monospace">5⁄16</text>
+              </svg>
+            </div>
+            <div class="l2-worked-steps">
+              <div class="l2-ws-row"><span class="l2-ws-num">①</span>1½″ = 1×16 + 8 = <strong>24 sixteenths</strong></div>
+              <div class="l2-ws-row"><span class="l2-ws-num">②</span>5⁄16″ = <strong>5 sixteenths</strong></div>
+              <div class="l2-ws-row"><span class="l2-ws-num">③</span>24 − 5 = <strong>19 sixteenths</strong></div>
+              <div class="l2-ws-row"><span class="l2-ws-num">④</span>19 ÷ 16 = 1 remainder 3 → <strong>1 and 3⁄16</strong></div>
+              <div class="l2-ws-row l2-ws-answer"><span class="l2-ws-num">✓</span>Answer: <strong>1 3⁄16″</strong></div>
+            </div>
+          </div>
+
+          <div class="l2-cta">
+            <span>Ready to practice?</span>
+            <button onclick="setMode(&#39;math&#39;)" class="l2-cta-btn accent">Take Quiz 2 →</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /learn2Section -->
 
   <!-- QUIZ MODE -->
   <div id="quizSection" style="display:none">
@@ -613,7 +1107,7 @@ body {
         <div class="quiz-prompt" id="qPrompt">Loading…</div>
 
         <div class="tape-scroll">
-          <svg id="quizSvg" viewBox="0 0 640 165" width="640" style="max-width:100%" xmlns="http://www.w3.org/2000/svg">
+          <svg id="quizSvg" viewBox="0 0 640 182" width="640" style="max-width:100%" xmlns="http://www.w3.org/2000/svg">
             <rect x="20" y="58" width="600" height="76" rx="4" fill="#f0d878" stroke="#b09030" stroke-width="1.5"></rect>
             <rect x="21" y="59" width="598" height="13" rx="3" fill="#e8cc55" opacity=".4"></rect>
             <rect x="20" y="58" width="6" height="76" rx="2" fill="#b09030"></rect>
@@ -633,45 +1127,110 @@ body {
     </div>
   </div>
 
+  <!-- QUIZ 2 — MATH MODE -->
+  <div id="mathSection" style="display:none">
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title-group">
+          <div class="panel-title">Math quiz — add &amp; subtract measurements</div>
+          <div class="panel-sub">Multi-inch ruler · three question types</div>
+        </div>
+        <button class="restart-btn" onclick="initMath()">↺ Restart</button>
+      </div>
+      <div class="panel-body">
+
+        <div class="stats-row">
+          <div class="stat-card green">
+            <div class="stat-label">Correct</div>
+            <div class="stat-value" id="mCorrect">0</div>
+          </div>
+          <div class="stat-card red">
+            <div class="stat-label">Wrong</div>
+            <div class="stat-value" id="mWrong">0</div>
+          </div>
+          <div class="stat-card amber">
+            <div class="stat-label">Streak</div>
+            <div class="stat-value" id="mStreak">0</div>
+          </div>
+        </div>
+
+        <div class="progress-wrap">
+          <div class="progress-bar" id="mProgress" style="width:0%"></div>
+        </div>
+
+        <!-- question type badge + prompt -->
+        <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:.6rem">
+          <span class="tag tag-quarter" id="mTypeBadge" style="font-size:.65rem">Read</span>
+          <div class="quiz-prompt" style="margin-bottom:0" id="mPrompt">Loading…</div>
+        </div>
+
+        <!-- the multi-inch ruler -->
+        <div class="tape-scroll" style="margin-bottom:.6rem">
+          <svg id="mathSvg" viewBox="0 0 920 205" width="920" style="max-width:100%" xmlns="http://www.w3.org/2000/svg">
+            <!-- tape body — 3 inches wide -->
+            <rect x="20" y="90" width="880" height="82" rx="4" fill="#f0d878" stroke="#b09030" stroke-width="1.5"></rect>
+            <rect x="21" y="91" width="878" height="14" rx="3" fill="#e8cc55" opacity=".4"></rect>
+            <rect x="20" y="90" width="6" height="82" rx="2" fill="#b09030"></rect>
+            <line x1="20" y1="90" x2="900" y2="90" stroke="#a08020" stroke-width=".75"></line>
+            <g id="mTicks"></g>
+            <g id="mLabels"></g>
+            <g id="mOverlay"></g>
+          </svg>
+        </div>
+
+        <!-- equation display for add/subtract -->
+        <div id="mEquation" style="display:none;text-align:center;font-family:var(--mono);font-size:1rem;font-weight:500;color:var(--text);background:var(--surface2);border:.5px solid var(--border);border-radius:var(--radius);padding:.7rem 1rem;margin-bottom:.85rem;letter-spacing:.04em"></div>
+
+        <div class="quiz-click-hint" id="mClickHint"></div>
+        <div class="quiz-opts" id="mOpts"></div>
+        <div class="quiz-feedback" id="mFeedback"></div>
+        <div style="text-align:center">
+          <button class="quiz-next-btn" id="mNext" onclick="nextMath()">Next question →</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <script>
 const slides=[
   {title:"The full inch — all 16 divisions",sub:"Every mark between two whole numbers",focus:-1},
-  {title:"1\u20441\u2044 inch",sub:"Shortest tick — position 1 of 16",focus:1},
-  {title:"1\u20448 inch",sub:"Second-shortest — position 2 of 16",focus:2},
-  {title:"3\u204416 inch",sub:"Short tick — position 3 of 16",focus:3},
-  {title:"1\u20444 inch",sub:"Medium-height — position 4 of 16",focus:4},
-  {title:"5\u204416 inch",sub:"Short tick — position 5 of 16",focus:5},
-  {title:"3\u20448 inch",sub:"Second-shortest — position 6 of 16",focus:6},
-  {title:"7\u204416 inch",sub:"Short tick — position 7 of 16",focus:7},
-  {title:"1\u20442 inch",sub:"Tallest landmark tick — position 8 of 16",focus:8},
-  {title:"9\u204416 inch",sub:"Short tick — position 9 of 16",focus:9},
-  {title:"5\u20448 inch",sub:"Second-shortest — position 10 of 16",focus:10},
-  {title:"11\u204416 inch",sub:"Short tick — position 11 of 16",focus:11},
-  {title:"3\u20444 inch",sub:"Medium-height — position 12 of 16",focus:12},
-  {title:"13\u204416 inch",sub:"Short tick — position 13 of 16",focus:13},
-  {title:"7\u20448 inch",sub:"Second-shortest — position 14 of 16",focus:14},
-  {title:"15\u204416 inch",sub:"Short tick — position 15 of 16",focus:15}
+  {title:"1/16 inch",sub:"Shortest tick — position 1 of 16",focus:1},
+  {title:"1/8 inch",sub:"Second-shortest — position 2 of 16",focus:2},
+  {title:"3/16 inch",sub:"Short tick — position 3 of 16",focus:3},
+  {title:"1/4 inch",sub:"Medium-height — position 4 of 16",focus:4},
+  {title:"5/16 inch",sub:"Short tick — position 5 of 16",focus:5},
+  {title:"3/8 inch",sub:"Second-shortest — position 6 of 16",focus:6},
+  {title:"7/16 inch",sub:"Short tick — position 7 of 16",focus:7},
+  {title:"1/2 inch",sub:"Tallest landmark tick — position 8 of 16",focus:8},
+  {title:"9/16 inch",sub:"Short tick — position 9 of 16",focus:9},
+  {title:"5/8 inch",sub:"Second-shortest — position 10 of 16",focus:10},
+  {title:"11/16 inch",sub:"Short tick — position 11 of 16",focus:11},
+  {title:"3/4 inch",sub:"Medium-height — position 12 of 16",focus:12},
+  {title:"13/16 inch",sub:"Short tick — position 13 of 16",focus:13},
+  {title:"7/8 inch",sub:"Second-shortest — position 14 of 16",focus:14},
+  {title:"15/16 inch",sub:"Short tick — position 15 of 16",focus:15}
 ];
 
 const ticks=[
   {pos:0,  spanLabel:'0"',      tier:"anchor",    tagClass:"tag-anchor",    label:'0',  title:'Starting edge (0")',               body:"This is the tape end or last whole-inch mark. All fractions are measured from here.",                               hint:"Always press the hook flush against the material before reading."},
-  {pos:1,  spanLabel:"1\u204416\"", tier:"sixteenth", tagClass:"tag-sixteenth", label:"",   title:"1\u204416\" \u2014 the first sixteenth",  body:"The shortest tick on the tape. 16 of these span one inch. Count 1 tick from 0.",                                  hint:"If a tick is tiny with nothing nearby, count carefully from the last whole-number anchor."},
-  {pos:2,  spanLabel:"1\u20448\"",  tier:"eighth",    tagClass:"tag-eighth",    label:"\u215b",title:"1\u20448\" \u2014 the first eighth",     body:"Slightly taller than sixteenth marks. 8 per inch \u2014 it\u2019s the 2nd tick from 0.",                       hint:"All eighth-position ticks (1\u20448, 3\u20448, 5\u20448, 7\u20448) share this same height."},
-  {pos:3,  spanLabel:"3\u204416\"", tier:"sixteenth", tagClass:"tag-sixteenth", label:"",   title:"3\u204416\" \u2014 the third sixteenth",  body:"Same short height as 1\u204416. Fastest find: locate the 1\u20444 mark, step back one tiny tick.",             hint:"3\u204416 = 1\u20444 minus 1\u204416."},
-  {pos:4,  spanLabel:"1\u20444\"",  tier:"quarter",   tagClass:"tag-quarter",   label:"\u00bc",title:"1\u20444\" \u2014 the first quarter",    body:"A noticeably taller tick \u2014 medium height. Sits exactly halfway between 0 and 1\u20442\".",               hint:"Quarter marks are easy visual anchors. Orient yourself here before counting sixteenths."},
-  {pos:5,  spanLabel:"5\u204416\"", tier:"sixteenth", tagClass:"tag-sixteenth", label:"",   title:"5\u204416\" \u2014 the fifth sixteenth",  body:"Short tick, one position after the 1\u20444 mark. Locate 1\u20444, step right one tiny tick.",               hint:"5\u204416 = 1\u20444 + 1\u204416."},
-  {pos:6,  spanLabel:"3\u20448\"",  tier:"eighth",    tagClass:"tag-eighth",    label:"\u215c",title:"3\u20448\" \u2014 the third eighth",     body:"Same height as 1\u20448. Located halfway between 1\u20444 and 1\u20442.",                                    hint:"3\u20448 is two eighth-height ticks to the left of the tall 1\u20442 mark."},
-  {pos:7,  spanLabel:"7\u204416\"", tier:"sixteenth", tagClass:"tag-sixteenth", label:"",   title:"7\u204416\" \u2014 the seventh sixteenth",body:"Short tick, one position before the 1\u20442 mark. Find 1\u20442, step left one tiny tick.",                  hint:"7\u204416 and 9\u204416 are mirrors \u2014 both one sixteenth from the half."},
-  {pos:8,  spanLabel:"1\u20442\"",  tier:"half",      tagClass:"tag-half",      label:"\u00bd",title:"1\u20442\" \u2014 the dominant anchor",  body:"The tallest tick between whole-inch marks \u2014 unmissable. Everything left is below 1\u20442\"; everything right is above.",hint:"Count whole inches first, then navigate from 1\u20442 to the exact fraction."},
-  {pos:9,  spanLabel:"9\u204416\"", tier:"sixteenth", tagClass:"tag-sixteenth", label:"",   title:"9\u204416\" \u2014 the ninth sixteenth",  body:"Short tick, one position after the 1\u20442 mark. Mirror of 7\u204416.",                                     hint:"9\u204416 = 1\u20442 + 1\u204416."},
-  {pos:10, spanLabel:"5\u20448\"",  tier:"eighth",    tagClass:"tag-eighth",    label:"\u215d",title:"5\u20448\" \u2014 the fifth eighth",     body:"Same height as 1\u20448 and 3\u20448. Halfway between 1\u20442 and 3\u20444.",                               hint:"5\u20448 is two eighth-height ticks past 1\u20442."},
-  {pos:11, spanLabel:"11\u204416\"",tier:"sixteenth", tagClass:"tag-sixteenth", label:"",   title:"11\u204416\" \u2014 the eleventh sixteenth",body:"Short tick, one position before the 3\u20444 mark. Find 3\u20444, step left one tiny tick.",               hint:"11\u204416 = 3\u20444 minus 1\u204416."},
-  {pos:12, spanLabel:"3\u20444\"",  tier:"quarter",   tagClass:"tag-quarter",   label:"\u00be",title:"3\u20444\" \u2014 the third quarter",    body:"Medium-height tick, same as 1\u20444. Symmetric with 1\u20444 around 1\u20442.",                            hint:"Fold the tape mentally at 1\u20442\" \u2014 the 1\u20444 and 3\u20444 marks align exactly."},
-  {pos:13, spanLabel:"13\u204416\"",tier:"sixteenth", tagClass:"tag-sixteenth", label:"",   title:"13\u204416\" \u2014 the thirteenth sixteenth",body:"Short tick, one position after the 3\u20444 mark. Find 3\u20444, step right one tiny tick.",             hint:"13\u204416 = 3\u20444 + 1\u204416."},
-  {pos:14, spanLabel:"7\u20448\"",  tier:"eighth",    tagClass:"tag-eighth",    label:"\u215e",title:"7\u20448\" \u2014 the seventh eighth",    body:"Same height as 1\u20448. The last eighth-height tick before the whole-inch mark.",                         hint:"7\u20448 and 1\u20448 are mirrors around 1\u20442\"."},
-  {pos:15, spanLabel:"15\u204416\"",tier:"sixteenth", tagClass:"tag-sixteenth", label:"",   title:"15\u204416\" \u2014 the fifteenth sixteenth",body:"Short tick, one position before the 1\" mark. Find 1\", step left one tiny tick.",                       hint:"15\u204416 = 1\" minus 1\u204416."},
+  {pos:1,  spanLabel:"1/16\"", tier:"sixteenth", tagClass:"tag-sixteenth", label:"",   title:"1/16\" \u2014 the first sixteenth",  body:"The shortest tick on the tape. 16 of these span one inch. Count 1 tick from 0.",                                  hint:"If a tick is tiny with nothing nearby, count carefully from the last whole-number anchor."},
+  {pos:2,  spanLabel:"1/8\"",  tier:"eighth",    tagClass:"tag-eighth",    label:"\u215b",title:"1/8\" \u2014 the first eighth",     body:"Slightly taller than sixteenth marks. 8 per inch \u2014 it\u2019s the 2nd tick from 0.",                       hint:"All eighth-position ticks (1/8, 3/8, 5/8, 7/8) share this same height."},
+  {pos:3,  spanLabel:"3/16\"", tier:"sixteenth", tagClass:"tag-sixteenth", label:"",   title:"3/16\" \u2014 the third sixteenth",  body:"Same short height as 1/16. Fastest find: locate the 1/4 mark, step back one tiny tick.",             hint:"3/16 = 1/4 minus 1/16."},
+  {pos:4,  spanLabel:"1/4\"",  tier:"quarter",   tagClass:"tag-quarter",   label:"\u00bc",title:"1/4\" \u2014 the first quarter",    body:"A noticeably taller tick \u2014 medium height. Sits exactly halfway between 0 and 1/2\".",               hint:"Quarter marks are easy visual anchors. Orient yourself here before counting sixteenths."},
+  {pos:5,  spanLabel:"5/16\"", tier:"sixteenth", tagClass:"tag-sixteenth", label:"",   title:"5/16\" \u2014 the fifth sixteenth",  body:"Short tick, one position after the 1/4 mark. Locate 1/4, step right one tiny tick.",               hint:"5/16 = 1/4 + 1/16."},
+  {pos:6,  spanLabel:"3/8\"",  tier:"eighth",    tagClass:"tag-eighth",    label:"\u215c",title:"3/8\" \u2014 the third eighth",     body:"Same height as 1/8. Located halfway between 1/4 and 1/2.",                                    hint:"3/8 is two eighth-height ticks to the left of the tall 1/2 mark."},
+  {pos:7,  spanLabel:"7/16\"", tier:"sixteenth", tagClass:"tag-sixteenth", label:"",   title:"7/16\" \u2014 the seventh sixteenth",body:"Short tick, one position before the 1/2 mark. Find 1/2, step left one tiny tick.",                  hint:"7/16 and 9/16 are mirrors \u2014 both one sixteenth from the half."},
+  {pos:8,  spanLabel:"1/2\"",  tier:"half",      tagClass:"tag-half",      label:"\u00bd",title:"1/2\" \u2014 the dominant anchor",  body:"The tallest tick between whole-inch marks \u2014 unmissable. Everything left is below 1/2\"; everything right is above.",hint:"Count whole inches first, then navigate from 1/2 to the exact fraction."},
+  {pos:9,  spanLabel:"9/16\"", tier:"sixteenth", tagClass:"tag-sixteenth", label:"",   title:"9/16\" \u2014 the ninth sixteenth",  body:"Short tick, one position after the 1/2 mark. Mirror of 7/16.",                                     hint:"9/16 = 1/2 + 1/16."},
+  {pos:10, spanLabel:"5/8\"",  tier:"eighth",    tagClass:"tag-eighth",    label:"\u215d",title:"5/8\" \u2014 the fifth eighth",     body:"Same height as 1/8 and 3/8. Halfway between 1/2 and 3/4.",                               hint:"5/8 is two eighth-height ticks past 1/2."},
+  {pos:11, spanLabel:"11/16\"",tier:"sixteenth", tagClass:"tag-sixteenth", label:"",   title:"11/16\" \u2014 the eleventh sixteenth",body:"Short tick, one position before the 3/4 mark. Find 3/4, step left one tiny tick.",               hint:"11/16 = 3/4 minus 1/16."},
+  {pos:12, spanLabel:"3/4\"",  tier:"quarter",   tagClass:"tag-quarter",   label:"\u00be",title:"3/4\" \u2014 the third quarter",    body:"Medium-height tick, same as 1/4. Symmetric with 1/4 around 1/2.",                            hint:"Fold the tape mentally at 1/2\" \u2014 the 1/4 and 3/4 marks align exactly."},
+  {pos:13, spanLabel:"13/16\"",tier:"sixteenth", tagClass:"tag-sixteenth", label:"",   title:"13/16\" \u2014 the thirteenth sixteenth",body:"Short tick, one position after the 3/4 mark. Find 3/4, step right one tiny tick.",             hint:"13/16 = 3/4 + 1/16."},
+  {pos:14, spanLabel:"7/8\"",  tier:"eighth",    tagClass:"tag-eighth",    label:"\u215e",title:"7/8\" \u2014 the seventh eighth",    body:"Same height as 1/8. The last eighth-height tick before the whole-inch mark.",                         hint:"7/8 and 1/8 are mirrors around 1/2\"."},
+  {pos:15, spanLabel:"15/16\"",tier:"sixteenth", tagClass:"tag-sixteenth", label:"",   title:"15/16\" \u2014 the fifteenth sixteenth",body:"Short tick, one position before the 1\" mark. Find 1\", step left one tiny tick.",                       hint:"15/16 = 1\" minus 1/16."},
   {pos:16, spanLabel:'1"',      tier:"anchor",    tagClass:"tag-anchor",    label:'1"', title:'1" \u2014 the full inch',               body:"The printed number on the tape. Every inch repeats this exact same tick pattern.",                             hint:"Use whole-inch numbers as your primary anchors on longer measurements."}
 ];
 
@@ -789,11 +1348,279 @@ function move(d){go(cur+d);}
 
 function setMode(m){
   document.querySelectorAll('.mtab').forEach(t=>t.classList.toggle('active',
-    (m==='learn'&&t.textContent==='Learn')||(m==='quiz'&&t.textContent==='Quiz')
+    (m==='learn'&&t.textContent==='Learn 1')||
+    (m==='learn2'&&t.textContent==='Learn 2')||
+    (m==='quiz'&&t.textContent==='Quiz 1')||
+    (m==='math'&&t.textContent==='Quiz 2')
   ));
   document.getElementById('learnSection').style.display=m==='learn'?'':'none';
+  document.getElementById('learn2Section').style.display=m==='learn2'?'':'none';
   document.getElementById('quizSection').style.display=m==='quiz'?'':'none';
+  document.getElementById('mathSection').style.display=m==='math'?'':'none';
   if(m==='quiz')initQuiz();
+  if(m==='math')initMath();
+}
+
+function showL2(idx){
+  for(let i=0;i<2;i++){
+    const c=document.getElementById('l2c'+i);
+    if(c) c.style.display=i===idx?'':'none';
+  }
+  document.querySelectorAll('#l2TabRow .l2tab').forEach((t,i)=>t.classList.toggle('active',i===idx));
+}
+
+function showL1(idx){
+  for(let i=0;i<3;i++){
+    const c=document.getElementById('l1c'+i);
+    if(c) c.style.display=i===idx?'':'none';
+  }
+  document.querySelectorAll('#l1TabRow .l2tab').forEach((t,i)=>t.classList.toggle('active',i===idx));
+}
+
+/* ─── Quiz 2 — Math mode ─── */
+
+/* Ruler spans 3 inches: positions 0..48 sixteenths */
+const M_INCHES=3;
+const M_SIXTEENTHS=M_INCHES*16; /* 48 */
+const MXL=20, MXR=900, M_SPAN=MXR-MXL;
+const MT_TOP=90, MT_H=82;
+
+/* Tier heights scaled for taller ruler */
+const M_TIER_H={
+  anchor: MT_H,
+  half:   MT_H*0.82,
+  quarter:MT_H*0.58,
+  eighth: MT_H*0.38,
+  sixteenth:MT_H*0.22
+};
+const M_TIER_SW={anchor:2.8,half:2.4,quarter:2.0,eighth:1.6,sixteenth:1.2};
+
+function mxOf(sixteenths){ return MXL+(sixteenths/M_SIXTEENTHS)*M_SPAN; }
+
+function tierOf(s){
+  if(s%16===0) return 'anchor';
+  if(s%8===0)  return 'half';
+  if(s%4===0)  return 'quarter';
+  if(s%2===0)  return 'eighth';
+  return 'sixteenth';
+}
+
+/* Convert sixteenths count to display string like 2 3/4" */
+function fracLabel(s){
+  const whole=Math.floor(s/16);
+  const rem=s%16;
+  if(rem===0) return whole+'"';
+  const fracs={1:'1/16',2:'\u215b',3:'3/16',4:'\u00bc',5:'5/16',6:'\u215c',7:'7/16',
+               8:'\u00bd',9:'9/16',10:'\u215d',11:'11/16',12:'\u00be',13:'13/16',14:'\u215e',15:'15/16'};
+  return (whole>0?whole+' ':'')+fracs[rem]+'"';
+}
+
+/* Render the 3-inch ruler */
+function renderMathRuler(){
+  const svg=document.getElementById('mathSvg');
+  let tG=svg.querySelector('g#mTicks'),lG=svg.querySelector('g#mLabels');
+  if(tG)tG.innerHTML=''; else{tG=svgEl('g',{id:'mTicks'});svg.insertBefore(tG,svg.querySelector('g#mOverlay'));}
+  if(lG)lG.innerHTML=''; else{lG=svgEl('g',{id:'mLabels'});svg.insertBefore(lG,svg.querySelector('g#mOverlay'));}
+
+  for(let s=0;s<=M_SIXTEENTHS;s++){
+    const x=mxOf(s);
+    const tier=tierOf(s);
+    const h=M_TIER_H[tier];
+    const sw=M_TIER_SW[tier];
+    tG.appendChild(svgEl('line',{x1:x,x2:x,y1:MT_TOP,y2:MT_TOP+h,stroke:COL_FULL,'stroke-width':sw,'stroke-linecap':'square'}));
+
+    /* labels: whole inches + half inches */
+    if(s%16===0){
+      const inch=s/16;
+      const labelY=MT_TOP+MT_H+16;
+      const lbl=inch+'"';
+      const bgW=lbl.length*8+10;
+      lG.appendChild(svgEl('rect',{x:x-bgW/2,y:labelY-13,width:bgW,height:18,rx:'3',fill:'rgba(210,185,60,.55)'}));
+      const lt=svgEl('text',{x,y:labelY,'text-anchor':'middle','font-size':'13','font-weight':'500',fill:'#2a2000','font-family':"'DM Mono',monospace"});
+      lt.textContent=lbl; lG.appendChild(lt);
+    } else if(s%8===0){
+      const labelY=MT_TOP+MT_H+14;
+      lG.appendChild(svgEl('rect',{x:x-12,y:labelY-11,width:24,height:15,rx:'3',fill:'rgba(210,185,60,.35)'}));
+      const lt=svgEl('text',{x,y:labelY,'text-anchor':'middle','font-size':'10','font-weight':'500',fill:'#3a3000','font-family':"'DM Mono',monospace"});
+      lt.textContent='\u00bd'; lG.appendChild(lt);
+    }
+  }
+}
+
+/* Draw colored span overlay on the ruler */
+function drawMathSpan(startS, endS, color, label, yOffset){
+  const ov=document.getElementById('mOverlay');
+  const x0=mxOf(startS), x1=mxOf(endS);
+  const spanW=x1-x0;
+  const yLine=MT_TOP-(yOffset||0)-8;
+
+  ov.appendChild(svgEl('rect',{x:x0,y:MT_TOP,width:spanW,height:MT_H,fill:color,opacity:'0.18'}));
+
+  if(spanW>16){
+    ov.appendChild(svgEl('line',{x1:x0+4,x2:x1-4,y1:yLine,y2:yLine,stroke:color,'stroke-width':'1.6','marker-start':'url(#mArL)','marker-end':'url(#mArR)'}));
+  }
+
+  if(label){
+    const bw=label.length*8+20;
+    const bx=Math.min(Math.max((x0+x1)/2-bw/2, MXL+2), MXR-bw-2);
+    ov.appendChild(svgEl('rect',{x:bx,y:yLine-13,width:bw,height:24,rx:'12',fill:color}));
+    const lt=svgEl('text',{x:bx+bw/2,y:yLine+5,'text-anchor':'middle','font-size':'12','font-weight':'500',fill:'#fff','font-family':"'DM Mono',monospace"});
+    lt.textContent=label; ov.appendChild(lt);
+  }
+
+  [x0,x1].forEach(x=>{
+    ov.appendChild(svgEl('line',{x1:x,x2:x,y1:yLine+13,y2:MT_TOP,stroke:color,'stroke-width':'1','stroke-dasharray':'3,3',opacity:'0.45'}));
+  });
+}
+
+function drawMathArrow(sixteenths, color){
+  const ov=document.getElementById('mOverlay');
+  const x=mxOf(sixteenths);
+  ov.appendChild(svgEl('path',{d:`M${x-9},${MT_TOP-16} L${x+9},${MT_TOP-16} L${x},${MT_TOP-2}`,fill:color}));
+  const lt=svgEl('text',{x,y:MT_TOP-20,'text-anchor':'middle','font-size':'11','font-weight':'500',fill:color,'font-family':"'DM Mono',monospace"});
+  lt.textContent='?'; ov.appendChild(lt);
+}
+
+function clearMathOverlay(){
+  const ov=document.getElementById('mOverlay');
+  ov.innerHTML='';
+  /* ensure arrow markers exist in this SVG */
+  const svg=document.getElementById('mathSvg');
+  if(!svg.querySelector('defs')){
+    const defs=svgEl('defs',{});
+    const mkL=svgEl('marker',{id:'mArL',markerWidth:'6',markerHeight:'6',refX:'6',refY:'3',orient:'auto'});
+    const pL=svgEl('path',{d:'M6,0 L0,3 L6,6',fill:'none',stroke:'currentColor','stroke-width':'1.5'});
+    mkL.appendChild(pL); defs.appendChild(mkL);
+    const mkR=svgEl('marker',{id:'mArR',markerWidth:'6',markerHeight:'6',refX:'0',refY:'3',orient:'auto'});
+    const pR=svgEl('path',{d:'M0,0 L6,3 L0,6',fill:'none',stroke:'currentColor','stroke-width':'1.5'});
+    mkR.appendChild(pR); defs.appendChild(mkR);
+    svg.insertBefore(defs,svg.firstChild);
+  }
+}
+
+/* ─── Math question engine ─── */
+let mCorrect=0,mWrong=0,mStreak=0,mTotal=0,mLocked=false,mAnswer=0;
+
+/* Allowed measurement values in sixteenths (common fractions only) */
+const M_VALS=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,18,20,22,24,26,28,30,32,36,40,44,48];
+const M_TYPES=['read','add','subtract'];
+
+function randVal(maxS){ return M_VALS.filter(v=>v<=maxS)[Math.floor(Math.random()*M_VALS.filter(v=>v<=maxS).length)]; }
+
+function wrongAnswers(correct, count){
+  const pool=new Set();
+  const offsets=[1,2,4,8,-1,-2,-4,-8];
+  offsets.forEach(o=>{ const v=correct+o; if(v>0&&v<=M_SIXTEENTHS&&v!==correct) pool.add(v); });
+  M_VALS.forEach(v=>{ if(v!==correct&&v>0&&v<=M_SIXTEENTHS) pool.add(v); });
+  return [...pool].sort(()=>Math.random()-.5).slice(0,count);
+}
+
+function initMath(){
+  mCorrect=0;mWrong=0;mStreak=0;mTotal=0;mLocked=false;
+  updateMathScores();
+  renderMathRuler();
+  nextMath();
+}
+
+function updateMathScores(){
+  document.getElementById('mCorrect').textContent=mCorrect;
+  document.getElementById('mWrong').textContent=mWrong;
+  document.getElementById('mStreak').textContent=mStreak;
+  document.getElementById('mProgress').style.width=(mTotal>0?Math.round(mCorrect/mTotal*100):0)+'%';
+}
+
+function nextMath(){
+  mLocked=false;
+  document.getElementById('mFeedback').textContent='';
+  document.getElementById('mFeedback').style.color='';
+  document.getElementById('mNext').style.display='none';
+  document.getElementById('mClickHint').textContent='';
+  document.getElementById('mEquation').style.display='none';
+  document.getElementById('mOpts').innerHTML='';
+  clearMathOverlay();
+
+  const qType=M_TYPES[Math.floor(Math.random()*M_TYPES.length)];
+  const badge=document.getElementById('mTypeBadge');
+
+  if(qType==='read'){
+    /* Show arrow on ruler, pick the fraction */
+    badge.textContent='Read';
+    badge.className='tag tag-quarter';
+    const pos=randVal(M_SIXTEENTHS);
+    mAnswer=pos;
+    document.getElementById('mPrompt').textContent='What measurement is the arrow pointing to?';
+    drawMathArrow(pos,'#c87941');
+    buildMathOpts(pos);
+
+  } else if(qType==='add'){
+    /* A + B = ? Show both spans on ruler */
+    badge.textContent='Add';
+    badge.className='tag tag-eighth';
+    const a=randVal(24);
+    const b=randVal(M_SIXTEENTHS-a);
+    mAnswer=a+b;
+    document.getElementById('mPrompt').textContent='What is the total length of both highlighted sections?';
+    document.getElementById('mEquation').style.display='block';
+    document.getElementById('mEquation').textContent=fracLabel(a)+' + '+fracLabel(b)+' = ?';
+    drawMathSpan(0,a,'#c87941',fracLabel(a),22);
+    drawMathSpan(a,a+b,'#5a9e5a',fracLabel(b),0);
+    buildMathOpts(a+b);
+
+  } else {
+    /* subtract: show full span, ask what's left after removing A */
+    badge.textContent='Subtract';
+    badge.className='tag tag-sixteenth';
+    const total=randVal(M_SIXTEENTHS);
+    const subtract=randVal(total-1);
+    mAnswer=total-subtract;
+    document.getElementById('mPrompt').textContent='The full span is shown. If you remove the red section, what length remains?';
+    document.getElementById('mEquation').style.display='block';
+    document.getElementById('mEquation').textContent=fracLabel(total)+' \u2212 '+fracLabel(subtract)+' = ?';
+    drawMathSpan(0,total,'#5a9e5a',fracLabel(total),0);
+    drawMathSpan(0,subtract,'#c05050',fracLabel(subtract),22);
+    buildMathOpts(total-subtract);
+  }
+}
+
+function buildMathOpts(correct){
+  const wrongs=wrongAnswers(correct,3);
+  const opts=[correct,...wrongs].sort(()=>Math.random()-.5);
+  const el=document.getElementById('mOpts');
+  el.innerHTML='';
+  opts.forEach(v=>{
+    const btn=document.createElement('button');
+    btn.className='qopt';
+    btn.textContent=fracLabel(v);
+    btn.onclick=()=>checkMath(v,correct,btn,el);
+    el.appendChild(btn);
+  });
+}
+
+function checkMath(chosen,correct,btn,container){
+  if(mLocked)return;
+  mLocked=true;mTotal++;
+  const ok=chosen===correct;
+  container.querySelectorAll('.qopt').forEach(b=>{
+    b.disabled=true;
+    if(parseInt(b.dataset.val)===correct||b.textContent===fracLabel(correct)) b.classList.add('correct');
+    else if(b===btn&&!ok) b.classList.add('wrong');
+  });
+  /* highlight correct answer button reliably by label text */
+  container.querySelectorAll('.qopt').forEach(b=>{
+    if(b.textContent===fracLabel(correct)) b.classList.add('correct');
+  });
+  const el=document.getElementById('mFeedback');
+  if(ok){
+    mCorrect++;mStreak++;
+    el.textContent='Correct! '+fracLabel(correct);
+    el.style.color='#80cc80';
+  } else {
+    mWrong++;mStreak=0;
+    el.textContent='Not quite \u2014 the answer was '+fracLabel(correct);
+    el.style.color='#e08080';
+  }
+  updateMathScores();
+  document.getElementById('mNext').style.display='inline-block';
 }
 
 let qCorrect=0,qWrong=0,qStreak=0,qTotal=0,qLocked=false,qTarget=null;
@@ -822,6 +1649,13 @@ function renderQuizTape(markerPos,hideMarker){
     const hit=svgEl('rect',{x:x-13,y:QT_TOP,width:26,height:QT_H,fill:'transparent','data-qpos':t.pos});
     hit.style.cursor='pointer';
     tG.appendChild(hit);
+    if(t.pos===0||t.pos===16){
+      const labelY=QT_TOP+QT_H+16;
+      const bgW=t.pos===16?26:20;
+      tG.appendChild(svgEl('rect',{x:x-bgW/2,y:labelY-13,width:bgW,height:18,rx:'3',fill:'rgba(210,185,60,.45)'}));
+      const lt=svgEl('text',{x,y:labelY,'text-anchor':'middle','font-size':'12','font-weight':'500',fill:'#2a2000','font-family':"'DM Mono',monospace"});
+      lt.textContent=t.label;tG.appendChild(lt);
+    }
   });
   if(!hideMarker&&markerPos!=null){
     const x=xOf(markerPos);
