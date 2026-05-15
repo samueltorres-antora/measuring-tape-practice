@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0065)file:///C:/Users/SamTorres/Downloads/tape-measure-trainer_24.html -->
+<!-- saved from url=(0065)file:///C:/Users/SamTorres/Downloads/tape-measure-trainer_28.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -585,17 +585,19 @@ body {
       <p class="header-sub">Inches → Metric → Math operations · six modules</p>
     </div>
     <div class="mode-tabs">
-      <button class="mtab active" onclick="setMode(&#39;learn&#39;)">Learn 1</button>
+      <button class="mtab" onclick="setMode(&#39;learn&#39;)">Learn 1</button>
       <button class="mtab" onclick="setMode(&#39;quiz&#39;)">Quiz 1</button>
       <button class="mtab" onclick="setMode(&#39;learn3&#39;)">Learn 2</button>
       <button class="mtab" onclick="setMode(&#39;quiz3&#39;)">Quiz 2</button>
       <button class="mtab" onclick="setMode(&#39;learn2&#39;)">Learn 3</button>
       <button class="mtab" onclick="setMode(&#39;math&#39;)">Quiz 3</button>
+      <button class="mtab" onclick="setMode(&#39;learn4&#39;)">Learn 4</button>
+      <button class="mtab active" onclick="setMode(&#39;quiz4&#39;)">Quiz 4</button>
     </div>
   </header>
 
   <!-- LEARN MODE -->
-  <div id="learnSection" style="">
+  <div id="learnSection" style="display: none;">
 
     <!-- Learn 1 sub-tabs -->
     <div style="display:flex;gap:5px;margin-bottom:.75rem;flex-wrap:wrap" id="l1TabRow">
@@ -883,7 +885,7 @@ body {
   </div><!-- /learnSection -->
 
   <!-- LEARN 2 — MATH CONCEPTS -->
-  <div id="learn2Section" style="display: none;">
+  <div id="learn2Section" style="display:none">
 
     <!-- L2 inner tabs -->
     <div style="display:flex;gap:5px;margin-bottom:.75rem;flex-wrap:wrap" id="l2TabRow">
@@ -892,7 +894,7 @@ body {
     </div>
 
     <!-- Card 0: Adding lengths (was Card 2) -->
-    <div class="l2card" id="l2c0" style="">
+    <div class="l2card" id="l2c0">
       <div class="panel">
         <div class="panel-header">
           <div class="panel-title-group">
@@ -980,7 +982,7 @@ body {
     </div>
 
     <!-- Card 1: Subtracting lengths (was Card 3) -->
-    <div class="l2card" id="l2c1" style="display: none;">
+    <div class="l2card" id="l2c1" style="display:none">
       <div class="panel">
         <div class="panel-header">
           <div class="panel-title-group">
@@ -1065,7 +1067,7 @@ body {
   </div><!-- /learn2Section -->
 
   <!-- QUIZ MODE -->
-  <div id="quizSection" style="display: none;">
+  <div id="quizSection" style="display:none">
     <div class="panel">
       <div class="panel-header">
         <div class="panel-title-group">
@@ -1095,7 +1097,7 @@ body {
           <div class="progress-bar" id="qProgress" style="width:0%"></div>
         </div>
 
-        <div class="quiz-prompt" id="qPrompt">Find the tick that represents 1/4"</div>
+        <div class="quiz-prompt" id="qPrompt">Loading…</div>
 
         <div class="tape-scroll">
           <svg id="quizSvg" viewBox="0 0 640 210" width="640" style="max-width:100%" xmlns="http://www.w3.org/2000/svg">
@@ -1103,23 +1105,23 @@ body {
             <rect x="21" y="59" width="598" height="13" rx="3" fill="#e8cc55" opacity=".4"></rect>
             <rect x="20" y="58" width="6" height="76" rx="2" fill="#b09030"></rect>
             <line x1="20" y1="58" x2="620" y2="58" stroke="#a08020" stroke-width=".75"></line>
-            <g id="qTicks"><line x1="20" x2="20" y1="58" y2="134" stroke="#1a160a" stroke-width="2.8" stroke-linecap="square"></line><rect x="7" y="58" width="26" height="76" fill="transparent" data-qpos="0" style="cursor: pointer;"></rect><rect x="2" y="135" width="36" height="32" rx="4" fill="rgba(210,185,60,.75)"></rect><text x="20" y="152" text-anchor="middle" font-size="20" font-weight="500" fill="#1a0e00" font-family="&#39;DM Mono&#39;,monospace">0</text><line x1="57.5" x2="57.5" y1="58" y2="74.72" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="44.5" y="58" width="26" height="76" fill="transparent" data-qpos="1" style="cursor: pointer;"></rect><line x1="95" x2="95" y1="58" y2="86.88" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><rect x="82" y="58" width="26" height="76" fill="transparent" data-qpos="2" style="cursor: pointer;"></rect><line x1="132.5" x2="132.5" y1="58" y2="74.72" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="119.5" y="58" width="26" height="76" fill="transparent" data-qpos="3" style="cursor: pointer;"></rect><line x1="170" x2="170" y1="58" y2="102.08" stroke="#1a160a" stroke-width="2" stroke-linecap="square"></line><rect x="157" y="58" width="26" height="76" fill="transparent" data-qpos="4" style="cursor: pointer;"></rect><line x1="207.5" x2="207.5" y1="58" y2="74.72" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="194.5" y="58" width="26" height="76" fill="transparent" data-qpos="5" style="cursor: pointer;"></rect><line x1="245" x2="245" y1="58" y2="86.88" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><rect x="232" y="58" width="26" height="76" fill="transparent" data-qpos="6" style="cursor: pointer;"></rect><line x1="282.5" x2="282.5" y1="58" y2="74.72" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="269.5" y="58" width="26" height="76" fill="transparent" data-qpos="7" style="cursor: pointer;"></rect><line x1="320" x2="320" y1="58" y2="120.32" stroke="#1a160a" stroke-width="2.4" stroke-linecap="square"></line><rect x="307" y="58" width="26" height="76" fill="transparent" data-qpos="8" style="cursor: pointer;"></rect><line x1="357.5" x2="357.5" y1="58" y2="74.72" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="344.5" y="58" width="26" height="76" fill="transparent" data-qpos="9" style="cursor: pointer;"></rect><line x1="395" x2="395" y1="58" y2="86.88" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><rect x="382" y="58" width="26" height="76" fill="transparent" data-qpos="10" style="cursor: pointer;"></rect><line x1="432.5" x2="432.5" y1="58" y2="74.72" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="419.5" y="58" width="26" height="76" fill="transparent" data-qpos="11" style="cursor: pointer;"></rect><line x1="470" x2="470" y1="58" y2="102.08" stroke="#1a160a" stroke-width="2" stroke-linecap="square"></line><rect x="457" y="58" width="26" height="76" fill="transparent" data-qpos="12" style="cursor: pointer;"></rect><line x1="507.5" x2="507.5" y1="58" y2="74.72" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="494.5" y="58" width="26" height="76" fill="transparent" data-qpos="13" style="cursor: pointer;"></rect><line x1="545" x2="545" y1="58" y2="86.88" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><rect x="532" y="58" width="26" height="76" fill="transparent" data-qpos="14" style="cursor: pointer;"></rect><line x1="582.5" x2="582.5" y1="58" y2="74.72" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="569.5" y="58" width="26" height="76" fill="transparent" data-qpos="15" style="cursor: pointer;"></rect><line x1="620" x2="620" y1="58" y2="134" stroke="#1a160a" stroke-width="2.8" stroke-linecap="square"></line><rect x="607" y="58" width="26" height="76" fill="transparent" data-qpos="16" style="cursor: pointer;"></rect><rect x="597" y="135" width="46" height="32" rx="4" fill="rgba(210,185,60,.75)"></rect><text x="620" y="152" text-anchor="middle" font-size="20" font-weight="500" fill="#1a0e00" font-family="&#39;DM Mono&#39;,monospace">1"</text></g>
+            <g id="qTicks"></g>
             <g id="qArrow"></g>
           </svg>
         </div>
 
-        <div class="quiz-click-hint" id="qClickHint">↓ tap the correct mark on the tape</div>
+        <div class="quiz-click-hint" id="qClickHint"></div>
         <div class="quiz-opts" id="qOpts"></div>
         <div class="quiz-feedback" id="qFeedback"></div>
         <div style="text-align:center">
-          <button class="quiz-next-btn" id="qNext" onclick="nextQuestion()" style="display: none;">Next question →</button>
+          <button class="quiz-next-btn" id="qNext" onclick="nextQuestion()">Next question →</button>
         </div>
       </div>
     </div>
   </div>
 
   <!-- QUIZ 2 — MATH MODE -->
-  <div id="mathSection" style="display: none;">
+  <div id="mathSection" style="display:none">
     <div class="panel">
       <div class="panel-header">
         <div class="panel-title-group">
@@ -1151,32 +1153,32 @@ body {
 
         <!-- question type badge + prompt -->
         <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:.6rem">
-          <span class="tag tag-eighth" id="mTypeBadge" style="font-size:.65rem">Add</span>
-          <div class="quiz-prompt" style="margin-bottom:0" id="mPrompt">What is the total length of both highlighted sections?</div>
+          <span class="tag tag-quarter" id="mTypeBadge" style="font-size:.65rem">Read</span>
+          <div class="quiz-prompt" style="margin-bottom:0" id="mPrompt">Loading…</div>
         </div>
 
         <!-- the multi-inch ruler -->
         <div class="tape-scroll" style="margin-bottom:.6rem">
-          <svg id="mathSvg" viewBox="0 0 920 250" width="920" style="max-width:100%" xmlns="http://www.w3.org/2000/svg"><defs><marker id="mArL" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M6,0 L0,3 L6,6" fill="none" stroke="currentColor" stroke-width="1.5"></path></marker><marker id="mArR" markerWidth="6" markerHeight="6" refX="0" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="currentColor" stroke-width="1.5"></path></marker></defs>
+          <svg id="mathSvg" viewBox="0 0 920 250" width="920" style="max-width:100%" xmlns="http://www.w3.org/2000/svg">
             <!-- tape body — 3 inches wide -->
             <rect x="20" y="90" width="880" height="82" rx="4" fill="#f0d878" stroke="#b09030" stroke-width="1.5"></rect>
             <rect x="21" y="91" width="878" height="14" rx="3" fill="#e8cc55" opacity=".4"></rect>
             <rect x="20" y="90" width="6" height="82" rx="2" fill="#b09030"></rect>
             <line x1="20" y1="90" x2="900" y2="90" stroke="#a08020" stroke-width=".75"></line>
-            <g id="mTicks"><line x1="20" x2="20" y1="90" y2="172" stroke="#1a160a" stroke-width="2.8" stroke-linecap="square"></line><line x1="38.33333333333333" x2="38.33333333333333" y1="90" y2="108.03999999999999" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><line x1="56.666666666666664" x2="56.666666666666664" y1="90" y2="121.16" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><line x1="75" x2="75" y1="90" y2="108.03999999999999" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><line x1="93.33333333333333" x2="93.33333333333333" y1="90" y2="137.56" stroke="#1a160a" stroke-width="2" stroke-linecap="square"></line><line x1="111.66666666666667" x2="111.66666666666667" y1="90" y2="108.03999999999999" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><line x1="130" x2="130" y1="90" y2="121.16" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><line x1="148.33333333333334" x2="148.33333333333334" y1="90" y2="108.03999999999999" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><line x1="166.66666666666666" x2="166.66666666666666" y1="90" y2="157.24" stroke="#1a160a" stroke-width="2.4" stroke-linecap="square"></line><line x1="185" x2="185" y1="90" y2="108.03999999999999" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><line x1="203.33333333333334" x2="203.33333333333334" y1="90" y2="121.16" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><line x1="221.66666666666666" x2="221.66666666666666" y1="90" y2="108.03999999999999" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><line x1="240" x2="240" y1="90" y2="137.56" stroke="#1a160a" stroke-width="2" stroke-linecap="square"></line><line x1="258.3333333333333" x2="258.3333333333333" y1="90" y2="108.03999999999999" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><line x1="276.6666666666667" x2="276.6666666666667" y1="90" y2="121.16" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><line x1="295" x2="295" y1="90" y2="108.03999999999999" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><line x1="313.3333333333333" x2="313.3333333333333" y1="90" y2="172" stroke="#1a160a" stroke-width="2.8" stroke-linecap="square"></line><line x1="331.6666666666667" x2="331.6666666666667" y1="90" y2="108.03999999999999" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><line x1="350" x2="350" y1="90" y2="121.16" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><line x1="368.3333333333333" x2="368.3333333333333" y1="90" y2="108.03999999999999" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><line x1="386.6666666666667" x2="386.6666666666667" y1="90" y2="137.56" stroke="#1a160a" stroke-width="2" stroke-linecap="square"></line><line x1="405" x2="405" y1="90" y2="108.03999999999999" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><line x1="423.3333333333333" x2="423.3333333333333" y1="90" y2="121.16" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><line x1="441.6666666666667" x2="441.6666666666667" y1="90" y2="108.03999999999999" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><line x1="460" x2="460" y1="90" y2="157.24" stroke="#1a160a" stroke-width="2.4" stroke-linecap="square"></line><line x1="478.33333333333337" x2="478.33333333333337" y1="90" y2="108.03999999999999" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><line x1="496.66666666666663" x2="496.66666666666663" y1="90" y2="121.16" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><line x1="515" x2="515" y1="90" y2="108.03999999999999" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><line x1="533.3333333333334" x2="533.3333333333334" y1="90" y2="137.56" stroke="#1a160a" stroke-width="2" stroke-linecap="square"></line><line x1="551.6666666666666" x2="551.6666666666666" y1="90" y2="108.03999999999999" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><line x1="570" x2="570" y1="90" y2="121.16" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><line x1="588.3333333333334" x2="588.3333333333334" y1="90" y2="108.03999999999999" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><line x1="606.6666666666666" x2="606.6666666666666" y1="90" y2="172" stroke="#1a160a" stroke-width="2.8" stroke-linecap="square"></line><line x1="625" x2="625" y1="90" y2="108.03999999999999" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><line x1="643.3333333333334" x2="643.3333333333334" y1="90" y2="121.16" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><line x1="661.6666666666666" x2="661.6666666666666" y1="90" y2="108.03999999999999" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><line x1="680" x2="680" y1="90" y2="137.56" stroke="#1a160a" stroke-width="2" stroke-linecap="square"></line><line x1="698.3333333333334" x2="698.3333333333334" y1="90" y2="108.03999999999999" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><line x1="716.6666666666666" x2="716.6666666666666" y1="90" y2="121.16" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><line x1="735" x2="735" y1="90" y2="108.03999999999999" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><line x1="753.3333333333334" x2="753.3333333333334" y1="90" y2="157.24" stroke="#1a160a" stroke-width="2.4" stroke-linecap="square"></line><line x1="771.6666666666666" x2="771.6666666666666" y1="90" y2="108.03999999999999" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><line x1="790" x2="790" y1="90" y2="121.16" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><line x1="808.3333333333334" x2="808.3333333333334" y1="90" y2="108.03999999999999" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><line x1="826.6666666666666" x2="826.6666666666666" y1="90" y2="137.56" stroke="#1a160a" stroke-width="2" stroke-linecap="square"></line><line x1="845" x2="845" y1="90" y2="108.03999999999999" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><line x1="863.3333333333334" x2="863.3333333333334" y1="90" y2="121.16" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><line x1="881.6666666666666" x2="881.6666666666666" y1="90" y2="108.03999999999999" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><line x1="900" x2="900" y1="90" y2="172" stroke="#1a160a" stroke-width="2.8" stroke-linecap="square"></line></g>
-            <g id="mLabels"><rect x="-3" y="173" width="46" height="32" rx="4" fill="rgba(210,185,60,.75)"></rect><text x="20" y="190" text-anchor="middle" font-size="20" font-weight="500" fill="#1a0e00" font-family="&#39;DM Mono&#39;,monospace">0"</text><rect x="76.33333333333333" y="173" width="34" height="32" rx="4" fill="rgba(210,185,60,.4)"></rect><text x="93.33333333333333" y="190" text-anchor="middle" font-size="20" font-weight="500" fill="#2a1800" font-family="&#39;DM Mono&#39;,monospace">¼</text><rect x="147.66666666666666" y="173" width="38" height="32" rx="4" fill="rgba(210,185,60,.55)"></rect><text x="166.66666666666666" y="190" text-anchor="middle" font-size="20" font-weight="500" fill="#2a1800" font-family="&#39;DM Mono&#39;,monospace">½</text><rect x="223" y="173" width="34" height="32" rx="4" fill="rgba(210,185,60,.4)"></rect><text x="240" y="190" text-anchor="middle" font-size="20" font-weight="500" fill="#2a1800" font-family="&#39;DM Mono&#39;,monospace">¾</text><rect x="290.3333333333333" y="173" width="46" height="32" rx="4" fill="rgba(210,185,60,.75)"></rect><text x="313.3333333333333" y="190" text-anchor="middle" font-size="20" font-weight="500" fill="#1a0e00" font-family="&#39;DM Mono&#39;,monospace">1"</text><rect x="369.6666666666667" y="173" width="34" height="32" rx="4" fill="rgba(210,185,60,.4)"></rect><text x="386.6666666666667" y="190" text-anchor="middle" font-size="20" font-weight="500" fill="#2a1800" font-family="&#39;DM Mono&#39;,monospace">¼</text><rect x="441" y="173" width="38" height="32" rx="4" fill="rgba(210,185,60,.55)"></rect><text x="460" y="190" text-anchor="middle" font-size="20" font-weight="500" fill="#2a1800" font-family="&#39;DM Mono&#39;,monospace">½</text><rect x="516.3333333333334" y="173" width="34" height="32" rx="4" fill="rgba(210,185,60,.4)"></rect><text x="533.3333333333334" y="190" text-anchor="middle" font-size="20" font-weight="500" fill="#2a1800" font-family="&#39;DM Mono&#39;,monospace">¾</text><rect x="583.6666666666666" y="173" width="46" height="32" rx="4" fill="rgba(210,185,60,.75)"></rect><text x="606.6666666666666" y="190" text-anchor="middle" font-size="20" font-weight="500" fill="#1a0e00" font-family="&#39;DM Mono&#39;,monospace">2"</text><rect x="663" y="173" width="34" height="32" rx="4" fill="rgba(210,185,60,.4)"></rect><text x="680" y="190" text-anchor="middle" font-size="20" font-weight="500" fill="#2a1800" font-family="&#39;DM Mono&#39;,monospace">¼</text><rect x="734.3333333333334" y="173" width="38" height="32" rx="4" fill="rgba(210,185,60,.55)"></rect><text x="753.3333333333334" y="190" text-anchor="middle" font-size="20" font-weight="500" fill="#2a1800" font-family="&#39;DM Mono&#39;,monospace">½</text><rect x="809.6666666666666" y="173" width="34" height="32" rx="4" fill="rgba(210,185,60,.4)"></rect><text x="826.6666666666666" y="190" text-anchor="middle" font-size="20" font-weight="500" fill="#2a1800" font-family="&#39;DM Mono&#39;,monospace">¾</text><rect x="877" y="173" width="46" height="32" rx="4" fill="rgba(210,185,60,.75)"></rect><text x="900" y="190" text-anchor="middle" font-size="20" font-weight="500" fill="#1a0e00" font-family="&#39;DM Mono&#39;,monospace">3"</text></g>
-            <g id="mOverlay"><rect x="20" y="90" width="330" height="82" fill="#c87941" opacity="0.18"></rect><line x1="24" x2="346" y1="60" y2="60" stroke="#c87941" stroke-width="1.6" marker-start="url(#mArL)" marker-end="url(#mArR)"></line><rect x="143" y="47" width="84" height="24" rx="12" fill="#c87941"></rect><text x="185" y="65" text-anchor="middle" font-size="16" font-weight="500" fill="#fff" font-family="&#39;DM Mono&#39;,monospace">1 ⅛"</text><line x1="20" x2="20" y1="73" y2="90" stroke="#c87941" stroke-width="1" stroke-dasharray="3,3" opacity="0.45"></line><line x1="350" x2="350" y1="73" y2="90" stroke="#c87941" stroke-width="1" stroke-dasharray="3,3" opacity="0.45"></line><rect x="350" y="90" width="183.33333333333337" height="82" fill="#5a9e5a" opacity="0.18"></rect><line x1="354" x2="529.3333333333334" y1="82" y2="82" stroke="#5a9e5a" stroke-width="1.6" marker-start="url(#mArL)" marker-end="url(#mArR)"></line><rect x="412.6666666666667" y="69" width="58" height="24" rx="12" fill="#5a9e5a"></rect><text x="441.6666666666667" y="87" text-anchor="middle" font-size="16" font-weight="500" fill="#fff" font-family="&#39;DM Mono&#39;,monospace">⅝"</text><line x1="350" x2="350" y1="95" y2="90" stroke="#5a9e5a" stroke-width="1" stroke-dasharray="3,3" opacity="0.45"></line><line x1="533.3333333333334" x2="533.3333333333334" y1="95" y2="90" stroke="#5a9e5a" stroke-width="1" stroke-dasharray="3,3" opacity="0.45"></line></g>
+            <g id="mTicks"></g>
+            <g id="mLabels"></g>
+            <g id="mOverlay"></g>
           </svg>
         </div>
 
         <!-- equation display for add/subtract -->
-        <div id="mEquation" style="display: block; text-align: center; font-family: var(--mono); font-size: 1.25rem; font-weight: 500; color: var(--text); background: var(--surface2); border: .5px solid var(--border); border-radius: var(--radius); padding: 0.85rem 1.1rem; margin-bottom: 0.85rem; letter-spacing: 0.04em;">1 ⅛" + ⅝" = ?</div>
+        <div id="mEquation" style="display:none;text-align:center;font-family:var(--mono);font-size:1.25rem;font-weight:500;color:var(--text);background:var(--surface2);border:.5px solid var(--border);border-radius:var(--radius);padding:.85rem 1.1rem;margin-bottom:.85rem;letter-spacing:.04em"></div>
 
         <div class="quiz-click-hint" id="mClickHint"></div>
-        <div class="quiz-opts" id="mOpts"><button class="qopt">2"</button><button class="qopt">⅝"</button><button class="qopt">1 ¾"</button><button class="qopt">3/16"</button></div>
+        <div class="quiz-opts" id="mOpts"></div>
         <div class="quiz-feedback" id="mFeedback"></div>
         <div style="text-align:center">
-          <button class="quiz-next-btn" id="mNext" onclick="nextMath()" style="display: none;">Next question →</button>
+          <button class="quiz-next-btn" id="mNext" onclick="nextMath()">Next question →</button>
         </div>
 
       </div>
@@ -1184,7 +1186,7 @@ body {
   </div>
 
   <!-- ══════════════ LEARN 3 — METRIC ══════════════ -->
-  <div id="learn3Section" style="display: none;">
+  <div id="learn3Section" style="display:none">
 
     <div style="display:flex;gap:5px;margin-bottom:.75rem;flex-wrap:wrap" id="l3TabRow">
       <button class="l2tab active" onclick="showL3(0)">Interactive ruler</button>
@@ -1197,12 +1199,12 @@ body {
       <div class="panel">
         <div class="panel-header">
           <div class="panel-title-group">
-            <div class="panel-title" id="mrstitle">100 mm ruler — all divisions</div>
-            <div class="panel-sub" id="mrssub">0 mm to 100 mm · every 10 mm = 1 cm</div>
+            <div class="panel-title" id="mrstitle">10 cm ruler — all divisions</div>
+            <div class="panel-sub" id="mrssub">Click any tick to see its measurement</div>
           </div>
           <div class="slide-nav-strip">
             <button class="snav-btn" id="mrpb" onclick="mrMove(-1)" disabled="">←</button>
-            <span class="snav-count" id="mrctr">1 / 11</span>
+            <span class="snav-count" id="mrctr">Overview</span>
             <button class="snav-btn" id="mrnb" onclick="mrMove(1)">→</button>
             <button class="snav-random" onclick="mrRandom()">⟳ Rnd</button>
           </div>
@@ -1228,8 +1230,8 @@ body {
               <rect x="21" y="86" width="878" height="13" rx="3" fill="#e8cc55" opacity=".4"></rect>
               <rect x="20" y="85" width="6" height="76" rx="2" fill="#b09030"></rect>
               <line x1="20" y1="85" x2="900" y2="85" stroke="#a08020" stroke-width=".75"></line>
-              <g id="mTicksG"><line x1="20" x2="20" y1="85" y2="161" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line><rect x="9" y="85" width="22" height="76" fill="transparent" data-mrpos="0" style="cursor: pointer;"></rect><line x1="28.8" x2="28.8" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="17.8" y="85" width="22" height="76" fill="transparent" data-mrpos="1" style="cursor: pointer;"></rect><line x1="37.6" x2="37.6" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="26.6" y="85" width="22" height="76" fill="transparent" data-mrpos="2" style="cursor: pointer;"></rect><line x1="46.4" x2="46.4" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="35.4" y="85" width="22" height="76" fill="transparent" data-mrpos="3" style="cursor: pointer;"></rect><line x1="55.2" x2="55.2" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="44.2" y="85" width="22" height="76" fill="transparent" data-mrpos="4" style="cursor: pointer;"></rect><line x1="64" x2="64" y1="85" y2="128" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line><rect x="53" y="85" width="22" height="76" fill="transparent" data-mrpos="5" style="cursor: pointer;"></rect><line x1="72.8" x2="72.8" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="61.8" y="85" width="22" height="76" fill="transparent" data-mrpos="6" style="cursor: pointer;"></rect><line x1="81.60000000000001" x2="81.60000000000001" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="70.60000000000001" y="85" width="22" height="76" fill="transparent" data-mrpos="7" style="cursor: pointer;"></rect><line x1="90.4" x2="90.4" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="79.4" y="85" width="22" height="76" fill="transparent" data-mrpos="8" style="cursor: pointer;"></rect><line x1="99.2" x2="99.2" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="88.2" y="85" width="22" height="76" fill="transparent" data-mrpos="9" style="cursor: pointer;"></rect><line x1="108" x2="108" y1="85" y2="161" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line><rect x="97" y="85" width="22" height="76" fill="transparent" data-mrpos="10" style="cursor: pointer;"></rect><line x1="116.8" x2="116.8" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="105.8" y="85" width="22" height="76" fill="transparent" data-mrpos="11" style="cursor: pointer;"></rect><line x1="125.6" x2="125.6" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="114.6" y="85" width="22" height="76" fill="transparent" data-mrpos="12" style="cursor: pointer;"></rect><line x1="134.4" x2="134.4" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="123.4" y="85" width="22" height="76" fill="transparent" data-mrpos="13" style="cursor: pointer;"></rect><line x1="143.20000000000002" x2="143.20000000000002" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="132.20000000000002" y="85" width="22" height="76" fill="transparent" data-mrpos="14" style="cursor: pointer;"></rect><line x1="152" x2="152" y1="85" y2="128" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line><rect x="141" y="85" width="22" height="76" fill="transparent" data-mrpos="15" style="cursor: pointer;"></rect><line x1="160.8" x2="160.8" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="149.8" y="85" width="22" height="76" fill="transparent" data-mrpos="16" style="cursor: pointer;"></rect><line x1="169.60000000000002" x2="169.60000000000002" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="158.60000000000002" y="85" width="22" height="76" fill="transparent" data-mrpos="17" style="cursor: pointer;"></rect><line x1="178.4" x2="178.4" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="167.4" y="85" width="22" height="76" fill="transparent" data-mrpos="18" style="cursor: pointer;"></rect><line x1="187.2" x2="187.2" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="176.2" y="85" width="22" height="76" fill="transparent" data-mrpos="19" style="cursor: pointer;"></rect><line x1="196" x2="196" y1="85" y2="161" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line><rect x="185" y="85" width="22" height="76" fill="transparent" data-mrpos="20" style="cursor: pointer;"></rect><line x1="204.79999999999998" x2="204.79999999999998" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="193.79999999999998" y="85" width="22" height="76" fill="transparent" data-mrpos="21" style="cursor: pointer;"></rect><line x1="213.6" x2="213.6" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="202.6" y="85" width="22" height="76" fill="transparent" data-mrpos="22" style="cursor: pointer;"></rect><line x1="222.4" x2="222.4" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="211.4" y="85" width="22" height="76" fill="transparent" data-mrpos="23" style="cursor: pointer;"></rect><line x1="231.2" x2="231.2" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="220.2" y="85" width="22" height="76" fill="transparent" data-mrpos="24" style="cursor: pointer;"></rect><line x1="240" x2="240" y1="85" y2="128" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line><rect x="229" y="85" width="22" height="76" fill="transparent" data-mrpos="25" style="cursor: pointer;"></rect><line x1="248.8" x2="248.8" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="237.8" y="85" width="22" height="76" fill="transparent" data-mrpos="26" style="cursor: pointer;"></rect><line x1="257.6" x2="257.6" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="246.60000000000002" y="85" width="22" height="76" fill="transparent" data-mrpos="27" style="cursor: pointer;"></rect><line x1="266.40000000000003" x2="266.40000000000003" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="255.40000000000003" y="85" width="22" height="76" fill="transparent" data-mrpos="28" style="cursor: pointer;"></rect><line x1="275.2" x2="275.2" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="264.2" y="85" width="22" height="76" fill="transparent" data-mrpos="29" style="cursor: pointer;"></rect><line x1="284" x2="284" y1="85" y2="161" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line><rect x="273" y="85" width="22" height="76" fill="transparent" data-mrpos="30" style="cursor: pointer;"></rect><line x1="292.8" x2="292.8" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="281.8" y="85" width="22" height="76" fill="transparent" data-mrpos="31" style="cursor: pointer;"></rect><line x1="301.6" x2="301.6" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="290.6" y="85" width="22" height="76" fill="transparent" data-mrpos="32" style="cursor: pointer;"></rect><line x1="310.40000000000003" x2="310.40000000000003" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="299.40000000000003" y="85" width="22" height="76" fill="transparent" data-mrpos="33" style="cursor: pointer;"></rect><line x1="319.20000000000005" x2="319.20000000000005" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="308.20000000000005" y="85" width="22" height="76" fill="transparent" data-mrpos="34" style="cursor: pointer;"></rect><line x1="328" x2="328" y1="85" y2="128" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line><rect x="317" y="85" width="22" height="76" fill="transparent" data-mrpos="35" style="cursor: pointer;"></rect><line x1="336.8" x2="336.8" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="325.8" y="85" width="22" height="76" fill="transparent" data-mrpos="36" style="cursor: pointer;"></rect><line x1="345.6" x2="345.6" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="334.6" y="85" width="22" height="76" fill="transparent" data-mrpos="37" style="cursor: pointer;"></rect><line x1="354.4" x2="354.4" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="343.4" y="85" width="22" height="76" fill="transparent" data-mrpos="38" style="cursor: pointer;"></rect><line x1="363.2" x2="363.2" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="352.2" y="85" width="22" height="76" fill="transparent" data-mrpos="39" style="cursor: pointer;"></rect><line x1="372" x2="372" y1="85" y2="161" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line><rect x="361" y="85" width="22" height="76" fill="transparent" data-mrpos="40" style="cursor: pointer;"></rect><line x1="380.79999999999995" x2="380.79999999999995" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="369.79999999999995" y="85" width="22" height="76" fill="transparent" data-mrpos="41" style="cursor: pointer;"></rect><line x1="389.59999999999997" x2="389.59999999999997" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="378.59999999999997" y="85" width="22" height="76" fill="transparent" data-mrpos="42" style="cursor: pointer;"></rect><line x1="398.4" x2="398.4" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="387.4" y="85" width="22" height="76" fill="transparent" data-mrpos="43" style="cursor: pointer;"></rect><line x1="407.2" x2="407.2" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="396.2" y="85" width="22" height="76" fill="transparent" data-mrpos="44" style="cursor: pointer;"></rect><line x1="416" x2="416" y1="85" y2="128" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line><rect x="405" y="85" width="22" height="76" fill="transparent" data-mrpos="45" style="cursor: pointer;"></rect><line x1="424.8" x2="424.8" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="413.8" y="85" width="22" height="76" fill="transparent" data-mrpos="46" style="cursor: pointer;"></rect><line x1="433.59999999999997" x2="433.59999999999997" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="422.59999999999997" y="85" width="22" height="76" fill="transparent" data-mrpos="47" style="cursor: pointer;"></rect><line x1="442.4" x2="442.4" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="431.4" y="85" width="22" height="76" fill="transparent" data-mrpos="48" style="cursor: pointer;"></rect><line x1="451.2" x2="451.2" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="440.2" y="85" width="22" height="76" fill="transparent" data-mrpos="49" style="cursor: pointer;"></rect><line x1="460" x2="460" y1="85" y2="161" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line><rect x="449" y="85" width="22" height="76" fill="transparent" data-mrpos="50" style="cursor: pointer;"></rect><line x1="468.8" x2="468.8" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="457.8" y="85" width="22" height="76" fill="transparent" data-mrpos="51" style="cursor: pointer;"></rect><line x1="477.6" x2="477.6" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="466.6" y="85" width="22" height="76" fill="transparent" data-mrpos="52" style="cursor: pointer;"></rect><line x1="486.40000000000003" x2="486.40000000000003" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="475.40000000000003" y="85" width="22" height="76" fill="transparent" data-mrpos="53" style="cursor: pointer;"></rect><line x1="495.20000000000005" x2="495.20000000000005" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="484.20000000000005" y="85" width="22" height="76" fill="transparent" data-mrpos="54" style="cursor: pointer;"></rect><line x1="504.00000000000006" x2="504.00000000000006" y1="85" y2="128" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line><rect x="493.00000000000006" y="85" width="22" height="76" fill="transparent" data-mrpos="55" style="cursor: pointer;"></rect><line x1="512.8000000000001" x2="512.8000000000001" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="501.80000000000007" y="85" width="22" height="76" fill="transparent" data-mrpos="56" style="cursor: pointer;"></rect><line x1="521.5999999999999" x2="521.5999999999999" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="510.5999999999999" y="85" width="22" height="76" fill="transparent" data-mrpos="57" style="cursor: pointer;"></rect><line x1="530.4" x2="530.4" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="519.4" y="85" width="22" height="76" fill="transparent" data-mrpos="58" style="cursor: pointer;"></rect><line x1="539.1999999999999" x2="539.1999999999999" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="528.1999999999999" y="85" width="22" height="76" fill="transparent" data-mrpos="59" style="cursor: pointer;"></rect><line x1="548" x2="548" y1="85" y2="161" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line><rect x="537" y="85" width="22" height="76" fill="transparent" data-mrpos="60" style="cursor: pointer;"></rect><line x1="556.8" x2="556.8" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="545.8" y="85" width="22" height="76" fill="transparent" data-mrpos="61" style="cursor: pointer;"></rect><line x1="565.6" x2="565.6" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="554.6" y="85" width="22" height="76" fill="transparent" data-mrpos="62" style="cursor: pointer;"></rect><line x1="574.4" x2="574.4" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="563.4" y="85" width="22" height="76" fill="transparent" data-mrpos="63" style="cursor: pointer;"></rect><line x1="583.2" x2="583.2" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="572.2" y="85" width="22" height="76" fill="transparent" data-mrpos="64" style="cursor: pointer;"></rect><line x1="592" x2="592" y1="85" y2="128" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line><rect x="581" y="85" width="22" height="76" fill="transparent" data-mrpos="65" style="cursor: pointer;"></rect><line x1="600.8000000000001" x2="600.8000000000001" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="589.8000000000001" y="85" width="22" height="76" fill="transparent" data-mrpos="66" style="cursor: pointer;"></rect><line x1="609.6" x2="609.6" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="598.6" y="85" width="22" height="76" fill="transparent" data-mrpos="67" style="cursor: pointer;"></rect><line x1="618.4000000000001" x2="618.4000000000001" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="607.4000000000001" y="85" width="22" height="76" fill="transparent" data-mrpos="68" style="cursor: pointer;"></rect><line x1="627.1999999999999" x2="627.1999999999999" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="616.1999999999999" y="85" width="22" height="76" fill="transparent" data-mrpos="69" style="cursor: pointer;"></rect><line x1="636" x2="636" y1="85" y2="161" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line><rect x="625" y="85" width="22" height="76" fill="transparent" data-mrpos="70" style="cursor: pointer;"></rect><line x1="644.8" x2="644.8" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="633.8" y="85" width="22" height="76" fill="transparent" data-mrpos="71" style="cursor: pointer;"></rect><line x1="653.6" x2="653.6" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="642.6" y="85" width="22" height="76" fill="transparent" data-mrpos="72" style="cursor: pointer;"></rect><line x1="662.4" x2="662.4" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="651.4" y="85" width="22" height="76" fill="transparent" data-mrpos="73" style="cursor: pointer;"></rect><line x1="671.2" x2="671.2" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="660.2" y="85" width="22" height="76" fill="transparent" data-mrpos="74" style="cursor: pointer;"></rect><line x1="680" x2="680" y1="85" y2="128" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line><rect x="669" y="85" width="22" height="76" fill="transparent" data-mrpos="75" style="cursor: pointer;"></rect><line x1="688.8" x2="688.8" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="677.8" y="85" width="22" height="76" fill="transparent" data-mrpos="76" style="cursor: pointer;"></rect><line x1="697.6" x2="697.6" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="686.6" y="85" width="22" height="76" fill="transparent" data-mrpos="77" style="cursor: pointer;"></rect><line x1="706.4" x2="706.4" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="695.4" y="85" width="22" height="76" fill="transparent" data-mrpos="78" style="cursor: pointer;"></rect><line x1="715.2" x2="715.2" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="704.2" y="85" width="22" height="76" fill="transparent" data-mrpos="79" style="cursor: pointer;"></rect><line x1="724" x2="724" y1="85" y2="161" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line><rect x="713" y="85" width="22" height="76" fill="transparent" data-mrpos="80" style="cursor: pointer;"></rect><line x1="732.8000000000001" x2="732.8000000000001" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="721.8000000000001" y="85" width="22" height="76" fill="transparent" data-mrpos="81" style="cursor: pointer;"></rect><line x1="741.5999999999999" x2="741.5999999999999" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="730.5999999999999" y="85" width="22" height="76" fill="transparent" data-mrpos="82" style="cursor: pointer;"></rect><line x1="750.4" x2="750.4" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="739.4" y="85" width="22" height="76" fill="transparent" data-mrpos="83" style="cursor: pointer;"></rect><line x1="759.1999999999999" x2="759.1999999999999" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="748.1999999999999" y="85" width="22" height="76" fill="transparent" data-mrpos="84" style="cursor: pointer;"></rect><line x1="768" x2="768" y1="85" y2="128" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line><rect x="757" y="85" width="22" height="76" fill="transparent" data-mrpos="85" style="cursor: pointer;"></rect><line x1="776.8" x2="776.8" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="765.8" y="85" width="22" height="76" fill="transparent" data-mrpos="86" style="cursor: pointer;"></rect><line x1="785.6" x2="785.6" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="774.6" y="85" width="22" height="76" fill="transparent" data-mrpos="87" style="cursor: pointer;"></rect><line x1="794.4" x2="794.4" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="783.4" y="85" width="22" height="76" fill="transparent" data-mrpos="88" style="cursor: pointer;"></rect><line x1="803.2" x2="803.2" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="792.2" y="85" width="22" height="76" fill="transparent" data-mrpos="89" style="cursor: pointer;"></rect><line x1="812" x2="812" y1="85" y2="161" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line><rect x="801" y="85" width="22" height="76" fill="transparent" data-mrpos="90" style="cursor: pointer;"></rect><line x1="820.8000000000001" x2="820.8000000000001" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="809.8000000000001" y="85" width="22" height="76" fill="transparent" data-mrpos="91" style="cursor: pointer;"></rect><line x1="829.6" x2="829.6" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="818.6" y="85" width="22" height="76" fill="transparent" data-mrpos="92" style="cursor: pointer;"></rect><line x1="838.4000000000001" x2="838.4000000000001" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="827.4000000000001" y="85" width="22" height="76" fill="transparent" data-mrpos="93" style="cursor: pointer;"></rect><line x1="847.1999999999999" x2="847.1999999999999" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="836.1999999999999" y="85" width="22" height="76" fill="transparent" data-mrpos="94" style="cursor: pointer;"></rect><line x1="856" x2="856" y1="85" y2="128" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line><rect x="845" y="85" width="22" height="76" fill="transparent" data-mrpos="95" style="cursor: pointer;"></rect><line x1="864.8" x2="864.8" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="853.8" y="85" width="22" height="76" fill="transparent" data-mrpos="96" style="cursor: pointer;"></rect><line x1="873.6" x2="873.6" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="862.6" y="85" width="22" height="76" fill="transparent" data-mrpos="97" style="cursor: pointer;"></rect><line x1="882.4" x2="882.4" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="871.4" y="85" width="22" height="76" fill="transparent" data-mrpos="98" style="cursor: pointer;"></rect><line x1="891.2" x2="891.2" y1="85" y2="108" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="880.2" y="85" width="22" height="76" fill="transparent" data-mrpos="99" style="cursor: pointer;"></rect><line x1="900" x2="900" y1="85" y2="161" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line><rect x="889" y="85" width="22" height="76" fill="transparent" data-mrpos="100" style="cursor: pointer;"></rect></g>
-              <g id="mLabelsG"><text transform="rotate(90,20,236)" x="20" y="236" text-anchor="middle" font-size="15" font-weight="500" fill="#7a3800" font-family="&#39;DM Mono&#39;,monospace">0mm</text><line x1="20" x2="20" y1="163" y2="171" stroke="#a09030" stroke-width=".8" opacity=".6"></line><text transform="rotate(90,64,236)" x="64" y="236" text-anchor="middle" font-size="14" fill="#5a4a00" font-family="&#39;DM Mono&#39;,monospace">5mm</text><line x1="64" x2="64" y1="163" y2="171" stroke="#a09030" stroke-width=".8" opacity=".5" stroke-dasharray="2,2"></line><text transform="rotate(90,108,236)" x="108" y="236" text-anchor="middle" font-size="15" font-weight="500" fill="#7a3800" font-family="&#39;DM Mono&#39;,monospace">10mm</text><line x1="108" x2="108" y1="163" y2="171" stroke="#a09030" stroke-width=".8" opacity=".6"></line><text transform="rotate(90,152,236)" x="152" y="236" text-anchor="middle" font-size="14" fill="#5a4a00" font-family="&#39;DM Mono&#39;,monospace">15mm</text><line x1="152" x2="152" y1="163" y2="171" stroke="#a09030" stroke-width=".8" opacity=".5" stroke-dasharray="2,2"></line><text transform="rotate(90,196,236)" x="196" y="236" text-anchor="middle" font-size="15" font-weight="500" fill="#7a3800" font-family="&#39;DM Mono&#39;,monospace">20mm</text><line x1="196" x2="196" y1="163" y2="171" stroke="#a09030" stroke-width=".8" opacity=".6"></line><text transform="rotate(90,240,236)" x="240" y="236" text-anchor="middle" font-size="14" fill="#5a4a00" font-family="&#39;DM Mono&#39;,monospace">25mm</text><line x1="240" x2="240" y1="163" y2="171" stroke="#a09030" stroke-width=".8" opacity=".5" stroke-dasharray="2,2"></line><text transform="rotate(90,284,236)" x="284" y="236" text-anchor="middle" font-size="15" font-weight="500" fill="#7a3800" font-family="&#39;DM Mono&#39;,monospace">30mm</text><line x1="284" x2="284" y1="163" y2="171" stroke="#a09030" stroke-width=".8" opacity=".6"></line><text transform="rotate(90,328,236)" x="328" y="236" text-anchor="middle" font-size="14" fill="#5a4a00" font-family="&#39;DM Mono&#39;,monospace">35mm</text><line x1="328" x2="328" y1="163" y2="171" stroke="#a09030" stroke-width=".8" opacity=".5" stroke-dasharray="2,2"></line><text transform="rotate(90,372,236)" x="372" y="236" text-anchor="middle" font-size="15" font-weight="500" fill="#7a3800" font-family="&#39;DM Mono&#39;,monospace">40mm</text><line x1="372" x2="372" y1="163" y2="171" stroke="#a09030" stroke-width=".8" opacity=".6"></line><text transform="rotate(90,416,236)" x="416" y="236" text-anchor="middle" font-size="14" fill="#5a4a00" font-family="&#39;DM Mono&#39;,monospace">45mm</text><line x1="416" x2="416" y1="163" y2="171" stroke="#a09030" stroke-width=".8" opacity=".5" stroke-dasharray="2,2"></line><text transform="rotate(90,460,236)" x="460" y="236" text-anchor="middle" font-size="15" font-weight="500" fill="#7a3800" font-family="&#39;DM Mono&#39;,monospace">50mm</text><line x1="460" x2="460" y1="163" y2="171" stroke="#a09030" stroke-width=".8" opacity=".6"></line><text transform="rotate(90,504.00000000000006,236)" x="504.00000000000006" y="236" text-anchor="middle" font-size="14" fill="#5a4a00" font-family="&#39;DM Mono&#39;,monospace">55mm</text><line x1="504.00000000000006" x2="504.00000000000006" y1="163" y2="171" stroke="#a09030" stroke-width=".8" opacity=".5" stroke-dasharray="2,2"></line><text transform="rotate(90,548,236)" x="548" y="236" text-anchor="middle" font-size="15" font-weight="500" fill="#7a3800" font-family="&#39;DM Mono&#39;,monospace">60mm</text><line x1="548" x2="548" y1="163" y2="171" stroke="#a09030" stroke-width=".8" opacity=".6"></line><text transform="rotate(90,592,236)" x="592" y="236" text-anchor="middle" font-size="14" fill="#5a4a00" font-family="&#39;DM Mono&#39;,monospace">65mm</text><line x1="592" x2="592" y1="163" y2="171" stroke="#a09030" stroke-width=".8" opacity=".5" stroke-dasharray="2,2"></line><text transform="rotate(90,636,236)" x="636" y="236" text-anchor="middle" font-size="15" font-weight="500" fill="#7a3800" font-family="&#39;DM Mono&#39;,monospace">70mm</text><line x1="636" x2="636" y1="163" y2="171" stroke="#a09030" stroke-width=".8" opacity=".6"></line><text transform="rotate(90,680,236)" x="680" y="236" text-anchor="middle" font-size="14" fill="#5a4a00" font-family="&#39;DM Mono&#39;,monospace">75mm</text><line x1="680" x2="680" y1="163" y2="171" stroke="#a09030" stroke-width=".8" opacity=".5" stroke-dasharray="2,2"></line><text transform="rotate(90,724,236)" x="724" y="236" text-anchor="middle" font-size="15" font-weight="500" fill="#7a3800" font-family="&#39;DM Mono&#39;,monospace">80mm</text><line x1="724" x2="724" y1="163" y2="171" stroke="#a09030" stroke-width=".8" opacity=".6"></line><text transform="rotate(90,768,236)" x="768" y="236" text-anchor="middle" font-size="14" fill="#5a4a00" font-family="&#39;DM Mono&#39;,monospace">85mm</text><line x1="768" x2="768" y1="163" y2="171" stroke="#a09030" stroke-width=".8" opacity=".5" stroke-dasharray="2,2"></line><text transform="rotate(90,812,236)" x="812" y="236" text-anchor="middle" font-size="15" font-weight="500" fill="#7a3800" font-family="&#39;DM Mono&#39;,monospace">90mm</text><line x1="812" x2="812" y1="163" y2="171" stroke="#a09030" stroke-width=".8" opacity=".6"></line><text transform="rotate(90,856,236)" x="856" y="236" text-anchor="middle" font-size="14" fill="#5a4a00" font-family="&#39;DM Mono&#39;,monospace">95mm</text><line x1="856" x2="856" y1="163" y2="171" stroke="#a09030" stroke-width=".8" opacity=".5" stroke-dasharray="2,2"></line><text transform="rotate(90,900,236)" x="900" y="236" text-anchor="middle" font-size="15" font-weight="500" fill="#7a3800" font-family="&#39;DM Mono&#39;,monospace">100mm</text><line x1="900" x2="900" y1="163" y2="171" stroke="#a09030" stroke-width=".8" opacity=".6"></line></g>
+              <g id="mTicksG"></g>
+              <g id="mLabelsG"></g>
             </svg>
           </div>
 
@@ -1532,7 +1534,7 @@ body {
 
 
   <!-- ══════════════ QUIZ 3 — METRIC ══════════════ -->
-  <div id="quiz3Section" style="display: none;">
+  <div id="quiz3Section" style="display:none">
     <div class="panel">
       <div class="panel-header">
         <div class="panel-title-group">
@@ -1549,8 +1551,8 @@ body {
         </div>
         <div class="progress-wrap"><div class="progress-bar" id="q3Progress" style="width:0%"></div></div>
         <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:.6rem">
-          <span class="tag tag-sixteenth" id="q3TypeBadge">Subtract</span>
-          <div class="quiz-prompt" style="margin-bottom:0" id="q3Prompt">The full span is shown. If you remove the red section, what remains?</div>
+          <span class="tag tag-quarter" id="q3TypeBadge">Read</span>
+          <div class="quiz-prompt" style="margin-bottom:0" id="q3Prompt">Loading…</div>
         </div>
         <div class="tape-scroll" style="margin-bottom:.6rem">
           <svg id="q3Svg" viewBox="0 0 920 240" width="920" style="max-width:100%" xmlns="http://www.w3.org/2000/svg">
@@ -1558,21 +1560,516 @@ body {
             <rect x="21" y="91" width="878" height="13" rx="3" fill="#e8cc55" opacity=".4"></rect>
             <rect x="20" y="90" width="6" height="76" rx="2" fill="#b09030"></rect>
             <line x1="20" y1="90" x2="900" y2="90" stroke="#a08020" stroke-width=".75"></line>
-            <g id="q3Ticks"><line x1="20" x2="20" y1="90" y2="166" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line><rect x="6.5" y="169" width="27" height="30" rx="4" fill="rgba(210,185,60,.6)"></rect><text x="20" y="182" text-anchor="middle" font-size="17" font-weight="500" fill="#2a2000" font-family="&#39;DM Mono&#39;,monospace">0</text><rect x="10" y="90" width="20" height="76" fill="transparent" data-q3mm="0" style="cursor: pointer;"></rect><line x1="28.8" x2="28.8" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="18.8" y="90" width="20" height="76" fill="transparent" data-q3mm="1" style="cursor: pointer;"></rect><line x1="37.6" x2="37.6" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="27.6" y="90" width="20" height="76" fill="transparent" data-q3mm="2" style="cursor: pointer;"></rect><line x1="46.4" x2="46.4" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="36.4" y="90" width="20" height="76" fill="transparent" data-q3mm="3" style="cursor: pointer;"></rect><line x1="55.2" x2="55.2" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="45.2" y="90" width="20" height="76" fill="transparent" data-q3mm="4" style="cursor: pointer;"></rect><line x1="64" x2="64" y1="90" y2="133" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line><rect x="54" y="90" width="20" height="76" fill="transparent" data-q3mm="5" style="cursor: pointer;"></rect><line x1="72.8" x2="72.8" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="62.8" y="90" width="20" height="76" fill="transparent" data-q3mm="6" style="cursor: pointer;"></rect><line x1="81.60000000000001" x2="81.60000000000001" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="71.60000000000001" y="90" width="20" height="76" fill="transparent" data-q3mm="7" style="cursor: pointer;"></rect><line x1="90.4" x2="90.4" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="80.4" y="90" width="20" height="76" fill="transparent" data-q3mm="8" style="cursor: pointer;"></rect><line x1="99.2" x2="99.2" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="89.2" y="90" width="20" height="76" fill="transparent" data-q3mm="9" style="cursor: pointer;"></rect><line x1="108" x2="108" y1="90" y2="166" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line><rect x="83.5" y="169" width="49" height="30" rx="4" fill="rgba(210,185,60,.6)"></rect><text x="108" y="182" text-anchor="middle" font-size="17" font-weight="500" fill="#2a2000" font-family="&#39;DM Mono&#39;,monospace">1cm</text><rect x="98" y="90" width="20" height="76" fill="transparent" data-q3mm="10" style="cursor: pointer;"></rect><line x1="116.8" x2="116.8" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="106.8" y="90" width="20" height="76" fill="transparent" data-q3mm="11" style="cursor: pointer;"></rect><line x1="125.6" x2="125.6" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="115.6" y="90" width="20" height="76" fill="transparent" data-q3mm="12" style="cursor: pointer;"></rect><line x1="134.4" x2="134.4" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="124.4" y="90" width="20" height="76" fill="transparent" data-q3mm="13" style="cursor: pointer;"></rect><line x1="143.20000000000002" x2="143.20000000000002" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="133.20000000000002" y="90" width="20" height="76" fill="transparent" data-q3mm="14" style="cursor: pointer;"></rect><line x1="152" x2="152" y1="90" y2="133" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line><rect x="142" y="90" width="20" height="76" fill="transparent" data-q3mm="15" style="cursor: pointer;"></rect><line x1="160.8" x2="160.8" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="150.8" y="90" width="20" height="76" fill="transparent" data-q3mm="16" style="cursor: pointer;"></rect><line x1="169.60000000000002" x2="169.60000000000002" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="159.60000000000002" y="90" width="20" height="76" fill="transparent" data-q3mm="17" style="cursor: pointer;"></rect><line x1="178.4" x2="178.4" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="168.4" y="90" width="20" height="76" fill="transparent" data-q3mm="18" style="cursor: pointer;"></rect><line x1="187.2" x2="187.2" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="177.2" y="90" width="20" height="76" fill="transparent" data-q3mm="19" style="cursor: pointer;"></rect><line x1="196" x2="196" y1="90" y2="166" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line><rect x="171.5" y="169" width="49" height="30" rx="4" fill="rgba(210,185,60,.6)"></rect><text x="196" y="182" text-anchor="middle" font-size="17" font-weight="500" fill="#2a2000" font-family="&#39;DM Mono&#39;,monospace">2cm</text><rect x="186" y="90" width="20" height="76" fill="transparent" data-q3mm="20" style="cursor: pointer;"></rect><line x1="204.79999999999998" x2="204.79999999999998" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="194.79999999999998" y="90" width="20" height="76" fill="transparent" data-q3mm="21" style="cursor: pointer;"></rect><line x1="213.6" x2="213.6" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="203.6" y="90" width="20" height="76" fill="transparent" data-q3mm="22" style="cursor: pointer;"></rect><line x1="222.4" x2="222.4" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="212.4" y="90" width="20" height="76" fill="transparent" data-q3mm="23" style="cursor: pointer;"></rect><line x1="231.2" x2="231.2" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="221.2" y="90" width="20" height="76" fill="transparent" data-q3mm="24" style="cursor: pointer;"></rect><line x1="240" x2="240" y1="90" y2="133" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line><rect x="230" y="90" width="20" height="76" fill="transparent" data-q3mm="25" style="cursor: pointer;"></rect><line x1="248.8" x2="248.8" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="238.8" y="90" width="20" height="76" fill="transparent" data-q3mm="26" style="cursor: pointer;"></rect><line x1="257.6" x2="257.6" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="247.60000000000002" y="90" width="20" height="76" fill="transparent" data-q3mm="27" style="cursor: pointer;"></rect><line x1="266.40000000000003" x2="266.40000000000003" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="256.40000000000003" y="90" width="20" height="76" fill="transparent" data-q3mm="28" style="cursor: pointer;"></rect><line x1="275.2" x2="275.2" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="265.2" y="90" width="20" height="76" fill="transparent" data-q3mm="29" style="cursor: pointer;"></rect><line x1="284" x2="284" y1="90" y2="166" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line><rect x="259.5" y="169" width="49" height="30" rx="4" fill="rgba(210,185,60,.6)"></rect><text x="284" y="182" text-anchor="middle" font-size="17" font-weight="500" fill="#2a2000" font-family="&#39;DM Mono&#39;,monospace">3cm</text><rect x="274" y="90" width="20" height="76" fill="transparent" data-q3mm="30" style="cursor: pointer;"></rect><line x1="292.8" x2="292.8" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="282.8" y="90" width="20" height="76" fill="transparent" data-q3mm="31" style="cursor: pointer;"></rect><line x1="301.6" x2="301.6" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="291.6" y="90" width="20" height="76" fill="transparent" data-q3mm="32" style="cursor: pointer;"></rect><line x1="310.40000000000003" x2="310.40000000000003" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="300.40000000000003" y="90" width="20" height="76" fill="transparent" data-q3mm="33" style="cursor: pointer;"></rect><line x1="319.20000000000005" x2="319.20000000000005" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="309.20000000000005" y="90" width="20" height="76" fill="transparent" data-q3mm="34" style="cursor: pointer;"></rect><line x1="328" x2="328" y1="90" y2="133" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line><rect x="318" y="90" width="20" height="76" fill="transparent" data-q3mm="35" style="cursor: pointer;"></rect><line x1="336.8" x2="336.8" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="326.8" y="90" width="20" height="76" fill="transparent" data-q3mm="36" style="cursor: pointer;"></rect><line x1="345.6" x2="345.6" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="335.6" y="90" width="20" height="76" fill="transparent" data-q3mm="37" style="cursor: pointer;"></rect><line x1="354.4" x2="354.4" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="344.4" y="90" width="20" height="76" fill="transparent" data-q3mm="38" style="cursor: pointer;"></rect><line x1="363.2" x2="363.2" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="353.2" y="90" width="20" height="76" fill="transparent" data-q3mm="39" style="cursor: pointer;"></rect><line x1="372" x2="372" y1="90" y2="166" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line><rect x="347.5" y="169" width="49" height="30" rx="4" fill="rgba(210,185,60,.6)"></rect><text x="372" y="182" text-anchor="middle" font-size="17" font-weight="500" fill="#2a2000" font-family="&#39;DM Mono&#39;,monospace">4cm</text><rect x="362" y="90" width="20" height="76" fill="transparent" data-q3mm="40" style="cursor: pointer;"></rect><line x1="380.79999999999995" x2="380.79999999999995" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="370.79999999999995" y="90" width="20" height="76" fill="transparent" data-q3mm="41" style="cursor: pointer;"></rect><line x1="389.59999999999997" x2="389.59999999999997" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="379.59999999999997" y="90" width="20" height="76" fill="transparent" data-q3mm="42" style="cursor: pointer;"></rect><line x1="398.4" x2="398.4" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="388.4" y="90" width="20" height="76" fill="transparent" data-q3mm="43" style="cursor: pointer;"></rect><line x1="407.2" x2="407.2" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="397.2" y="90" width="20" height="76" fill="transparent" data-q3mm="44" style="cursor: pointer;"></rect><line x1="416" x2="416" y1="90" y2="133" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line><rect x="406" y="90" width="20" height="76" fill="transparent" data-q3mm="45" style="cursor: pointer;"></rect><line x1="424.8" x2="424.8" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="414.8" y="90" width="20" height="76" fill="transparent" data-q3mm="46" style="cursor: pointer;"></rect><line x1="433.59999999999997" x2="433.59999999999997" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="423.59999999999997" y="90" width="20" height="76" fill="transparent" data-q3mm="47" style="cursor: pointer;"></rect><line x1="442.4" x2="442.4" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="432.4" y="90" width="20" height="76" fill="transparent" data-q3mm="48" style="cursor: pointer;"></rect><line x1="451.2" x2="451.2" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="441.2" y="90" width="20" height="76" fill="transparent" data-q3mm="49" style="cursor: pointer;"></rect><line x1="460" x2="460" y1="90" y2="166" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line><rect x="435.5" y="169" width="49" height="30" rx="4" fill="rgba(210,185,60,.6)"></rect><text x="460" y="182" text-anchor="middle" font-size="17" font-weight="500" fill="#2a2000" font-family="&#39;DM Mono&#39;,monospace">5cm</text><rect x="450" y="90" width="20" height="76" fill="transparent" data-q3mm="50" style="cursor: pointer;"></rect><line x1="468.8" x2="468.8" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="458.8" y="90" width="20" height="76" fill="transparent" data-q3mm="51" style="cursor: pointer;"></rect><line x1="477.6" x2="477.6" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="467.6" y="90" width="20" height="76" fill="transparent" data-q3mm="52" style="cursor: pointer;"></rect><line x1="486.40000000000003" x2="486.40000000000003" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="476.40000000000003" y="90" width="20" height="76" fill="transparent" data-q3mm="53" style="cursor: pointer;"></rect><line x1="495.20000000000005" x2="495.20000000000005" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="485.20000000000005" y="90" width="20" height="76" fill="transparent" data-q3mm="54" style="cursor: pointer;"></rect><line x1="504.00000000000006" x2="504.00000000000006" y1="90" y2="133" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line><rect x="494.00000000000006" y="90" width="20" height="76" fill="transparent" data-q3mm="55" style="cursor: pointer;"></rect><line x1="512.8000000000001" x2="512.8000000000001" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="502.80000000000007" y="90" width="20" height="76" fill="transparent" data-q3mm="56" style="cursor: pointer;"></rect><line x1="521.5999999999999" x2="521.5999999999999" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="511.5999999999999" y="90" width="20" height="76" fill="transparent" data-q3mm="57" style="cursor: pointer;"></rect><line x1="530.4" x2="530.4" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="520.4" y="90" width="20" height="76" fill="transparent" data-q3mm="58" style="cursor: pointer;"></rect><line x1="539.1999999999999" x2="539.1999999999999" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="529.1999999999999" y="90" width="20" height="76" fill="transparent" data-q3mm="59" style="cursor: pointer;"></rect><line x1="548" x2="548" y1="90" y2="166" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line><rect x="523.5" y="169" width="49" height="30" rx="4" fill="rgba(210,185,60,.6)"></rect><text x="548" y="182" text-anchor="middle" font-size="17" font-weight="500" fill="#2a2000" font-family="&#39;DM Mono&#39;,monospace">6cm</text><rect x="538" y="90" width="20" height="76" fill="transparent" data-q3mm="60" style="cursor: pointer;"></rect><line x1="556.8" x2="556.8" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="546.8" y="90" width="20" height="76" fill="transparent" data-q3mm="61" style="cursor: pointer;"></rect><line x1="565.6" x2="565.6" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="555.6" y="90" width="20" height="76" fill="transparent" data-q3mm="62" style="cursor: pointer;"></rect><line x1="574.4" x2="574.4" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="564.4" y="90" width="20" height="76" fill="transparent" data-q3mm="63" style="cursor: pointer;"></rect><line x1="583.2" x2="583.2" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="573.2" y="90" width="20" height="76" fill="transparent" data-q3mm="64" style="cursor: pointer;"></rect><line x1="592" x2="592" y1="90" y2="133" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line><rect x="582" y="90" width="20" height="76" fill="transparent" data-q3mm="65" style="cursor: pointer;"></rect><line x1="600.8000000000001" x2="600.8000000000001" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="590.8000000000001" y="90" width="20" height="76" fill="transparent" data-q3mm="66" style="cursor: pointer;"></rect><line x1="609.6" x2="609.6" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="599.6" y="90" width="20" height="76" fill="transparent" data-q3mm="67" style="cursor: pointer;"></rect><line x1="618.4000000000001" x2="618.4000000000001" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="608.4000000000001" y="90" width="20" height="76" fill="transparent" data-q3mm="68" style="cursor: pointer;"></rect><line x1="627.1999999999999" x2="627.1999999999999" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="617.1999999999999" y="90" width="20" height="76" fill="transparent" data-q3mm="69" style="cursor: pointer;"></rect><line x1="636" x2="636" y1="90" y2="166" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line><rect x="611.5" y="169" width="49" height="30" rx="4" fill="rgba(210,185,60,.6)"></rect><text x="636" y="182" text-anchor="middle" font-size="17" font-weight="500" fill="#2a2000" font-family="&#39;DM Mono&#39;,monospace">7cm</text><rect x="626" y="90" width="20" height="76" fill="transparent" data-q3mm="70" style="cursor: pointer;"></rect><line x1="644.8" x2="644.8" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="634.8" y="90" width="20" height="76" fill="transparent" data-q3mm="71" style="cursor: pointer;"></rect><line x1="653.6" x2="653.6" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="643.6" y="90" width="20" height="76" fill="transparent" data-q3mm="72" style="cursor: pointer;"></rect><line x1="662.4" x2="662.4" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="652.4" y="90" width="20" height="76" fill="transparent" data-q3mm="73" style="cursor: pointer;"></rect><line x1="671.2" x2="671.2" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="661.2" y="90" width="20" height="76" fill="transparent" data-q3mm="74" style="cursor: pointer;"></rect><line x1="680" x2="680" y1="90" y2="133" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line><rect x="670" y="90" width="20" height="76" fill="transparent" data-q3mm="75" style="cursor: pointer;"></rect><line x1="688.8" x2="688.8" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="678.8" y="90" width="20" height="76" fill="transparent" data-q3mm="76" style="cursor: pointer;"></rect><line x1="697.6" x2="697.6" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="687.6" y="90" width="20" height="76" fill="transparent" data-q3mm="77" style="cursor: pointer;"></rect><line x1="706.4" x2="706.4" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="696.4" y="90" width="20" height="76" fill="transparent" data-q3mm="78" style="cursor: pointer;"></rect><line x1="715.2" x2="715.2" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="705.2" y="90" width="20" height="76" fill="transparent" data-q3mm="79" style="cursor: pointer;"></rect><line x1="724" x2="724" y1="90" y2="166" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line><rect x="699.5" y="169" width="49" height="30" rx="4" fill="rgba(210,185,60,.6)"></rect><text x="724" y="182" text-anchor="middle" font-size="17" font-weight="500" fill="#2a2000" font-family="&#39;DM Mono&#39;,monospace">8cm</text><rect x="714" y="90" width="20" height="76" fill="transparent" data-q3mm="80" style="cursor: pointer;"></rect><line x1="732.8000000000001" x2="732.8000000000001" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="722.8000000000001" y="90" width="20" height="76" fill="transparent" data-q3mm="81" style="cursor: pointer;"></rect><line x1="741.5999999999999" x2="741.5999999999999" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="731.5999999999999" y="90" width="20" height="76" fill="transparent" data-q3mm="82" style="cursor: pointer;"></rect><line x1="750.4" x2="750.4" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="740.4" y="90" width="20" height="76" fill="transparent" data-q3mm="83" style="cursor: pointer;"></rect><line x1="759.1999999999999" x2="759.1999999999999" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="749.1999999999999" y="90" width="20" height="76" fill="transparent" data-q3mm="84" style="cursor: pointer;"></rect><line x1="768" x2="768" y1="90" y2="133" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line><rect x="758" y="90" width="20" height="76" fill="transparent" data-q3mm="85" style="cursor: pointer;"></rect><line x1="776.8" x2="776.8" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="766.8" y="90" width="20" height="76" fill="transparent" data-q3mm="86" style="cursor: pointer;"></rect><line x1="785.6" x2="785.6" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="775.6" y="90" width="20" height="76" fill="transparent" data-q3mm="87" style="cursor: pointer;"></rect><line x1="794.4" x2="794.4" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="784.4" y="90" width="20" height="76" fill="transparent" data-q3mm="88" style="cursor: pointer;"></rect><line x1="803.2" x2="803.2" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="793.2" y="90" width="20" height="76" fill="transparent" data-q3mm="89" style="cursor: pointer;"></rect><line x1="812" x2="812" y1="90" y2="166" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line><rect x="787.5" y="169" width="49" height="30" rx="4" fill="rgba(210,185,60,.6)"></rect><text x="812" y="182" text-anchor="middle" font-size="17" font-weight="500" fill="#2a2000" font-family="&#39;DM Mono&#39;,monospace">9cm</text><rect x="802" y="90" width="20" height="76" fill="transparent" data-q3mm="90" style="cursor: pointer;"></rect><line x1="820.8000000000001" x2="820.8000000000001" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="810.8000000000001" y="90" width="20" height="76" fill="transparent" data-q3mm="91" style="cursor: pointer;"></rect><line x1="829.6" x2="829.6" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="819.6" y="90" width="20" height="76" fill="transparent" data-q3mm="92" style="cursor: pointer;"></rect><line x1="838.4000000000001" x2="838.4000000000001" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="828.4000000000001" y="90" width="20" height="76" fill="transparent" data-q3mm="93" style="cursor: pointer;"></rect><line x1="847.1999999999999" x2="847.1999999999999" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="837.1999999999999" y="90" width="20" height="76" fill="transparent" data-q3mm="94" style="cursor: pointer;"></rect><line x1="856" x2="856" y1="90" y2="133" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line><rect x="846" y="90" width="20" height="76" fill="transparent" data-q3mm="95" style="cursor: pointer;"></rect><line x1="864.8" x2="864.8" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="854.8" y="90" width="20" height="76" fill="transparent" data-q3mm="96" style="cursor: pointer;"></rect><line x1="873.6" x2="873.6" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="863.6" y="90" width="20" height="76" fill="transparent" data-q3mm="97" style="cursor: pointer;"></rect><line x1="882.4" x2="882.4" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="872.4" y="90" width="20" height="76" fill="transparent" data-q3mm="98" style="cursor: pointer;"></rect><line x1="891.2" x2="891.2" y1="90" y2="113" stroke="#1a160a" stroke-width="1.1" stroke-linecap="square"></line><rect x="881.2" y="90" width="20" height="76" fill="transparent" data-q3mm="99" style="cursor: pointer;"></rect><line x1="900" x2="900" y1="90" y2="166" stroke="#1a160a" stroke-width="2.5" stroke-linecap="square"></line><rect x="870" y="169" width="60" height="30" rx="4" fill="rgba(210,185,60,.6)"></rect><text x="900" y="182" text-anchor="middle" font-size="17" font-weight="500" fill="#2a2000" font-family="&#39;DM Mono&#39;,monospace">10cm</text><rect x="890" y="90" width="20" height="76" fill="transparent" data-q3mm="100" style="cursor: pointer;"></rect></g>
+            <g id="q3Ticks"></g>
             <g id="q3Arrow"></g>
-            <g id="q3Overlay"><rect x="20" y="90" width="686.4" height="76" fill="#5a9e5a" opacity="0.18"></rect><line x1="24" x2="702.4" y1="82" y2="82" stroke="#5a9e5a" stroke-width="1.6" marker-start="url(#marL)" marker-end="url(#marR)"></line><rect x="321.2" y="69" width="84" height="24" rx="12" fill="#5a9e5a"></rect><text x="363.2" y="87" text-anchor="middle" font-size="16" font-weight="500" fill="#fff" font-family="&#39;DM Mono&#39;,monospace">78mm</text><line x1="20" x2="20" y1="95" y2="90" stroke="#5a9e5a" stroke-width="1" stroke-dasharray="3,3" opacity="0.45"></line><line x1="706.4" x2="706.4" y1="95" y2="90" stroke="#5a9e5a" stroke-width="1" stroke-dasharray="3,3" opacity="0.45"></line><rect x="20" y="90" width="316.8" height="76" fill="#c05050" opacity="0.18"></rect><line x1="24" x2="332.8" y1="60" y2="60" stroke="#c05050" stroke-width="1.6" marker-start="url(#marL)" marker-end="url(#marR)"></line><rect x="136.4" y="47" width="84" height="24" rx="12" fill="#c05050"></rect><text x="178.4" y="65" text-anchor="middle" font-size="16" font-weight="500" fill="#fff" font-family="&#39;DM Mono&#39;,monospace">36mm</text><line x1="20" x2="20" y1="73" y2="90" stroke="#c05050" stroke-width="1" stroke-dasharray="3,3" opacity="0.45"></line><line x1="336.8" x2="336.8" y1="73" y2="90" stroke="#c05050" stroke-width="1" stroke-dasharray="3,3" opacity="0.45"></line></g>
+            <g id="q3Overlay"></g>
           </svg>
         </div>
-        <div id="q3Equation" style="display: block; text-align: center; font-family: var(--mono); font-size: 1.25rem; font-weight: 500; color: var(--text); background: var(--surface2); border: .5px solid var(--border); border-radius: var(--radius); padding: 0.85rem 1.1rem; margin-bottom: 0.85rem; letter-spacing: 0.04em;">78mm − 36mm = ?</div>
+        <div id="q3Equation" style="display:none;text-align:center;font-family:var(--mono);font-size:1.25rem;font-weight:500;color:var(--text);background:var(--surface2);border:.5px solid var(--border);border-radius:var(--radius);padding:.85rem 1.1rem;margin-bottom:.85rem;letter-spacing:.04em"></div>
         <div class="quiz-click-hint" id="q3ClickHint"></div>
-        <div class="quiz-opts" id="q3Opts"><button class="qopt">63mm</button><button class="qopt">37mm</button><button class="qopt">42mm</button><button class="qopt">40mm</button></div>
+        <div class="quiz-opts" id="q3Opts"></div>
         <div class="quiz-feedback" id="q3Feedback"></div>
         <div style="text-align:center">
-          <button class="quiz-next-btn" id="q3Next" onclick="nextQ3()" style="display: none;">Next question →</button>
+          <button class="quiz-next-btn" id="q3Next" onclick="nextQ3()">Next question →</button>
         </div>
       </div>
     </div>
   </div><!-- /quiz3Section -->
+  <!-- ══════════════ LEARN 4 — IMPROPER FRACTIONS / MULTI-INCH ══════════════ -->
+  <div id="learn4Section" style="display:none">
+
+    <div style="display:flex;gap:5px;margin-bottom:.75rem;flex-wrap:wrap" id="l4TabRow">
+      <button class="l2tab active" onclick="showL4(0)">Interactive ruler</button>
+      <button class="l2tab" onclick="showL4(1)">How it works</button>
+      <button class="l2tab" onclick="showL4(2)">Worked examples</button>
+      <button class="l2tab" onclick="showL4(3)">Improper fractions</button>
+    </div>
+
+    <!-- L4 Card 0: Interactive multi-inch ruler -->
+    <div id="l4c0">
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <div class="panel-title" id="l4title">0 – 4 inch ruler — full measurements</div>
+            <div class="panel-sub" id="l4sub">Tap any tick to see the complete mixed-number measurement</div>
+          </div>
+          <div class="slide-nav-strip">
+            <button class="snav-btn" id="l4pb" onclick="l4Move(-1)" disabled="">←</button>
+            <span class="snav-count" id="l4ctr">1 / 13</span>
+            <button class="snav-btn" id="l4nb" onclick="l4Move(1)">→</button>
+            <button class="snav-random" onclick="l4Random()">↶ Rnd</button>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="legend">
+            <div class="leg"><div class="leg-line" style="width:3px;height:20px;opacity:.9"></div>Whole inch</div>
+            <div class="leg"><div class="leg-line" style="width:2.5px;height:16px;opacity:.8"></div>½″</div>
+            <div class="leg"><div class="leg-line" style="width:2px;height:12px;opacity:.7"></div>¼ ¾</div>
+            <div class="leg"><div class="leg-line" style="width:1.5px;height:8px;opacity:.6"></div>⅛ ⅜ ⅝ ⅞</div>
+            <div class="leg"><div class="leg-line" style="width:1px;height:5px;opacity:.5"></div>sixteenths</div>
+          </div>
+          <p style="text-align:center;font-family:var(--mono);font-size:.65rem;color:var(--text3);margin-bottom:.6rem;letter-spacing:.04em">Tap any tick to see its full measurement</p>
+          <div class="tape-scroll">
+            <svg id="l4Svg" viewBox="0 0 920 240" width="920" style="max-width:100%" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <marker id="l4arL" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M6,0 L0,3 L6,6" fill="none" stroke="#c87941" stroke-width="1.5"></path></marker>
+                <marker id="l4arR" markerWidth="6" markerHeight="6" refX="0" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#c87941" stroke-width="1.5"></path></marker>
+              </defs>
+              <g id="l4SpanLayer"></g>
+              <rect x="20" y="85" width="880" height="76" rx="4" fill="#f0d878" stroke="#b09030" stroke-width="1.5"></rect>
+              <rect x="21" y="86" width="878" height="13" rx="3" fill="#e8cc55" opacity=".4"></rect>
+              <rect x="20" y="85" width="6" height="76" rx="2" fill="#b09030"></rect>
+              <line x1="20" y1="85" x2="900" y2="85" stroke="#a08020" stroke-width=".75"></line>
+              <g id="l4Ticks"></g>
+              <g id="l4Labels"></g>
+            </svg>
+          </div>
+          <div class="detail">
+            <div class="detail-title" id="l4dp-title">Tap a tick mark above</div>
+            <div class="detail-body" id="l4dp-body">Tap any line to see the full mixed-number measurement and how to read it.</div>
+            <div class="detail-hint" id="l4dp-hint" style="display:none"></div>
+          </div>
+        </div>
+      </div>
+      <div class="dots" id="l4dots"></div>
+    </div><!-- /l4c0 -->
+
+    <!-- L4 Card 1: How it works -->
+    <div id="l4c1" style="display:none">
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <div class="panel-title">Reading measurements above 1 inch</div>
+            <div class="panel-sub">Whole numbers + fractions = mixed numbers</div>
+          </div>
+          <span class="tag tag-anchor">Foundation</span>
+        </div>
+        <div class="panel-body">
+          <div class="l2-concept">
+            <div class="l2-step-num">1</div>
+            <div class="l2-step-body">
+              <div class="l2-step-title">Read the whole inches first</div>
+              <div class="l2-step-text">Find the largest printed whole number that is at or to the <strong>left</strong> of your measurement point. That is your whole-inch base. A point between the 2 and 3 marks has a base of <strong>2″</strong>.</div>
+            </div>
+          </div>
+          <div class="l2-concept">
+            <div class="l2-step-num">2</div>
+            <div class="l2-step-body">
+              <div class="l2-step-title">Read the fraction the same way as before</div>
+              <div class="l2-step-text">From the whole-inch mark, use the same landmark method — find ½, then ¼ or ¾, then count tiny ticks. The fraction you get is the part to add to your whole number.</div>
+            </div>
+          </div>
+          <div class="l2-concept">
+            <div class="l2-step-num">3</div>
+            <div class="l2-step-body">
+              <div class="l2-step-title">Combine: whole + fraction = your measurement</div>
+              <div class="l2-step-text">Write the whole number first, then the fraction. <strong>2 + 3/8 = 2⅜″</strong>. This is called a <em>mixed number</em>. Every measurement on a tape measure beyond 1″ is a mixed number.</div>
+            </div>
+          </div>
+          <div class="l2-concept">
+            <div class="l2-step-num">4</div>
+            <div class="l2-step-body">
+              <div class="l2-step-title">The fraction pattern repeats every inch</div>
+              <div class="l2-step-text">The tick heights between 2″ and 3″ are identical to those between 0″ and 1″. Once you learn one inch, you can read any inch on the tape.</div>
+            </div>
+          </div>
+          <div class="l2-cta">
+            <span>Ready to practice?</span>
+            <button onclick="showL4(0)" class="l2-cta-btn">Try the ruler →</button>
+            <button onclick="setMode(&#39;quiz4&#39;)" class="l2-cta-btn accent">Take Quiz 4 →</button>
+          </div>
+        </div>
+      </div>
+    </div><!-- /l4c1 -->
+
+    <!-- L4 Card 2: Worked examples -->
+    <div id="l4c2" style="display:none">
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <div class="panel-title">Worked examples — mixed numbers</div>
+            <div class="panel-sub">Step-by-step for three common measurements</div>
+          </div>
+          <span class="tag tag-quarter">Technique</span>
+        </div>
+        <div class="panel-body">
+
+          <!-- Example 1: 1 3/4" -->
+          <div class="l2-worked">
+            <div class="l2-worked-title">Example 1 — read this measurement</div>
+            <div class="l2-diagram-wrap">
+              <svg viewBox="0 0 640 155" width="100%" style="max-width:640px;display:block;margin:0 auto" xmlns="http://www.w3.org/2000/svg">
+                <!-- 2-inch ruler, each inch = 300px, x=20..620 -->
+                <rect x="20" y="30" width="600" height="60" rx="4" fill="#f0d878" stroke="#b09030" stroke-width="1.5"></rect>
+                <rect x="21" y="31" width="598" height="12" fill="#e8cc55" opacity=".35"></rect>
+                <rect x="20" y="30" width="5" height="60" rx="2" fill="#b09030"></rect>
+                <!-- whole inch ticks at x=20 (0"), x=320 (1"), x=620 (2") -->
+                <line x1="20" y1="30" x2="20" y2="90" stroke="#1a160a" stroke-width="3" stroke-linecap="square"></line>
+                <line x1="320" y1="30" x2="320" y2="90" stroke="#1a160a" stroke-width="3" stroke-linecap="square"></line>
+                <line x1="620" y1="30" x2="620" y2="90" stroke="#1a160a" stroke-width="3" stroke-linecap="square"></line>
+                <!-- half ticks at x=170 (½"), x=470 (1½") -->
+                <line x1="170" y1="30" x2="170" y2="75" stroke="#1a160a" stroke-width="2.2" stroke-linecap="square"></line>
+                <line x1="470" y1="30" x2="470" y2="75" stroke="#1a160a" stroke-width="2.2" stroke-linecap="square"></line>
+                <!-- quarter ticks -->
+                <line x1="95" y1="30" x2="95" y2="65" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line>
+                <line x1="245" y1="30" x2="245" y2="65" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line>
+                <line x1="395" y1="30" x2="395" y2="65" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line>
+                <line x1="545" y1="30" x2="545" y2="65" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line>
+                <!-- arrow at 1¾" = 1 + 12/16 → x=320+(12/16)*300=320+225=545 -->
+                <path d="M545,16 L555,30 L535,30 Z" fill="#c87941"></path>
+                <rect x="320" y="30" width="225" height="60" fill="#c87941" opacity=".14"></rect>
+                <!-- labels -->
+                <rect x="4" y="93" width="40" height="26" rx="4" fill="rgba(210,185,60,.75)"></rect>
+                <text x="24" y="111" text-anchor="middle" font-size="20" font-weight="500" fill="#1a0e00" font-family="&#39;DM Mono&#39;,monospace">0"</text>
+                <rect x="301" y="93" width="40" height="26" rx="4" fill="rgba(210,185,60,.75)"></rect>
+                <text x="321" y="111" text-anchor="middle" font-size="20" font-weight="500" fill="#1a0e00" font-family="&#39;DM Mono&#39;,monospace">1"</text>
+                <rect x="601" y="93" width="40" height="26" rx="4" fill="rgba(210,185,60,.75)"></rect>
+                <text x="621" y="111" text-anchor="middle" font-size="20" font-weight="500" fill="#1a0e00" font-family="&#39;DM Mono&#39;,monospace">2"</text>
+                <rect x="450" y="93" width="40" height="26" rx="4" fill="rgba(210,185,60,.5)"></rect>
+                <text x="470" y="111" text-anchor="middle" font-size="20" font-weight="500" fill="#2a1800" font-family="&#39;DM Mono&#39;,monospace">1½</text>
+                <rect x="526" y="93" width="40" height="26" rx="4" fill="rgba(210,185,60,.4)"></rect>
+                <text x="546" y="111" text-anchor="middle" font-size="20" font-weight="500" fill="#2a1800" font-family="&#39;DM Mono&#39;,monospace">1¾</text>
+              </svg>
+            </div>
+            <div class="l2-worked-steps">
+              <div class="l2-ws-row"><span class="l2-ws-num">①</span>Arrow is between 1″ and 2″ — whole number base is <strong>1″</strong></div>
+              <div class="l2-ws-row"><span class="l2-ws-num">②</span>Arrow is past the 1½ mark — in the second quarter of the inch</div>
+              <div class="l2-ws-row"><span class="l2-ws-num">③</span>Arrow is on the ¾ landmark tick exactly</div>
+              <div class="l2-ws-row l2-ws-answer"><span class="l2-ws-num">✓</span>Answer: <strong>1¾″</strong> (1 whole inch + ¾)</div>
+            </div>
+          </div>
+
+          <!-- Example 2: 2 5/16" -->
+          <div class="l2-worked">
+            <div class="l2-worked-title">Example 2 — read this measurement</div>
+            <div class="l2-diagram-wrap">
+              <svg viewBox="0 0 640 155" width="100%" style="max-width:640px;display:block;margin:0 auto" xmlns="http://www.w3.org/2000/svg">
+                <rect x="20" y="30" width="600" height="60" rx="4" fill="#f0d878" stroke="#b09030" stroke-width="1.5"></rect>
+                <rect x="21" y="31" width="598" height="12" fill="#e8cc55" opacity=".35"></rect>
+                <rect x="20" y="30" width="5" height="60" rx="2" fill="#b09030"></rect>
+                <!-- 2-inch ruler: 0 at x=20, 1" at x=320, 2" at x=620. Each inch=300px -->
+                <line x1="20" y1="30" x2="20" y2="90" stroke="#1a160a" stroke-width="3" stroke-linecap="square"></line>
+                <line x1="320" y1="30" x2="320" y2="90" stroke="#1a160a" stroke-width="3" stroke-linecap="square"></line>
+                <line x1="620" y1="30" x2="620" y2="90" stroke="#1a160a" stroke-width="3" stroke-linecap="square"></line>
+                <line x1="170" y1="30" x2="170" y2="75" stroke="#1a160a" stroke-width="2.2" stroke-linecap="square"></line>
+                <line x1="470" y1="30" x2="470" y2="75" stroke="#1a160a" stroke-width="2.2" stroke-linecap="square"></line>
+                <line x1="95" y1="30" x2="95" y2="65" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line>
+                <line x1="245" y1="30" x2="245" y2="65" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line>
+                <line x1="395" y1="30" x2="395" y2="65" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line>
+                <line x1="545" y1="30" x2="545" y2="65" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line>
+                <!-- 5/16 sixteenth ticks from 2" mark: 2" is at x=620 but that's 2nd inch. 
+                     Show 1" to 2" section. 2 5/16 = base x=320, +5/16*300=320+93.75=413.75 -->
+                <!-- extra sixteenth ticks between ¼ (x=395) -->
+                <line x1="376" y1="30" x2="376" y2="50" stroke="#1a160a" stroke-width="1" stroke-linecap="square"></line>
+                <line x1="395" y1="30" x2="395" y2="65" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line>
+                <line x1="414" y1="30" x2="414" y2="50" stroke="#1a160a" stroke-width="1" stroke-linecap="square"></line>
+                <!-- arrow at 2 5/16 — but ruler only shows 0-2", so 2 5/16 is past 2". Show 1 5/16 instead -->
+                <!-- Actually show 1 5/16: x=320+(5/16)*300=320+93.75=413.75 -->
+                <path d="M413.75,16 L423,30 L404,30 Z" fill="#c87941"></path>
+                <rect x="320" y="30" width="93.75" height="60" fill="#c87941" opacity=".14"></rect>
+                <!-- labels -->
+                <rect x="4" y="93" width="40" height="26" rx="4" fill="rgba(210,185,60,.75)"></rect>
+                <text x="24" y="111" text-anchor="middle" font-size="20" font-weight="500" fill="#1a0e00" font-family="&#39;DM Mono&#39;,monospace">0"</text>
+                <rect x="301" y="93" width="40" height="26" rx="4" fill="rgba(210,185,60,.75)"></rect>
+                <text x="321" y="111" text-anchor="middle" font-size="20" font-weight="500" fill="#1a0e00" font-family="&#39;DM Mono&#39;,monospace">1"</text>
+                <rect x="601" y="93" width="40" height="26" rx="4" fill="rgba(210,185,60,.75)"></rect>
+                <text x="621" y="111" text-anchor="middle" font-size="20" font-weight="500" fill="#1a0e00" font-family="&#39;DM Mono&#39;,monospace">2"</text>
+                <rect x="374" y="93" width="42" height="26" rx="4" fill="rgba(210,185,60,.4)"></rect>
+                <text x="395" y="111" text-anchor="middle" font-size="20" font-weight="500" fill="#2a1800" font-family="&#39;DM Mono&#39;,monospace">1¼</text>
+              </svg>
+            </div>
+            <div class="l2-worked-steps">
+              <div class="l2-ws-row"><span class="l2-ws-num">①</span>Arrow is between 1″ and 2″ — whole number base is <strong>1″</strong></div>
+              <div class="l2-ws-row"><span class="l2-ws-num">②</span>Arrow is before the 1½ mark, past the 1¼ mark</div>
+              <div class="l2-ws-row"><span class="l2-ws-num">③</span>Count 1 tiny tick past the ¼ landmark → that is 5/16</div>
+              <div class="l2-ws-row l2-ws-answer"><span class="l2-ws-num">✓</span>Answer: <strong>1 5/16″</strong> (1 whole inch + ¼ + 1 sixteenth)</div>
+            </div>
+          </div>
+
+          <!-- Example 3: 3 7/8" -->
+          <div class="l2-worked">
+            <div class="l2-worked-title">Example 3 — read this measurement</div>
+            <div class="l2-diagram-wrap">
+              <svg viewBox="0 0 640 155" width="100%" style="max-width:640px;display:block;margin:0 auto" xmlns="http://www.w3.org/2000/svg">
+                <!-- Show 3" to 4" section scaled to full width -->
+                <rect x="20" y="30" width="600" height="60" rx="4" fill="#f0d878" stroke="#b09030" stroke-width="1.5"></rect>
+                <rect x="21" y="31" width="598" height="12" fill="#e8cc55" opacity=".35"></rect>
+                <rect x="20" y="30" width="5" height="60" rx="2" fill="#b09030"></rect>
+                <line x1="20" y1="30" x2="20" y2="90" stroke="#1a160a" stroke-width="3" stroke-linecap="square"></line>
+                <line x1="620" y1="30" x2="620" y2="90" stroke="#1a160a" stroke-width="3" stroke-linecap="square"></line>
+                <line x1="320" y1="30" x2="320" y2="75" stroke="#1a160a" stroke-width="2.2" stroke-linecap="square"></line>
+                <line x1="170" y1="30" x2="170" y2="65" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line>
+                <line x1="470" y1="30" x2="470" y2="65" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line>
+                <line x1="95" y1="30" x2="95" y2="54" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+                <line x1="245" y1="30" x2="245" y2="54" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+                <line x1="395" y1="30" x2="395" y2="54" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+                <line x1="545" y1="30" x2="545" y2="54" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+                <!-- 7/8 = x=20+(14/16)*600=545 — on the ⅞ tick -->
+                <path d="M545,16 L555,30 L535,30 Z" fill="#c87941"></path>
+                <rect x="20" y="30" width="525" height="60" fill="#c87941" opacity=".14"></rect>
+                <!-- labels -->
+                <rect x="4" y="93" width="40" height="26" rx="4" fill="rgba(210,185,60,.75)"></rect>
+                <text x="24" y="111" text-anchor="middle" font-size="20" font-weight="500" fill="#1a0e00" font-family="&#39;DM Mono&#39;,monospace">3"</text>
+                <rect x="601" y="93" width="40" height="26" rx="4" fill="rgba(210,185,60,.75)"></rect>
+                <text x="621" y="111" text-anchor="middle" font-size="20" font-weight="500" fill="#1a0e00" font-family="&#39;DM Mono&#39;,monospace">4"</text>
+                <rect x="300" y="93" width="42" height="26" rx="4" fill="rgba(210,185,60,.5)"></rect>
+                <text x="321" y="111" text-anchor="middle" font-size="20" font-weight="500" fill="#2a1800" font-family="&#39;DM Mono&#39;,monospace">3½</text>
+                <rect x="524" y="93" width="42" height="26" rx="4" fill="rgba(210,185,60,.4)"></rect>
+                <text x="545" y="111" text-anchor="middle" font-size="20" font-weight="500" fill="#2a1800" font-family="&#39;DM Mono&#39;,monospace">3¾</text>
+              </svg>
+            </div>
+            <div class="l2-worked-steps">
+              <div class="l2-ws-row"><span class="l2-ws-num">①</span>This ruler shows the 3″–4″ section — whole number base is <strong>3″</strong></div>
+              <div class="l2-ws-row"><span class="l2-ws-num">②</span>Arrow is past 3¾ — in the last quarter of the inch</div>
+              <div class="l2-ws-row"><span class="l2-ws-num">③</span>One eighth-height tick past the ¾ mark = ⅞</div>
+              <div class="l2-ws-row l2-ws-answer"><span class="l2-ws-num">✓</span>Answer: <strong>3⅞″</strong> (3 whole inches + ⅞)</div>
+            </div>
+          </div>
+
+          <div class="l2-cta">
+            <span>Ready to test yourself?</span>
+            <button onclick="setMode(&#39;quiz4&#39;)" class="l2-cta-btn accent">Take Quiz 4 →</button>
+          </div>
+        </div>
+      </div>
+    </div><!-- /l4c2 -->
+
+    <!-- L4 Card 3: Improper fractions -->
+    <div id="l4c3" style="display:none">
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <div class="panel-title">Improper fractions on a ruler</div>
+            <div class="panel-sub">When the numerator is larger than the denominator</div>
+          </div>
+          <span class="tag tag-sixteenth">Advanced</span>
+        </div>
+        <div class="panel-body">
+
+          <div class="l2-concept">
+            <div class="l2-step-num">1</div>
+            <div class="l2-step-body">
+              <div class="l2-step-title">What is an improper fraction?</div>
+              <div class="l2-step-text">A fraction where the top number (numerator) is <strong>bigger than</strong> the bottom number (denominator). Examples: <strong>5/4</strong>, <strong>19/8</strong>, <strong>27/16</strong>. These represent measurements larger than 1 inch.</div>
+              <div class="l2-conversion-grid" style="margin-top:.65rem">
+                <div class="l2-cv-row"><span class="l2-cv-frac">5/4</span><span class="l2-cv-eq">bigger than 1 (4/4)</span></div>
+                <div class="l2-cv-row"><span class="l2-cv-frac">9/8</span><span class="l2-cv-eq">bigger than 1 (8/8)</span></div>
+                <div class="l2-cv-row"><span class="l2-cv-frac">19/8</span><span class="l2-cv-eq">bigger than 2 (16/8)</span></div>
+                <div class="l2-cv-row"><span class="l2-cv-frac">27/16</span><span class="l2-cv-eq">bigger than 1 (16/16)</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="l2-concept">
+            <div class="l2-step-num">2</div>
+            <div class="l2-step-body">
+              <div class="l2-step-title">How to convert to a mixed number</div>
+              <div class="l2-step-text">Divide the numerator by the denominator. The <strong>quotient</strong> is the whole number. The <strong>remainder</strong> over the denominator is the fraction part.</div>
+              <div class="l2-conversion-grid" style="margin-top:.65rem">
+                <div class="l2-cv-row"><span class="l2-cv-frac">5/4</span><span class="l2-cv-eq">5 ÷ 4 = 1 remainder 1 → <strong>1 1/4″</strong></span></div>
+                <div class="l2-cv-row"><span class="l2-cv-frac">19/8</span><span class="l2-cv-eq">19 ÷ 8 = 2 remainder 3 → <strong>2 3/8″</strong></span></div>
+                <div class="l2-cv-row"><span class="l2-cv-frac">27/16</span><span class="l2-cv-eq">27 ÷ 16 = 1 remainder 11 → <strong>1 11/16″</strong></span></div>
+                <div class="l2-cv-row"><span class="l2-cv-frac">38/16</span><span class="l2-cv-eq">38 ÷ 16 = 2 remainder 6 → <strong>2 6/16 = 2 3/8″</strong></span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="l2-concept">
+            <div class="l2-step-num">3</div>
+            <div class="l2-step-body">
+              <div class="l2-step-title">Everything is in sixteenths on a tape measure</div>
+              <div class="l2-step-text">A tape measure uses sixteenths as its smallest division. To convert any measurement to sixteenths and back, remember: <strong>1″ = 16/16</strong>, so multiply whole inches by 16 and add any fraction already in sixteenths.</div>
+              <div class="l2-conversion-grid" style="margin-top:.65rem">
+                <div class="l2-cv-row"><span class="l2-cv-frac">2 3/4″</span><span class="l2-cv-eq">= (2×16 + 12)/16 = <strong>44/16</strong></span></div>
+                <div class="l2-cv-row"><span class="l2-cv-frac">3 5/16″</span><span class="l2-cv-eq">= (3×16 + 5)/16 = <strong>53/16</strong></span></div>
+                <div class="l2-cv-row"><span class="l2-cv-frac">1 7/8″</span><span class="l2-cv-eq">= (1×16 + 14)/16 = <strong>30/16</strong></span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Worked example 1: 19/8 -->
+          <div class="l2-worked">
+            <div class="l2-worked-title">Example — where is 19/8″ on the ruler?</div>
+            <div class="l2-diagram-wrap">
+              <svg viewBox="0 0 640 155" width="100%" style="max-width:640px;display:block;margin:0 auto" xmlns="http://www.w3.org/2000/svg">
+                <!-- 3-inch ruler, each inch=200px, x=20..620 -->
+                <rect x="20" y="30" width="600" height="60" rx="4" fill="#f0d878" stroke="#b09030" stroke-width="1.5"></rect>
+                <rect x="21" y="31" width="598" height="12" fill="#e8cc55" opacity=".35"></rect>
+                <rect x="20" y="30" width="5" height="60" rx="2" fill="#b09030"></rect>
+                <!-- whole inch ticks: 0=x20, 1=x220, 2=x420, 3=x620 -->
+                <line x1="20" y1="30" x2="20" y2="90" stroke="#1a160a" stroke-width="3" stroke-linecap="square"></line>
+                <line x1="220" y1="30" x2="220" y2="90" stroke="#1a160a" stroke-width="3" stroke-linecap="square"></line>
+                <line x1="420" y1="30" x2="420" y2="90" stroke="#1a160a" stroke-width="3" stroke-linecap="square"></line>
+                <line x1="620" y1="30" x2="620" y2="90" stroke="#1a160a" stroke-width="3" stroke-linecap="square"></line>
+                <!-- half ticks every ½": each ½=100px -->
+                <line x1="120" y1="30" x2="120" y2="75" stroke="#1a160a" stroke-width="2.2" stroke-linecap="square"></line>
+                <line x1="320" y1="30" x2="320" y2="75" stroke="#1a160a" stroke-width="2.2" stroke-linecap="square"></line>
+                <line x1="520" y1="30" x2="520" y2="75" stroke="#1a160a" stroke-width="2.2" stroke-linecap="square"></line>
+                <!-- quarter ticks every ¼": each ¼=50px -->
+                <line x1="70" y1="30" x2="70" y2="65" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line>
+                <line x1="170" y1="30" x2="170" y2="65" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line>
+                <line x1="270" y1="30" x2="270" y2="65" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line>
+                <line x1="370" y1="30" x2="370" y2="65" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line>
+                <line x1="470" y1="30" x2="470" y2="65" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line>
+                <line x1="570" y1="30" x2="570" y2="65" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line>
+                <!-- eighth ticks every ⅛": each ⅛=25px -->
+                <line x1="45" y1="30" x2="45" y2="54" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+                <line x1="95" y1="30" x2="95" y2="54" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+                <line x1="145" y1="30" x2="145" y2="54" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+                <line x1="195" y1="30" x2="195" y2="54" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+                <line x1="245" y1="30" x2="245" y2="54" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+                <line x1="295" y1="30" x2="295" y2="54" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+                <line x1="345" y1="30" x2="345" y2="54" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+                <line x1="395" y1="30" x2="395" y2="54" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+                <line x1="445" y1="30" x2="445" y2="54" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+                <line x1="495" y1="30" x2="495" y2="54" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+                <line x1="545" y1="30" x2="545" y2="54" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+                <line x1="595" y1="30" x2="595" y2="54" stroke="#1a160a" stroke-width="1.4" stroke-linecap="square"></line>
+                <!-- 19/8 = 2 3/8" = 2 whole + 3 eighths = x=420 + (3/8)*200 = 420+75 = 495 -->
+                <rect x="20" y="30" width="475" height="60" fill="#c87941" opacity=".14"></rect>
+                <path d="M495,16 L505,30 L485,30 Z" fill="#c87941"></path>
+                <!-- labels -->
+                <rect x="4" y="93" width="36" height="28" rx="4" fill="rgba(210,185,60,.75)"></rect>
+                <text x="22" y="112" text-anchor="middle" font-size="20" font-weight="500" fill="#1a0e00" font-family="&#39;DM Mono&#39;,monospace">0"</text>
+                <rect x="204" y="93" width="36" height="28" rx="4" fill="rgba(210,185,60,.75)"></rect>
+                <text x="222" y="112" text-anchor="middle" font-size="20" font-weight="500" fill="#1a0e00" font-family="&#39;DM Mono&#39;,monospace">1"</text>
+                <rect x="404" y="93" width="36" height="28" rx="4" fill="rgba(210,185,60,.75)"></rect>
+                <text x="422" y="112" text-anchor="middle" font-size="20" font-weight="500" fill="#1a0e00" font-family="&#39;DM Mono&#39;,monospace">2"</text>
+                <rect x="604" y="93" width="36" height="28" rx="4" fill="rgba(210,185,60,.75)"></rect>
+                <text x="622" y="112" text-anchor="middle" font-size="20" font-weight="500" fill="#1a0e00" font-family="&#39;DM Mono&#39;,monospace">3"</text>
+                <rect x="302" y="93" width="38" height="28" rx="4" fill="rgba(210,185,60,.5)"></rect>
+                <text x="321" y="112" text-anchor="middle" font-size="20" font-weight="500" fill="#2a1800" font-family="&#39;DM Mono&#39;,monospace">2½</text>
+                <rect x="476" y="93" width="38" height="28" rx="4" fill="rgba(210,185,60,.4)"></rect>
+                <text x="495" y="112" text-anchor="middle" font-size="20" font-weight="500" fill="#2a1800" font-family="&#39;DM Mono&#39;,monospace">2⅜</text>
+              </svg>
+            </div>
+            <div class="l2-worked-steps">
+              <div class="l2-ws-row"><span class="l2-ws-num">①</span>Convert: 19 ÷ 8 = <strong>2 remainder 3</strong> → 2 and 3/8</div>
+              <div class="l2-ws-row"><span class="l2-ws-num">②</span>Find the <strong>2″</strong> mark on the ruler</div>
+              <div class="l2-ws-row"><span class="l2-ws-num">③</span>Count 3 eighth-ticks past the 2″ mark</div>
+              <div class="l2-ws-row l2-ws-answer"><span class="l2-ws-num">✓</span><strong>19/8″ = 2 3/8″</strong> — the arrow shows exactly where it lands</div>
+            </div>
+          </div>
+
+          <!-- Worked example 2: 27/16 -->
+          <div class="l2-worked">
+            <div class="l2-worked-title">Example — where is 27/16″ on the ruler?</div>
+            <div class="l2-diagram-wrap">
+              <svg viewBox="0 0 640 155" width="100%" style="max-width:640px;display:block;margin:0 auto" xmlns="http://www.w3.org/2000/svg">
+                <!-- 2-inch ruler, each inch=300px -->
+                <rect x="20" y="30" width="600" height="60" rx="4" fill="#f0d878" stroke="#b09030" stroke-width="1.5"></rect>
+                <rect x="21" y="31" width="598" height="12" fill="#e8cc55" opacity=".35"></rect>
+                <rect x="20" y="30" width="5" height="60" rx="2" fill="#b09030"></rect>
+                <line x1="20" y1="30" x2="20" y2="90" stroke="#1a160a" stroke-width="3" stroke-linecap="square"></line>
+                <line x1="320" y1="30" x2="320" y2="90" stroke="#1a160a" stroke-width="3" stroke-linecap="square"></line>
+                <line x1="620" y1="30" x2="620" y2="90" stroke="#1a160a" stroke-width="3" stroke-linecap="square"></line>
+                <line x1="170" y1="30" x2="170" y2="75" stroke="#1a160a" stroke-width="2.2" stroke-linecap="square"></line>
+                <line x1="470" y1="30" x2="470" y2="75" stroke="#1a160a" stroke-width="2.2" stroke-linecap="square"></line>
+                <line x1="95" y1="30" x2="95" y2="65" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line>
+                <line x1="245" y1="30" x2="245" y2="65" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line>
+                <line x1="395" y1="30" x2="395" y2="65" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line>
+                <line x1="545" y1="30" x2="545" y2="65" stroke="#1a160a" stroke-width="1.8" stroke-linecap="square"></line>
+                <!-- sixteenth ticks between 1" and 2" only — each 1/16 = 300/16 = 18.75px -->
+                <line x1="357" y1="30" x2="357" y2="48" stroke="#1a160a" stroke-width="1" stroke-linecap="square"></line>
+                <line x1="376" y1="30" x2="376" y2="48" stroke="#1a160a" stroke-width="1" stroke-linecap="square"></line>
+                <line x1="414" y1="30" x2="414" y2="48" stroke="#1a160a" stroke-width="1" stroke-linecap="square"></line>
+                <line x1="433" y1="30" x2="433" y2="48" stroke="#1a160a" stroke-width="1" stroke-linecap="square"></line>
+                <!-- 27/16 = 1 remainder 11 → 1 11/16" = x=320+(11/16)*300=320+206.25=526.25 -->
+                <rect x="20" y="30" width="506" height="60" fill="#c87941" opacity=".14"></rect>
+                <path d="M526,16 L536,30 L516,30 Z" fill="#c87941"></path>
+                <!-- labels -->
+                <rect x="4" y="93" width="36" height="28" rx="4" fill="rgba(210,185,60,.75)"></rect>
+                <text x="22" y="112" text-anchor="middle" font-size="20" font-weight="500" fill="#1a0e00" font-family="&#39;DM Mono&#39;,monospace">0"</text>
+                <rect x="302" y="93" width="36" height="28" rx="4" fill="rgba(210,185,60,.75)"></rect>
+                <text x="320" y="112" text-anchor="middle" font-size="20" font-weight="500" fill="#1a0e00" font-family="&#39;DM Mono&#39;,monospace">1"</text>
+                <rect x="602" y="93" width="36" height="28" rx="4" fill="rgba(210,185,60,.75)"></rect>
+                <text x="620" y="112" text-anchor="middle" font-size="20" font-weight="500" fill="#1a0e00" font-family="&#39;DM Mono&#39;,monospace">2"</text>
+                <rect x="451" y="93" width="40" height="28" rx="4" fill="rgba(210,185,60,.5)"></rect>
+                <text x="471" y="112" text-anchor="middle" font-size="20" font-weight="500" fill="#2a1800" font-family="&#39;DM Mono&#39;,monospace">1¾</text>
+                <rect x="505" y="93" width="46" height="28" rx="4" fill="rgba(210,185,60,.4)"></rect>
+                <text x="528" y="112" text-anchor="middle" font-size="18" font-weight="500" fill="#2a1800" font-family="&#39;DM Mono&#39;,monospace">1 11/16</text>
+              </svg>
+            </div>
+            <div class="l2-worked-steps">
+              <div class="l2-ws-row"><span class="l2-ws-num">①</span>Convert: 27 ÷ 16 = <strong>1 remainder 11</strong> → 1 and 11/16</div>
+              <div class="l2-ws-row"><span class="l2-ws-num">②</span>Find the <strong>1″</strong> mark, then find the ¾ landmark (12/16)</div>
+              <div class="l2-ws-row"><span class="l2-ws-num">③</span>Step back 1 tiny sixteenth tick from ¾ → that is 11/16</div>
+              <div class="l2-ws-row l2-ws-answer"><span class="l2-ws-num">✓</span><strong>27/16″ = 1 11/16″</strong></div>
+            </div>
+          </div>
+
+          <!-- Worked example 3: 44/16 -->
+          <div class="l2-worked">
+            <div class="l2-worked-title">Example — convert a measurement TO an improper fraction</div>
+            <div class="l2-worked-title" style="margin-top:.5rem;color:var(--text2)">You read 2 3/4″ on the ruler. What is it as a single fraction over 16?</div>
+            <div class="l2-worked-steps" style="margin-top:.65rem">
+              <div class="l2-ws-row"><span class="l2-ws-num">①</span>Convert whole inches: 2″ = 2 × 16 = <strong>32 sixteenths</strong></div>
+              <div class="l2-ws-row"><span class="l2-ws-num">②</span>Convert fraction: ¾ = 12/16 = <strong>12 sixteenths</strong></div>
+              <div class="l2-ws-row"><span class="l2-ws-num">③</span>Add: 32 + 12 = <strong>44 sixteenths</strong></div>
+              <div class="l2-ws-row l2-ws-answer"><span class="l2-ws-num">✓</span><strong>2 3/4″ = 44/16″</strong></div>
+            </div>
+            <div style="margin-top:.75rem;padding:.65rem .85rem;background:var(--surface2);border:.5px solid var(--border);border-radius:var(--radius);font-size:.83rem;color:var(--text2);line-height:1.6">
+              <strong style="color:var(--text)">Why this matters:</strong> When adding or subtracting measurements in math (like in Quiz 3), converting to a single fraction over 16 makes the arithmetic much easier before converting back.
+            </div>
+          </div>
+
+          <div class="l2-cta">
+            <span>Ready to test yourself?</span>
+            <button onclick="setMode(&#39;quiz4&#39;)" class="l2-cta-btn accent">Take Quiz 4 →</button>
+          </div>
+        </div>
+      </div>
+    </div><!-- /l4c3 -->
+
+  </div><!-- /learn4Section -->
+
+
+  <!-- ══════════════ QUIZ 4 — MIXED NUMBERS ══════════════ -->
+  <div id="quiz4Section" style="">
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title-group">
+          <div class="panel-title">Mixed number quiz — above 1 inch</div>
+          <div class="panel-sub">Read mixed numbers · find ticks · identify &amp; convert improper fractions</div>
+        </div>
+        <button class="restart-btn" onclick="initQ4()">↻ Restart</button>
+      </div>
+      <div class="panel-body">
+        <div class="stats-row">
+          <div class="stat-card green"><div class="stat-label">Correct</div><div class="stat-value" id="q4Correct">10</div></div>
+          <div class="stat-card red"><div class="stat-label">Wrong</div><div class="stat-value" id="q4Wrong">0</div></div>
+          <div class="stat-card amber"><div class="stat-label">Streak</div><div class="stat-value" id="q4Streak">10</div></div>
+        </div>
+        <div class="progress-wrap"><div class="progress-bar" id="q4Progress" style="width: 100%;"></div></div>
+        <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:.6rem">
+          <span class="tag tag-sixteenth" id="q4TypeBadge">Improper</span>
+          <div class="quiz-prompt" style="margin-bottom:0" id="q4Prompt">The arrow points to a measurement. Which improper fraction matches?</div>
+        </div>
+        <div class="tape-scroll" style="margin-bottom:.6rem">
+          <svg id="q4Svg" viewBox="0 0 920 235" width="920" style="max-width:100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <marker id="q4arL" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M6,0 L0,3 L6,6" fill="none" stroke="#c87941" stroke-width="1.5"></path></marker>
+              <marker id="q4arR" markerWidth="6" markerHeight="6" refX="0" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#c87941" stroke-width="1.5"></path></marker>
+            </defs>
+            <rect x="20" y="85" width="880" height="76" rx="4" fill="#f0d878" stroke="#b09030" stroke-width="1.5"></rect>
+            <rect x="21" y="86" width="878" height="13" rx="3" fill="#e8cc55" opacity=".4"></rect>
+            <rect x="20" y="85" width="6" height="76" rx="2" fill="#b09030"></rect>
+            <line x1="20" y1="85" x2="900" y2="85" stroke="#a08020" stroke-width=".75"></line>
+            <g id="q4Ticks"><line x1="20" x2="20" y1="85" y2="161" stroke="#1a160a" stroke-width="2.8" stroke-linecap="square"></line><rect x="-1" y="162" width="42" height="32" rx="4" fill="rgba(210,185,60,.75)"></rect><text x="20" y="179" text-anchor="middle" font-size="20" font-weight="500" fill="#1a0e00" font-family="&#39;DM Mono&#39;,monospace">0"</text><rect x="11" y="85" width="18" height="76" fill="transparent" data-q4s="0" style="cursor: pointer;"></rect><line x1="33.75" x2="33.75" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="24.75" y="85" width="18" height="76" fill="transparent" data-q4s="1" style="cursor: pointer;"></rect><line x1="47.5" x2="47.5" y1="85" y2="114" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><rect x="38.5" y="85" width="18" height="76" fill="transparent" data-q4s="2" style="cursor: pointer;"></rect><line x1="61.25" x2="61.25" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="52.25" y="85" width="18" height="76" fill="transparent" data-q4s="3" style="cursor: pointer;"></rect><line x1="75" x2="75" y1="85" y2="129" stroke="#1a160a" stroke-width="2" stroke-linecap="square"></line><rect x="66" y="85" width="18" height="76" fill="transparent" data-q4s="4" style="cursor: pointer;"></rect><line x1="88.75" x2="88.75" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="79.75" y="85" width="18" height="76" fill="transparent" data-q4s="5" style="cursor: pointer;"></rect><line x1="102.5" x2="102.5" y1="85" y2="114" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><rect x="93.5" y="85" width="18" height="76" fill="transparent" data-q4s="6" style="cursor: pointer;"></rect><line x1="116.25" x2="116.25" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="107.25" y="85" width="18" height="76" fill="transparent" data-q4s="7" style="cursor: pointer;"></rect><line x1="130" x2="130" y1="85" y2="147" stroke="#1a160a" stroke-width="2.4" stroke-linecap="square"></line><rect x="121" y="85" width="18" height="76" fill="transparent" data-q4s="8" style="cursor: pointer;"></rect><line x1="143.75" x2="143.75" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="134.75" y="85" width="18" height="76" fill="transparent" data-q4s="9" style="cursor: pointer;"></rect><line x1="157.5" x2="157.5" y1="85" y2="114" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><rect x="148.5" y="85" width="18" height="76" fill="transparent" data-q4s="10" style="cursor: pointer;"></rect><line x1="171.25" x2="171.25" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="162.25" y="85" width="18" height="76" fill="transparent" data-q4s="11" style="cursor: pointer;"></rect><line x1="185" x2="185" y1="85" y2="129" stroke="#1a160a" stroke-width="2" stroke-linecap="square"></line><rect x="176" y="85" width="18" height="76" fill="transparent" data-q4s="12" style="cursor: pointer;"></rect><line x1="198.75" x2="198.75" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="189.75" y="85" width="18" height="76" fill="transparent" data-q4s="13" style="cursor: pointer;"></rect><line x1="212.5" x2="212.5" y1="85" y2="114" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><rect x="203.5" y="85" width="18" height="76" fill="transparent" data-q4s="14" style="cursor: pointer;"></rect><line x1="226.25" x2="226.25" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="217.25" y="85" width="18" height="76" fill="transparent" data-q4s="15" style="cursor: pointer;"></rect><line x1="240" x2="240" y1="85" y2="161" stroke="#1a160a" stroke-width="2.8" stroke-linecap="square"></line><rect x="219" y="162" width="42" height="32" rx="4" fill="rgba(210,185,60,.75)"></rect><text x="240" y="179" text-anchor="middle" font-size="20" font-weight="500" fill="#1a0e00" font-family="&#39;DM Mono&#39;,monospace">1"</text><rect x="231" y="85" width="18" height="76" fill="transparent" data-q4s="16" style="cursor: pointer;"></rect><line x1="253.75" x2="253.75" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="244.75" y="85" width="18" height="76" fill="transparent" data-q4s="17" style="cursor: pointer;"></rect><line x1="267.5" x2="267.5" y1="85" y2="114" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><rect x="258.5" y="85" width="18" height="76" fill="transparent" data-q4s="18" style="cursor: pointer;"></rect><line x1="281.25" x2="281.25" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="272.25" y="85" width="18" height="76" fill="transparent" data-q4s="19" style="cursor: pointer;"></rect><line x1="295" x2="295" y1="85" y2="129" stroke="#1a160a" stroke-width="2" stroke-linecap="square"></line><rect x="286" y="85" width="18" height="76" fill="transparent" data-q4s="20" style="cursor: pointer;"></rect><line x1="308.75" x2="308.75" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="299.75" y="85" width="18" height="76" fill="transparent" data-q4s="21" style="cursor: pointer;"></rect><line x1="322.5" x2="322.5" y1="85" y2="114" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><rect x="313.5" y="85" width="18" height="76" fill="transparent" data-q4s="22" style="cursor: pointer;"></rect><line x1="336.25" x2="336.25" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="327.25" y="85" width="18" height="76" fill="transparent" data-q4s="23" style="cursor: pointer;"></rect><line x1="350" x2="350" y1="85" y2="147" stroke="#1a160a" stroke-width="2.4" stroke-linecap="square"></line><rect x="341" y="85" width="18" height="76" fill="transparent" data-q4s="24" style="cursor: pointer;"></rect><line x1="363.75" x2="363.75" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="354.75" y="85" width="18" height="76" fill="transparent" data-q4s="25" style="cursor: pointer;"></rect><line x1="377.5" x2="377.5" y1="85" y2="114" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><rect x="368.5" y="85" width="18" height="76" fill="transparent" data-q4s="26" style="cursor: pointer;"></rect><line x1="391.25" x2="391.25" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="382.25" y="85" width="18" height="76" fill="transparent" data-q4s="27" style="cursor: pointer;"></rect><line x1="405" x2="405" y1="85" y2="129" stroke="#1a160a" stroke-width="2" stroke-linecap="square"></line><rect x="396" y="85" width="18" height="76" fill="transparent" data-q4s="28" style="cursor: pointer;"></rect><line x1="418.75" x2="418.75" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="409.75" y="85" width="18" height="76" fill="transparent" data-q4s="29" style="cursor: pointer;"></rect><line x1="432.5" x2="432.5" y1="85" y2="114" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><rect x="423.5" y="85" width="18" height="76" fill="transparent" data-q4s="30" style="cursor: pointer;"></rect><line x1="446.25" x2="446.25" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="437.25" y="85" width="18" height="76" fill="transparent" data-q4s="31" style="cursor: pointer;"></rect><line x1="460" x2="460" y1="85" y2="161" stroke="#1a160a" stroke-width="2.8" stroke-linecap="square"></line><rect x="439" y="162" width="42" height="32" rx="4" fill="rgba(210,185,60,.75)"></rect><text x="460" y="179" text-anchor="middle" font-size="20" font-weight="500" fill="#1a0e00" font-family="&#39;DM Mono&#39;,monospace">2"</text><rect x="451" y="85" width="18" height="76" fill="transparent" data-q4s="32" style="cursor: pointer;"></rect><line x1="473.75" x2="473.75" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="464.75" y="85" width="18" height="76" fill="transparent" data-q4s="33" style="cursor: pointer;"></rect><line x1="487.5" x2="487.5" y1="85" y2="114" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><rect x="478.5" y="85" width="18" height="76" fill="transparent" data-q4s="34" style="cursor: pointer;"></rect><line x1="501.25" x2="501.25" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="492.25" y="85" width="18" height="76" fill="transparent" data-q4s="35" style="cursor: pointer;"></rect><line x1="515" x2="515" y1="85" y2="129" stroke="#1a160a" stroke-width="2" stroke-linecap="square"></line><rect x="506" y="85" width="18" height="76" fill="transparent" data-q4s="36" style="cursor: pointer;"></rect><line x1="528.75" x2="528.75" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="519.75" y="85" width="18" height="76" fill="transparent" data-q4s="37" style="cursor: pointer;"></rect><line x1="542.5" x2="542.5" y1="85" y2="114" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><rect x="533.5" y="85" width="18" height="76" fill="transparent" data-q4s="38" style="cursor: pointer;"></rect><line x1="556.25" x2="556.25" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="547.25" y="85" width="18" height="76" fill="transparent" data-q4s="39" style="cursor: pointer;"></rect><line x1="570" x2="570" y1="85" y2="147" stroke="#1a160a" stroke-width="2.4" stroke-linecap="square"></line><rect x="561" y="85" width="18" height="76" fill="transparent" data-q4s="40" style="cursor: pointer;"></rect><line x1="583.75" x2="583.75" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="574.75" y="85" width="18" height="76" fill="transparent" data-q4s="41" style="cursor: pointer;"></rect><line x1="597.5" x2="597.5" y1="85" y2="114" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><rect x="588.5" y="85" width="18" height="76" fill="transparent" data-q4s="42" style="cursor: pointer;"></rect><line x1="611.25" x2="611.25" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="602.25" y="85" width="18" height="76" fill="transparent" data-q4s="43" style="cursor: pointer;"></rect><line x1="625" x2="625" y1="85" y2="129" stroke="#1a160a" stroke-width="2" stroke-linecap="square"></line><rect x="616" y="85" width="18" height="76" fill="transparent" data-q4s="44" style="cursor: pointer;"></rect><line x1="638.75" x2="638.75" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="629.75" y="85" width="18" height="76" fill="transparent" data-q4s="45" style="cursor: pointer;"></rect><line x1="652.5" x2="652.5" y1="85" y2="114" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><rect x="643.5" y="85" width="18" height="76" fill="transparent" data-q4s="46" style="cursor: pointer;"></rect><line x1="666.25" x2="666.25" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="657.25" y="85" width="18" height="76" fill="transparent" data-q4s="47" style="cursor: pointer;"></rect><line x1="680" x2="680" y1="85" y2="161" stroke="#1a160a" stroke-width="2.8" stroke-linecap="square"></line><rect x="659" y="162" width="42" height="32" rx="4" fill="rgba(210,185,60,.75)"></rect><text x="680" y="179" text-anchor="middle" font-size="20" font-weight="500" fill="#1a0e00" font-family="&#39;DM Mono&#39;,monospace">3"</text><rect x="671" y="85" width="18" height="76" fill="transparent" data-q4s="48" style="cursor: pointer;"></rect><line x1="693.75" x2="693.75" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="684.75" y="85" width="18" height="76" fill="transparent" data-q4s="49" style="cursor: pointer;"></rect><line x1="707.5" x2="707.5" y1="85" y2="114" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><rect x="698.5" y="85" width="18" height="76" fill="transparent" data-q4s="50" style="cursor: pointer;"></rect><line x1="721.25" x2="721.25" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="712.25" y="85" width="18" height="76" fill="transparent" data-q4s="51" style="cursor: pointer;"></rect><line x1="735" x2="735" y1="85" y2="129" stroke="#1a160a" stroke-width="2" stroke-linecap="square"></line><rect x="726" y="85" width="18" height="76" fill="transparent" data-q4s="52" style="cursor: pointer;"></rect><line x1="748.75" x2="748.75" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="739.75" y="85" width="18" height="76" fill="transparent" data-q4s="53" style="cursor: pointer;"></rect><line x1="762.5" x2="762.5" y1="85" y2="114" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><rect x="753.5" y="85" width="18" height="76" fill="transparent" data-q4s="54" style="cursor: pointer;"></rect><line x1="776.25" x2="776.25" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="767.25" y="85" width="18" height="76" fill="transparent" data-q4s="55" style="cursor: pointer;"></rect><line x1="790" x2="790" y1="85" y2="147" stroke="#1a160a" stroke-width="2.4" stroke-linecap="square"></line><rect x="781" y="85" width="18" height="76" fill="transparent" data-q4s="56" style="cursor: pointer;"></rect><line x1="803.75" x2="803.75" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="794.75" y="85" width="18" height="76" fill="transparent" data-q4s="57" style="cursor: pointer;"></rect><line x1="817.5" x2="817.5" y1="85" y2="114" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><rect x="808.5" y="85" width="18" height="76" fill="transparent" data-q4s="58" style="cursor: pointer;"></rect><line x1="831.25" x2="831.25" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="822.25" y="85" width="18" height="76" fill="transparent" data-q4s="59" style="cursor: pointer;"></rect><line x1="845" x2="845" y1="85" y2="129" stroke="#1a160a" stroke-width="2" stroke-linecap="square"></line><rect x="836" y="85" width="18" height="76" fill="transparent" data-q4s="60" style="cursor: pointer;"></rect><line x1="858.75" x2="858.75" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="849.75" y="85" width="18" height="76" fill="transparent" data-q4s="61" style="cursor: pointer;"></rect><line x1="872.5" x2="872.5" y1="85" y2="114" stroke="#1a160a" stroke-width="1.6" stroke-linecap="square"></line><rect x="863.5" y="85" width="18" height="76" fill="transparent" data-q4s="62" style="cursor: pointer;"></rect><line x1="886.25" x2="886.25" y1="85" y2="102" stroke="#1a160a" stroke-width="1.2" stroke-linecap="square"></line><rect x="877.25" y="85" width="18" height="76" fill="transparent" data-q4s="63" style="cursor: pointer;"></rect><line x1="900" x2="900" y1="85" y2="161" stroke="#1a160a" stroke-width="2.8" stroke-linecap="square"></line><rect x="879" y="162" width="42" height="32" rx="4" fill="rgba(210,185,60,.75)"></rect><text x="900" y="179" text-anchor="middle" font-size="20" font-weight="500" fill="#1a0e00" font-family="&#39;DM Mono&#39;,monospace">4"</text><rect x="891" y="85" width="18" height="76" fill="transparent" data-q4s="64" style="cursor: pointer;"></rect></g>
+            <g id="q4Arrow"><path d="M781,67 L799,67 L790,83" fill="#c87941"></path><text x="790" y="63" text-anchor="middle" font-size="17" font-weight="500" fill="#c87941" font-family="&#39;DM Mono&#39;,monospace">?</text></g>
+          </svg>
+        </div>
+        <div class="quiz-click-hint" id="q4ClickHint"></div>
+        <div class="quiz-opts" id="q4Opts"><button class="qopt">14/4"</button><button class="qopt">45/16"</button><button class="qopt">13/4"</button><button class="qopt">2/4"</button></div>
+        <div class="quiz-feedback" id="q4Feedback" style=""></div>
+        <div style="text-align:center">
+          <button class="quiz-next-btn" id="q4Next" onclick="nextQ4()" style="display: none;">Next question →</button>
+        </div>
+      </div>
+    </div>
+  </div><!-- /quiz4Section -->
+
+
 
 </div><!-- /app -->
 <script>
@@ -1729,18 +2226,356 @@ function move(d){go(cur+d);}
 
 function setMode(m){
   document.querySelectorAll('.mtab').forEach((t,i)=>{
-    const modes=['learn','quiz','learn3','quiz3','learn2','math'];
+    const modes=['learn','quiz','learn3','quiz3','learn2','math','learn4','quiz4'];
     t.classList.toggle('active', modes[i]===m);
   });
-  ['learnSection','learn2Section','learn3Section','quizSection','mathSection','quiz3Section'].forEach(id=>{
-    document.getElementById(id).style.display='none';
+  ['learnSection','learn2Section','learn3Section','quizSection','mathSection','quiz3Section','learn4Section','quiz4Section'].forEach(id=>{
+    const el=document.getElementById(id); if(el) el.style.display='none';
   });
-  const map={learn:'learnSection',learn2:'learn2Section',learn3:'learn3Section',quiz:'quizSection',math:'mathSection',quiz3:'quiz3Section'};
-  document.getElementById(map[m]).style.display='';
+  const map={learn:'learnSection',learn2:'learn2Section',learn3:'learn3Section',quiz:'quizSection',math:'mathSection',quiz3:'quiz3Section',learn4:'learn4Section',quiz4:'quiz4Section'};
+  if(map[m]) document.getElementById(map[m]).style.display='';
   if(m==='quiz') initQuiz();
   if(m==='math') initMath();
   if(m==='learn3') initMetricRuler();
   if(m==='quiz3') initQ3();
+  if(m==='learn4') initL4();
+  if(m==='quiz4') initQ4();
+}
+
+function showL4(idx){
+  for(let i=0;i<4;i++){
+    const c=document.getElementById('l4c'+i);
+    if(c) c.style.display=i===idx?'':'none';
+  }
+  document.querySelectorAll('#l4TabRow .l2tab').forEach((t,i)=>t.classList.toggle('active',i===idx));
+  if(idx===0) initL4();
+}
+
+/* ─── Learn 4: 4-inch interactive ruler ─── */
+const L4_INCHES=4, L4_SIXTEENTHS=64;
+const L4_XL=20, L4_XR=900, L4_SPAN=L4_XR-L4_XL;
+const L4_TOP=85, L4_H=76;
+function l4X(s){ return L4_XL+(s/L4_SIXTEENTHS)*L4_SPAN; }
+function l4TierOf(s){
+  if(s%16===0) return 'anchor';
+  if(s%8===0)  return 'half';
+  if(s%4===0)  return 'quarter';
+  if(s%2===0)  return 'eighth';
+  return 'sixteenth';
+}
+const L4_TIER_H={anchor:L4_H,half:Math.round(L4_H*.82),quarter:Math.round(L4_H*.58),eighth:Math.round(L4_H*.38),sixteenth:Math.round(L4_H*.22)};
+const L4_TIER_SW={anchor:2.8,half:2.4,quarter:2.0,eighth:1.6,sixteenth:1.2};
+const L4_FRACS={0:'',1:'1/16',2:'1/8',3:'3/16',4:'1/4',5:'5/16',6:'3/8',7:'7/16',8:'1/2',9:'9/16',10:'5/8',11:'11/16',12:'3/4',13:'13/16',14:'7/8',15:'15/16'};
+function l4Label(s){
+  const whole=Math.floor(s/16), rem=s%16;
+  if(rem===0) return whole+'"';
+  return (whole>0?whole+' ':'')+L4_FRACS[rem]+'"';
+}
+
+const l4Slides=[
+  {s:-1, title:'0 to 4 inch ruler', sub:'Tap any tick to see its full mixed-number measurement'},
+  {s:2,  title:'1/8\"', sub:'Two sixteenths from 0'},
+  {s:4,  title:'1/4\"', sub:'One quarter inch'},
+  {s:8,  title:'1/2\"', sub:'One half inch'},
+  {s:16, title:'1\"',   sub:'One full inch'},
+  {s:20, title:'1 1/4\"', sub:'One and one-quarter inches'},
+  {s:24, title:'1 1/2\"', sub:'One and one-half inches'},
+  {s:28, title:'1 3/4\"', sub:'One and three-quarter inches'},
+  {s:32, title:'2\"',   sub:'Two full inches'},
+  {s:37, title:'2 5/16\"', sub:'Two and five-sixteenths'},
+  {s:46, title:'2 7/8\"', sub:'Two and seven-eighths'},
+  {s:53, title:'3 5/16\"', sub:'Three and five-sixteenths'},
+  {s:60, title:'3 3/4\"', sub:'Three and three-quarter inches'},
+];
+let l4Cur=0, l4Sel=-1;
+const l4Total=l4Slides.length;
+
+function initL4(){
+  const dots=document.getElementById('l4dots');
+  if(dots&&dots.children.length===0){
+    for(let i=0;i<l4Total;i++){
+      const d=document.createElement('div');
+      d.className='dot'+(i===0?' on':'');
+      d.onclick=()=>l4Go(i);
+      dots.appendChild(d);
+    }
+  }
+  l4Go(0);
+}
+
+function l4Go(n){
+  const dots=document.getElementById('l4dots');
+  dots?.querySelectorAll('.dot')[l4Cur]?.classList.remove('on');
+  l4Cur=Math.max(0,Math.min(l4Total-1,n));
+  l4Sel=-1;
+  const s=l4Slides[l4Cur];
+  document.getElementById('l4title').textContent=s.title;
+  document.getElementById('l4sub').textContent=s.sub;
+  document.getElementById('l4ctr').textContent=(l4Cur+1)+' / '+l4Total;
+  document.getElementById('l4dp-title').textContent='Tap a tick mark above';
+  document.getElementById('l4dp-body').textContent='Tap any line to see its full mixed-number measurement.';
+  document.getElementById('l4dp-hint').style.display='none';
+  dots?.querySelectorAll('.dot')[l4Cur]?.classList.add('on');
+  document.getElementById('l4pb').disabled=l4Cur===0;
+  document.getElementById('l4nb').disabled=l4Cur===l4Total-1;
+  document.getElementById('l4SpanLayer').innerHTML='';
+  renderL4Ruler(s.s,-1);
+  if(s.s>=0) setTimeout(()=>selectL4Tick(s.s,s.s),100);
+}
+function l4Move(d){ l4Go(l4Cur+d); }
+function l4Random(){ l4Go(1+Math.floor(Math.random()*(l4Total-1))); }
+
+function renderL4Ruler(focus, selected){
+  const svg=document.getElementById('l4Svg');
+  let tG=svg.querySelector('g#l4Ticks'), lG=svg.querySelector('g#l4Labels');
+  if(tG) tG.innerHTML=''; else{ tG=svgEl('g',{id:'l4Ticks'}); svg.appendChild(tG); }
+  if(lG) lG.innerHTML=''; else{ lG=svgEl('g',{id:'l4Labels'}); svg.appendChild(lG); }
+  for(let s=0;s<=L4_SIXTEENTHS;s++){
+    const x=l4X(s), tier=l4TierOf(s), h=L4_TIER_H[tier], sw=L4_TIER_SW[tier];
+    const isSel=selected===s, isFocus=focus===s;
+    const col=(isSel||isFocus)?'#c87941':(focus===-1?'#1a160a':'#8a7e40');
+    tG.appendChild(svgEl('line',{x1:x,x2:x,y1:L4_TOP,y2:L4_TOP+h,stroke:col,'stroke-width':isSel?sw+0.8:sw,'stroke-linecap':'square'}));
+    const hit=svgEl('rect',{x:x-9,y:L4_TOP,width:18,height:L4_H,fill:'transparent','data-l4s':s});
+    hit.style.cursor='pointer';
+    tG.appendChild(hit);
+    if(isSel) tG.appendChild(svgEl('circle',{cx:x,cy:L4_TOP+h+7,r:'3.5',fill:'#c87941'}));
+    const labelY=L4_TOP+L4_H+18;
+    if(tier==='anchor'){
+      const lbl=l4Label(s), bgW=lbl.length*12+18;
+      lG.appendChild(svgEl('rect',{x:x-bgW/2,y:labelY-17,width:bgW,height:32,rx:'4',fill:(isSel||isFocus)?'#c87941':'rgba(210,185,60,.75)'}));
+      const lt=svgEl('text',{x,y:labelY,'text-anchor':'middle','font-size':'20','font-weight':'500',fill:(isSel||isFocus)?'#fff':'#1a0e00','font-family':"'DM Mono',monospace"});
+      lt.textContent=lbl; lG.appendChild(lt);
+    } else if(isSel||isFocus){
+      const lbl=l4Label(s), bgW=lbl.length*12+18;
+      lG.appendChild(svgEl('rect',{x:x-bgW/2,y:labelY-17,width:bgW,height:32,rx:'4',fill:'#c87941'}));
+      const lt=svgEl('text',{x,y:labelY,'text-anchor':'middle','font-size':'20','font-weight':'500',fill:'#fff','font-family':"'DM Mono',monospace"});
+      lt.textContent=lbl; lG.appendChild(lt);
+    }
+  }
+  tG.querySelectorAll('[data-l4s]').forEach(el=>{
+    el.addEventListener('click',()=>selectL4Tick(parseInt(el.getAttribute('data-l4s')),focus));
+  });
+}
+
+function renderL4Span(s){
+  const sl=document.getElementById('l4SpanLayer');
+  sl.innerHTML='';
+  if(s<=0) return;
+  const x0=l4X(0), x1=l4X(s), spanW=x1-x0, yLine=36, midX=(x0+x1)/2;
+  sl.appendChild(svgEl('rect',{x:x0,y:L4_TOP,width:spanW,height:L4_H,fill:'#c87941',opacity:'0.16'}));
+  if(spanW>=18) sl.appendChild(svgEl('line',{x1:x0+5,x2:x1-5,y1:yLine,y2:yLine,stroke:'#c87941','stroke-width':'1.6','marker-start':'url(#l4arL)','marker-end':'url(#l4arR)'}));
+  const lbl=l4Label(s), bw=lbl.length*13+28;
+  const bx=Math.min(Math.max(midX-bw/2,L4_XL+2),L4_XR-bw-2);
+  sl.appendChild(svgEl('rect',{x:bx,y:yLine-14,width:bw,height:28,rx:'14',fill:'#c87941'}));
+  const lt=svgEl('text',{x:bx+bw/2,y:yLine+7,'text-anchor':'middle','font-size':'17','font-weight':'500',fill:'#fff','font-family':"'DM Mono',monospace"});
+  lt.textContent=lbl; sl.appendChild(lt);
+  [x0,x1].forEach(x=>{
+    sl.appendChild(svgEl('line',{x1:x,x2:x,y1:yLine+14,y2:L4_TOP,stroke:'#c87941','stroke-width':'1','stroke-dasharray':'3,3',opacity:'0.4'}));
+  });
+}
+
+function selectL4Tick(s, focus){
+  l4Sel=s;
+  const tier=l4TierOf(s);
+  const whole=Math.floor(s/16), rem=s%16;
+  const tierLabel={anchor:'whole inch',half:'half inch',quarter:'quarter inch',eighth:'eighth inch',sixteenth:'sixteenth'};
+  const titleEl=document.getElementById('l4dp-title');
+  titleEl.innerHTML='';
+  const tag=document.createElement('span');
+  tag.className='tag '+(tier==='anchor'?'tag-anchor':tier==='half'?'tag-half':tier==='quarter'?'tag-quarter':tier==='eighth'?'tag-eighth':'tag-sixteenth');
+  tag.textContent=tierLabel[tier];
+  titleEl.appendChild(tag);
+  titleEl.appendChild(document.createTextNode('\u00a0'+l4Label(s)));
+  let body='';
+  if(tier==='anchor') body=whole+' whole inch'+(whole!==1?'es':'')+' from 0. Each inch contains 16 sixteenths.';
+  else body='Start at '+whole+'\u2033. Then add '+L4_FRACS[rem]+'\u2033 within that inch.'+(whole>0?' Count the '+whole+' whole inches first, then find the fraction landmark.':'');
+  document.getElementById('l4dp-body').textContent=body;
+  const hint=document.getElementById('l4dp-hint');
+  if(whole>0){ hint.textContent='Tip: always identify the whole inch first — look for the nearest printed number to the left.'; hint.style.display='block'; }
+  else { hint.style.display='none'; }
+  renderL4Span(s);
+  renderL4Ruler(focus, s);
+}
+
+/* ─── Quiz 4: Mixed numbers + improper fractions ─── */
+const Q4_XL=20, Q4_XR=900, Q4_SIXTEENTHS=64, Q4_SPAN=Q4_XR-Q4_XL;
+const Q4_TOP=85, Q4_H=76;
+function q4X(s){ return Q4_XL+(s/Q4_SIXTEENTHS)*Q4_SPAN; }
+const q4Pool=[];
+for(let s=2;s<=62;s++) q4Pool.push(s);
+
+/* Convert sixteenths to improper fraction string using smallest denominator */
+function toImproper(s){
+  /* s is in sixteenths — express as n/d where d is 4, 8, or 16 */
+  if(s%4===0) return (s/4)+'/4';
+  if(s%2===0) return (s/2)+'/8';
+  return s+'/16';
+}
+/* Also generate a "wrong" improper fraction label from a nearby sixteenth count */
+function improperWrongs(correct, count){
+  const pool=new Set();
+  [-4,-2,-1,1,2,4,8,-8].forEach(o=>{ const v=correct+o; if(v>0&&v<Q4_SIXTEENTHS&&v!==correct) pool.add(v); });
+  q4Pool.forEach(v=>{ if(v!==correct) pool.add(v); });
+  return [...pool].sort(()=>Math.random()-.5).slice(0,count);
+}
+
+let q4Correct=0, q4Wrong=0, q4Streak=0, q4Total=0, q4Locked=false, q4Target=0;
+
+function initQ4(){
+  q4Correct=0; q4Wrong=0; q4Streak=0; q4Total=0; q4Locked=false;
+  updateQ4Scores(); nextQ4();
+}
+function updateQ4Scores(){
+  document.getElementById('q4Correct').textContent=q4Correct;
+  document.getElementById('q4Wrong').textContent=q4Wrong;
+  document.getElementById('q4Streak').textContent=q4Streak;
+  document.getElementById('q4Progress').style.width=(q4Total>0?Math.round(q4Correct/q4Total*100):0)+'%';
+}
+
+function renderQ4Ruler(markerS, hideMarker){
+  const svg=document.getElementById('q4Svg');
+  let tG=svg.querySelector('g#q4Ticks'), aG=svg.querySelector('g#q4Arrow');
+  if(tG) tG.innerHTML=''; else{ tG=svgEl('g',{id:'q4Ticks'}); svg.appendChild(tG); }
+  if(aG) aG.innerHTML=''; else{ aG=svgEl('g',{id:'q4Arrow'}); svg.appendChild(aG); }
+  for(let s=0;s<=Q4_SIXTEENTHS;s++){
+    const tier=l4TierOf(s), h=L4_TIER_H[tier], sw=L4_TIER_SW[tier];
+    const x=q4X(s);
+    tG.appendChild(svgEl('line',{x1:x,x2:x,y1:Q4_TOP,y2:Q4_TOP+h,stroke:'#1a160a','stroke-width':sw,'stroke-linecap':'square'}));
+    if(tier==='anchor'){
+      const lbl=l4Label(s), labelY=Q4_TOP+Q4_H+18, bgW=lbl.length*12+18;
+      tG.appendChild(svgEl('rect',{x:x-bgW/2,y:labelY-17,width:bgW,height:32,rx:'4',fill:'rgba(210,185,60,.75)'}));
+      const lt=svgEl('text',{x,y:labelY,'text-anchor':'middle','font-size':'20','font-weight':'500',fill:'#1a0e00','font-family':"'DM Mono',monospace"});
+      lt.textContent=lbl; tG.appendChild(lt);
+    }
+    const hit=svgEl('rect',{x:x-9,y:Q4_TOP,width:18,height:Q4_H,fill:'transparent','data-q4s':s});
+    hit.style.cursor='pointer';
+    tG.appendChild(hit);
+  }
+  if(!hideMarker&&markerS!=null){
+    const x=q4X(markerS);
+    aG.appendChild(svgEl('path',{d:`M${x-9},${Q4_TOP-18} L${x+9},${Q4_TOP-18} L${x},${Q4_TOP-2}`,fill:'#c87941'}));
+    const lt=svgEl('text',{x,y:Q4_TOP-22,'text-anchor':'middle','font-size':'17','font-weight':'500',fill:'#c87941','font-family':"'DM Mono',monospace"});
+    lt.textContent='?'; aG.appendChild(lt);
+  }
+}
+function highlightQ4Tick(s, color){
+  const x=q4X(s), h=L4_TIER_H[l4TierOf(s)];
+  document.getElementById('q4Ticks').appendChild(
+    svgEl('line',{x1:x,x2:x,y1:Q4_TOP,y2:Q4_TOP+h,stroke:color,'stroke-width':'3.5','stroke-linecap':'square'})
+  );
+}
+
+function nextQ4(){
+  q4Locked=false;
+  document.getElementById('q4Feedback').textContent='';
+  document.getElementById('q4Feedback').style.color='';
+  document.getElementById('q4Next').style.display='none';
+  document.getElementById('q4ClickHint').textContent='';
+  document.getElementById('q4Opts').innerHTML='';
+
+  q4Target=q4Pool[Math.floor(Math.random()*q4Pool.length)];
+  const badge=document.getElementById('q4TypeBadge');
+
+  /* Pick from 4 question types with equal probability */
+  const qTypes=['read','find','improper','convert'];
+  const qType=qTypes[Math.floor(Math.random()*qTypes.length)];
+
+  if(qType==='read'){
+    /* Arrow on ruler → pick mixed number */
+    badge.textContent='Read'; badge.className='tag tag-quarter';
+    document.getElementById('q4Prompt').textContent='What measurement does the arrow point to?';
+    renderQ4Ruler(q4Target, false);
+    const wrongs=improperWrongs(q4Target,3);
+    const opts=[q4Target,...wrongs].sort(()=>Math.random()-.5);
+    const correct=l4Label(q4Target);
+    const el=document.getElementById('q4Opts');
+    opts.forEach(s=>{
+      const btn=document.createElement('button');
+      btn.className='qopt'; btn.textContent=l4Label(s);
+      btn.onclick=()=>checkQ4Answer(l4Label(s),correct,btn,el);
+      el.appendChild(btn);
+    });
+
+  } else if(qType==='find'){
+    /* Given mixed number → tap tick on ruler */
+    badge.textContent='Find'; badge.className='tag tag-eighth';
+    document.getElementById('q4Prompt').textContent='Tap the tick that shows '+l4Label(q4Target);
+    document.getElementById('q4ClickHint').textContent='\u2193 tap the correct mark on the ruler';
+    renderQ4Ruler(null, true);
+    document.getElementById('q4Svg').querySelectorAll('[data-q4s]').forEach(el=>{
+      el.addEventListener('click', function h(){
+        if(q4Locked) return;
+        el.removeEventListener('click',h);
+        const clicked=parseInt(el.getAttribute('data-q4s'));
+        const ok=clicked===q4Target;
+        q4Locked=true; q4Total++;
+        highlightQ4Tick(q4Target,'#5a9e5a');
+        if(!ok) highlightQ4Tick(clicked,'#c05050');
+        if(ok){q4Correct++;q4Streak++;showQ4Feedback(true);}
+        else  {q4Wrong++;q4Streak=0;showQ4Feedback(false,l4Label(q4Target),l4Label(clicked));}
+        updateQ4Scores();
+        document.getElementById('q4Next').style.display='inline-block';
+      });
+    });
+
+  } else if(qType==='improper'){
+    /* Arrow on ruler → pick improper fraction form */
+    badge.textContent='Improper'; badge.className='tag tag-sixteenth';
+    const impCorrect=toImproper(q4Target);
+    document.getElementById('q4Prompt').textContent='The arrow points to a measurement. Which improper fraction matches?';
+    renderQ4Ruler(q4Target, false);
+    const wrongs=improperWrongs(q4Target,3);
+    const opts=[q4Target,...wrongs].sort(()=>Math.random()-.5);
+    const el=document.getElementById('q4Opts');
+    opts.forEach(s=>{
+      const btn=document.createElement('button');
+      btn.className='qopt'; btn.textContent=toImproper(s)+'\"';
+      btn.onclick=()=>checkQ4Answer(toImproper(s)+'\"', impCorrect+'\"', btn, el);
+      el.appendChild(btn);
+    });
+
+  } else {
+    /* Convert: given improper fraction → pick the matching mixed number */
+    badge.textContent='Convert'; badge.className='tag tag-half';
+    /* Only use targets > 16 sixteenths so there's a meaningful whole number */
+    const convertPool=q4Pool.filter(s=>s>16);
+    q4Target=convertPool[Math.floor(Math.random()*convertPool.length)];
+    const impFrac=toImproper(q4Target);
+    const correctMixed=l4Label(q4Target);
+    document.getElementById('q4Prompt').textContent='Convert '+impFrac+'\" to a mixed number. Which is correct?';
+    /* No ruler arrow needed — pure conversion question */
+    renderQ4Ruler(null, true);
+    const wrongs=improperWrongs(q4Target,3);
+    const opts=[q4Target,...wrongs].sort(()=>Math.random()-.5);
+    const el=document.getElementById('q4Opts');
+    opts.forEach(s=>{
+      const btn=document.createElement('button');
+      btn.className='qopt'; btn.textContent=l4Label(s);
+      btn.onclick=()=>checkQ4Answer(l4Label(s),correctMixed,btn,el);
+      el.appendChild(btn);
+    });
+  }
+}
+
+function checkQ4Answer(chosen, correct, btn, container){
+  if(q4Locked) return;
+  q4Locked=true; q4Total++;
+  const ok=chosen===correct;
+  container.querySelectorAll('.qopt').forEach(b=>{
+    b.disabled=true;
+    if(b.textContent===correct) b.classList.add('correct');
+    else if(b===btn&&!ok) b.classList.add('wrong');
+  });
+  if(ok){q4Correct++;q4Streak++;showQ4Feedback(true);}
+  else  {q4Wrong++;q4Streak=0;showQ4Feedback(false,correct);}
+  updateQ4Scores();
+  document.getElementById('q4Next').style.display='inline-block';
+}
+function showQ4Feedback(ok, correct, got){
+  const el=document.getElementById('q4Feedback');
+  if(ok){ el.textContent='Correct!'; el.style.color='#80cc80'; }
+  else if(got){ el.textContent='Not quite \u2014 you picked '+got+', answer was '+correct; el.style.color='#e08080'; }
+  else{ el.textContent='Not quite \u2014 answer was '+correct; el.style.color='#e08080'; }
 }
 
 function showL3(idx){
